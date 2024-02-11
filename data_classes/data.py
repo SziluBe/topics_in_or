@@ -268,12 +268,12 @@ class Subpart:
 # create a representation of the class in the xml file
         
 class Class:
-    def __init__(self, id, limit, room, time, parent, penalty):
+    def __init__(self, id, limit, room, time, parent):
         self.id = id
         self.limit = limit
-        self.room = room
-        self.time = time
-        self.parent = parent
+        self.room = room # constraint object (rather, a list of them)
+        self.time = time # constraint object (rather, a list of them)
+        self.parent = parent # cause it may be false
 
 # create a representation of the time in the xml file
         
@@ -292,6 +292,8 @@ class Distribution:
         self.type = type
         self.required = required
         self.class_ = class_
+
+# TODO: different types of dist. constraints
 
 # create a representation of the student in the xml file
         
