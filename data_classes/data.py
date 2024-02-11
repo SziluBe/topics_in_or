@@ -197,6 +197,8 @@
 
 # create a representation of the data in the xml file
 
+# TODO: change nested constraints to a list of objects
+
 class Data:
     def __init__(self, name, nr_days, nr_weeks, slots_per_day, optimization, rooms, courses, distributions, students, solution):
         self.name = name

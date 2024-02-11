@@ -1,0 +1,5 @@
+- parse list of rooms from XL
+- parse list of times from XL (split days into e.g. 5 min slots between start and finish times in each day)
+- parse list of weeks from XL
+- generate representation of the solution in XL
+- generate travel times between rooms
