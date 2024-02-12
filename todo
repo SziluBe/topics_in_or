@@ -3,3 +3,12 @@
 - parse list of weeks from XL
 - generate representation of the solution in XL
 - generate travel times between rooms
+- NotOverlap and Precedence constraint generation -> suggest ways to automatically do this for courses
+- get instructor data
+- model instructors with SameAttendees constraints
+- optional MaxDays constraint generatin for courses -> suggest ...
+- generate student course selections for use plugged in as constraints in experiments
+- find start time of days by data (earliest class)
+- find end time of days similarly
+- NOTE: week 9 in XL is Sem 1 Week 1 and there are 11 weeks, so week 19 is Sem 1 Week 11 (i.e. last week), week 26 in XL is Sem 2 Week 1 and week 37 is Sem 2 Week 11
+- make tool to define course structures (configs) manually, and do this for all courses in the data
