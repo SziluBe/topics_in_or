@@ -1,0 +1,36 @@
+<course id="MATH08062">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="58"/>
+        </subpart>
+        <subpart id="2_WS">
+            <class id="WS" limit="16"/> x 4
+        </subpart>
+    </config>
+</course>
+<course id="MATH08071">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="72"/>
+        </subpart>
+        <subpart id="2_WS">
+            <class id="WS" limit="15"/> x 4
+        </subpart>
+    </config>
+</course>
+<course id="MATH10086">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="57"/>
+        </subpart>
+        <subpart id="2_L2">
+            <class id="L2" limit="57"/>
+        </subpart>
+        <subpart id="3_L3">
+            <class id="L3" limit="57"/>
+        </subpart>
+        <subpart id="4_WS">
+            <class id="WS" limit="57"/>
+        </subpart>
+    </config>
+</course>
