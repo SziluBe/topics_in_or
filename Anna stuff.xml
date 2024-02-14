@@ -1,0 +1,98 @@
+<course id="MATH10024">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="40"/>
+        </subpart>
+        <subpart id="2_L2">
+            <class id="L2" limit="40"/> x 4
+        </subpart>
+        <subpart id="3_WS">
+            <class id="WS" limit="40"/> x 2
+        </subpart>
+        <subpart id="4_L3">
+            <class id="L3" limit="150"/>
+        </subpart>
+        <subpart id="5_L4">
+            <class id="L4" limit="150"/>
+    </config>
+</course>
+
+<course id="MATH08059">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="250"/>
+        </subpart>
+        <subpart id="2_L2">
+            <class id="L2" limit="250"/>
+        </subpart>
+        <subpart id="3_L3">
+            <class id="L3" limit="250"/>
+        </subpart>
+        <subpart id="4_L4">
+            <class id="L4" limit="250"/>
+        </subpart>
+        <subpart id="5_WS">
+            <class id="WS" limit="12"/> x38
+        </subpart>
+    </config>
+</course>
+
+<course id="MATH11199">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="290"/>
+        </subpart>
+        <subpart id="2_WS">
+            <class id="WS" limit="15"/> x17
+        </subpart>
+    </config>
+</course>
+
+<course id="MATH11197">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="30"/>
+        </subpart>
+        <subpart id="2_L2">
+            <class id="L2" limit="30"/>
+        </subpart>
+        <subpart id="3_L3">
+            <class id="L3" limit="30"/>
+        </subpart>
+        <subpart id="4_WS">
+            <class id="WS" limit="30"/> x2
+        </subpart>
+    </config>
+</course>
+
+<course id="MATH11228">
+    <config id="1">
+        <subpart id="1_WS">
+            <class id="WS" limit="40"/>
+        </subpart>
+    </config>
+</course>
+
+<course id="MATH11190">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="50"/>
+        </subpart>
+        <subpart id="2_WS">
+            <class id="WS" limit="50"/>
+        </subpart>
+    </config>
+</course>
+
+<course id="MATH11157">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="45"/>
+        </subpart>
+        <subpart id="2_WS">
+            <class id="WS" limit="45"/>
+        </subpart>
+    </config>
+</course>
+
+
