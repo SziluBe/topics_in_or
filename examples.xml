@@ -34,3 +34,237 @@
         </subpart>
     </config>
 </course>
+<course id="MATH11120">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="42"/>
+        </subpart>
+        <subpart id="2_L2">
+            <class id="L2" limit="42"/>
+        </subpart>
+        <subpart id="3_WS">
+            <class id="WS" limit="42"/>
+        </subpart>
+    </config>
+</course>
+<course id="MATH10077">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="28"/>
+        </subpart>
+        <subpart id="2_L2">
+            <class id="L2" limit="28"/>
+        </subpart>
+        <subpart id="3_WS">
+            <class id="WS" limit="28"/>
+        </subpart>
+    </config>
+</course>
+<course id="MATH11226">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="38"/>
+        </subpart>
+        <subpart id="2_L2">
+            <class id="L2" limit="38"/>
+        </subpart>
+        <subpart id="3_WS">
+            <class id="WS" limit="38"/>
+        </subpart>
+    </config>
+</course>
+<course id="MATH11140">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="43"/>
+        </subpart>
+        <subpart id="2_L2">
+            <class id="L2" limit="43"/>
+        </subpart>
+        <subpart id="3_WS">
+            <class id="WS" limit="43"/>
+        </subpart>
+    </config>
+</course>
+
+<course id="MATH11120">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="42"/>
+        </subpart>
+        <subpart id="2_L2">
+            <class id="L2" limit="42"/>
+        </subpart>
+        <subpart id="3_WS">
+            <class id="WS" limit="42"/>
+        </subpart>
+    </config>
+</course>
+
+<course id="MATH11120">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="42"/>
+        </subpart>
+        <subpart id="2_L2">
+            <class id="L2" limit="42"/>
+        </subpart>
+        <subpart id="3_WS">
+            <class id="WS" limit="42"/>
+        </subpart>
+    </config>
+</course>
+
+<course id="MATH11120">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="42"/>
+        </subpart>
+        <subpart id="2_L2">
+            <class id="L2" limit="42"/>
+        </subpart>
+        <subpart id="3_WS">
+            <class id="WS" limit="42"/>
+        </subpart>
+    </config>
+</course>
+
+<course id="MATH11120">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="42"/>
+        </subpart>
+        <subpart id="2_L2">
+            <class id="L2" limit="42"/>
+        </subpart>
+        <subpart id="3_WS">
+            <class id="WS" limit="42"/>
+        </subpart>
+    </config>
+</course>
+
+<course id="MATH11120">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="42"/>
+        </subpart>
+        <subpart id="2_L2">
+            <class id="L2" limit="42"/>
+        </subpart>
+        <subpart id="3_WS">
+            <class id="WS" limit="42"/>
+        </subpart>
+    </config>
+</course>
+
+<course id="MATH11120">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="42"/>
+        </subpart>
+        <subpart id="2_L2">
+            <class id="L2" limit="42"/>
+        </subpart>
+        <subpart id="3_WS">
+            <class id="WS" limit="42"/>
+        </subpart>
+    </config>
+</course>
+
+<course id="MATH11120">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="42"/>
+        </subpart>
+        <subpart id="2_L2">
+            <class id="L2" limit="42"/>
+        </subpart>
+        <subpart id="3_WS">
+            <class id="WS" limit="42"/>
+        </subpart>
+    </config>
+</course>
+
+<course id="MATH11120">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="42"/>
+        </subpart>
+        <subpart id="2_L2">
+            <class id="L2" limit="42"/>
+        </subpart>
+        <subpart id="3_WS">
+            <class id="WS" limit="42"/>
+        </subpart>
+    </config>
+</course>
+
+<course id="MATH11120">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="42"/>
+        </subpart>
+        <subpart id="2_L2">
+            <class id="L2" limit="42"/>
+        </subpart>
+        <subpart id="3_WS">
+            <class id="WS" limit="42"/>
+        </subpart>
+    </config>
+</course>
+
+<course id="MATH11120">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="42"/>
+        </subpart>
+        <subpart id="2_L2">
+            <class id="L2" limit="42"/>
+        </subpart>
+        <subpart id="3_WS">
+            <class id="WS" limit="42"/>
+        </subpart>
+    </config>
+</course>
+
+<course id="MATH11120">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="42"/>
+        </subpart>
+        <subpart id="2_L2">
+            <class id="L2" limit="42"/>
+        </subpart>
+        <subpart id="3_WS">
+            <class id="WS" limit="42"/>
+        </subpart>
+    </config>
+</course>
+
+<course id="MATH11120">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="42"/>
+        </subpart>
+        <subpart id="2_L2">
+            <class id="L2" limit="42"/>
+        </subpart>
+        <subpart id="3_WS">
+            <class id="WS" limit="42"/>
+        </subpart>
+    </config>
+</course>
+
+<course id="MATH11120">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="42"/>
+        </subpart>
+        <subpart id="2_L2">
+            <class id="L2" limit="42"/>
+        </subpart>
+        <subpart id="3_WS">
+            <class id="WS" limit="42"/>
+        </subpart>
+    </config>
+</course>
