@@ -12,3 +12,8 @@
 - find end time of days similarly
 - NOTE: week 9 in XL is Sem 1 Week 1 and there are 11 weeks, so week 19 is Sem 1 Week 11 (i.e. last week), week 26 in XL is Sem 2 Week 1 and week 37 is Sem 2 Week 11
 - make tool to define course structures (configs) manually, and do this for all courses in the data -> maybe do a simplified auto-parser to get data for experiments
+
+- match rooms with possible activity types
+- parse time constraints for classes -> generate new ones (e.g. same week, but all possible times)
+- parse courses by course code
+- parse subparts by activity types (? -> will need more than just that)

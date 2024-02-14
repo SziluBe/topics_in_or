@@ -86,6 +86,90 @@
         </subpart>
     </config>
 </course>
+# TODO: redo limits above
+<course id="MATH10053">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="85"/>
+        </subpart>
+        <subpart id="2_L2">
+            <class id="L2" limit="85"/>
+        </subpart>
+        <subpart id="3_WS">
+            <class id="WS" limit="85"/>
+        </subpart>
+        <subpart id="4_COMP_WS">
+            <class id="COMP_WS" limit="15"/> x5
+        </subpart>
+    </config>
+</course>
+<course id="MATH11236">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="40"/>
+        </subpart>
+        <subpart id="2_L2">
+            <class id="L2" limit="40"/>
+        </subpart>
+        <subpart id="3_WS">
+            <class id="WS" limit="40"/>
+        </subpart>
+    </config>
+</course>
+<course id="MATH11175">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="150"/>
+        </subpart>
+        <subpart id="2_WS">
+            <class id="WS" limit="15"/> x 10
+        </subpart>
+    </config>
+</course>
+<course id="MATH11177">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="197"/>
+        </subpart>
+        <subpart id="2_WS">
+            <class id="WS" limit="15"/> x 14
+        </subpart>
+    </config>
+</course>
+<course id="MATH11174">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="102"/>
+        </subpart>
+        <subpart id="2_COMP_WS">
+            <class id="WS" limit="15"/> x 8
+        </subpart>
+    </config>
+</course>
+<course id="MATH11230">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="48"/>
+        </subpart>
+        <subpart id="2_WS">
+            <class id="WS" limit="48"/>
+        </subpart>
+    </config>
+</course>
+
+<course id="MATH08058">
+    <config id="1">
+        <subpart id="1_L1">
+            <class id="L1" limit="42"/>
+        </subpart>
+        <subpart id="2_L2">
+            <class id="L2" limit="42"/>
+        </subpart>
+        <subpart id="3_WS">
+            <class id="WS" limit="42"/>
+        </subpart>
+    </config>
+</course>
 
 <course id="MATH11120">
     <config id="1">
