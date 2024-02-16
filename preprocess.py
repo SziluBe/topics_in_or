@@ -108,7 +108,7 @@ for index, row in df.iterrows():
     course = row['Course Code']
     subpart = row['Activity Type Name']
     activity = row['Activity']
-    weeks = ...
+    weeks = ... # TODO?
     ######
     # NEVERMIND
     # if we already have an activity that only differs in
