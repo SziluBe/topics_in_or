@@ -22,5 +22,6 @@ x room constraints for classes based on what rooms can house what activities
     x manually create groups of activity types such that if one can happen in a room, so can the rest (i.e. different names for workshops would be in one group, diff. names for computer workshops would be another, etc.)
 - manually check and fix constraints for what activities each room can hold
 - parse time constraints for classes -> generate new ones (e.g. same week, but all possible times)
+- generate penalties for course room constraints -> maybe set temporary properties for courses based on preferred building/campus and generate room allocation to buildings/campuses?
 
 - get solver repos working
