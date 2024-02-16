@@ -278,7 +278,7 @@ class Class:
         self.parent = parent # cause it may be false
 
 # create a representation of the time in the xml file
-        
+
 class Time:
     def __init__(self, days, start, length, weeks, penalty):
         self.days = days

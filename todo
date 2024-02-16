@@ -13,7 +13,12 @@
 - NOTE: week 9 in XL is Sem 1 Week 1 and there are 11 weeks, so week 19 is Sem 1 Week 11 (i.e. last week), week 26 in XL is Sem 2 Week 1 and week 37 is Sem 2 Week 11
 - make tool to define course structures (configs) manually, and do this for all courses in the data -> maybe do a simplified auto-parser to get data for experiments
 
-- match rooms with possible activity types
+x match rooms with possible activity types
+x parse courses by course code
+x parse subparts by activity types (? -> will need more than just that)
+
+x room constraints for classes based on what rooms can house what activities
+    x create list of unique activity types
+    x manually create groups of activity types such that if one can happen in a room, so can the rest (i.e. different names for workshops would be in one group, diff. names for computer workshops would be another, etc.)
+- manually check and fix constraints for what activities each room can hold
 - parse time constraints for classes -> generate new ones (e.g. same week, but all possible times)
-- parse courses by course code
-- parse subparts by activity types (? -> will need more than just that)

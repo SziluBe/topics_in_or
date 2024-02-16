@@ -92,5 +92,76 @@ for room_id in room_ids.values():
 
 print(travel_times)
 
+# (course) : (subpart, activity, weeks)
+# TODO: find semester by "Delivery Semester" column for each course
+# if empty, check if the course has any other activity with a delivery semester
+# also check that all activities of a course have the same delivery semester
+# also make sure to take into account the "Number of Teaching Weeks" column
+# this can help us find two-semester courses
+# for two-semester courses, we can add two courses to the dictionary,
+# suffixing the course code with "A" and "B" for the first and second semester, respectively
+courses = df['Course Code'].unique()
+
+courses = {course: set() for course in courses}
+
+for index, row in df.iterrows():
+    course = row['Course Code']
+    subpart = row['Activity Type Name']
+    activity = row['Activity']
+    weeks = ...
+    ######
+    # NEVERMIND
+    # if we already have an activity that only differs in
+    # a /xxx... suffix, we don't add it
+    # where xxx may be any numerical string
+    ######
+    courses[course].add((subpart, activity))
+
+print(courses)
+
+# match rooms with possible activity types #TODO: this will probably require some manual work
+rooms = {k: set() for k in room_ids.keys()}
+activity_types_df = df['Activity Type Name'].unique()
+activity_types = set()
+for at in activity_types_df:
+    activity_types.add(at)
+
+print(activity_types)
+
+# {'*Workshop', '*Lecture - Online Pre-recorded', 'Oral Presentation', '*Workshop - Online Live', 'Computer Workshop', 'Q&A Session', 'Self Study', 'Examples Class', '*Lecture', '*Lecture - Online Live'}
+# groupings:
+# Lecture: *Lecture
+# Online: *Lecture - Online Pre-recorded, *Lecture - Online Live, Q&A Session, *Workshop - Online Live
+# Workshop: *Workshop
+# Computer Workshop: Computer Workshop
+# Special: Oral Presentation, Self Study, Examples Class
+
+activity_groups = {
+    "*Lecture": ["*Lecture"],
+    "*Lecture - Online Pre-recorded": ["*Lecture - Online Pre-recorded", "*Lecture - Online Live", "Q&A Session", "*Workshop - Online Live"],
+    "*Lecture - Online Live": ["*Lecture - Online Pre-recorded", "*Lecture - Online Live", "Q&A Session", "*Workshop - Online Live"],
+    "Q&A Session": ["*Lecture - Online Pre-recorded", "*Lecture - Online Live", "Q&A Session", "*Workshop - Online Live"],
+    "*Workshop - Online Live": ["*Lecture - Online Pre-recorded", "*Lecture - Online Live", "Q&A Session", "*Workshop - Online Live"],
+    "*Workshop": ["*Workshop"],
+    "Computer Workshop": ["Computer Workshop"],
+    "Oral Presentation": ["Oral Presentation"], #TODO: manually add to rooms where it can be held (due to few examples we may miss a lot)
+    "Self Study": ["Self Study"], #TODO: manually add to rooms where it can be held (due to few examples we may miss a lot)
+    "Examples Class": ["Examples Class"] #TODO: manually add to rooms where it can be held (due to few examples we may miss a lot)
+} # TODO: manually check that all rooms have all the activities they can hold, manually add the missing ones
+
+for index, row in df.iterrows():
+    room_name = row['Allocated Location Name']
+    # room_id = room_ids[room_name]
+    activity_type = row['Activity Type Name']
+    rooms[room_name].add(activity_type)
+
+# add the missing activities to the rooms (very inefficient, but it's a small dataset)
+for room in rooms:
+    temp = rooms[room].copy()
+    for activity in temp:
+        for activity2 in activity_groups[activity]:
+            rooms[room].add(activity2)
+
+print(rooms)
 
 
