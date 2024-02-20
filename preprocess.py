@@ -125,12 +125,6 @@ for index, row in df.iterrows():
     dayss = ...
     starts = ...
     penalties = ...
-    ######
-    # NEVERMIND
-    # if we already have an activity that only differs in
-    # a /xxx... suffix, we don't add it
-    # where xxx may be any numerical string
-    ######
     courses[course].append((subpart, activity, weeks, duration))
 
 print(courses)
