@@ -102,20 +102,30 @@ print(travel_times)
 # suffixing the course code with "A" and "B" for the first and second semester, respectively
 courses = df['Course Code'].unique()
 
-courses = {course: set() for course in courses}
+courses = {course: [] for course in courses}
 
 for index, row in df.iterrows():
     course = row['Course Code']
     subpart = row['Activity Type Name']
     activity = row['Activity']
-    weeks = ... # TODO?
+    weeks_str = row['Teaching Week Pattern']
+    # split weeks_str on ', '
+    weeks_split = weeks_str.split(', ')
+    weeks = []
+    # if any of the weeks is a range, expand it
+    for i in range(len(weeks_split)):
+        if '-' in weeks_split[i]:
+            start, end = weeks_split[i].split('-')
+            weeks.extend(range(int(start), int(end) + 1))
+        else:
+            weeks.append(int(weeks_split[i]))
     ######
     # NEVERMIND
     # if we already have an activity that only differs in
     # a /xxx... suffix, we don't add it
     # where xxx may be any numerical string
     ######
-    courses[course].add((subpart, activity))
+    courses[course].append((subpart, activity, weeks))
 
 print(courses)
 
