@@ -119,13 +119,19 @@ for index, row in df.iterrows():
             weeks.extend(range(int(start), int(end) + 1))
         else:
             weeks.append(int(weeks_split[i]))
+    duration = row['Duration']
+    # Convert duration from hours string (hh:mm) to multiples of 5 minutes
+    duration = int(int(duration.split(':')[0]) * 12 + int(duration.split(':')[1]) / 5)
+    dayss = ...
+    starts = ...
+    penalties = ...
     ######
     # NEVERMIND
     # if we already have an activity that only differs in
     # a /xxx... suffix, we don't add it
     # where xxx may be any numerical string
     ######
-    courses[course].append((subpart, activity, weeks))
+    courses[course].append((subpart, activity, weeks, duration))
 
 print(courses)
 
