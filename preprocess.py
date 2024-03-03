@@ -1,4 +1,6 @@
 import pandas as pd
+# elementTree for generating XML
+import xml.etree.ElementTree as ET
 
 # Specify the file path
 file_path = "School of Mathematics - Timetable Data.xlsx"
@@ -174,4 +176,34 @@ for room in rooms:
 
 print(rooms)
 
+# generate the XML file
 
+# create the root element, weeks: 9 to 37, i.e. 29 weeks (9 is included, so is 37), TODO: slotsperday, 5 minute slots, currently gives 24 hrs, should try 9am-5pm or 6pm
+root = ET.Element("problem", name="som_timetabling", nrDays="7", nrWeeks="29", slotsPerday="288")
+
+# create the rooms element
+rooms_element = ET.SubElement(root, "rooms")
+# for each room, create a room element, with id and capacity
+for room in room_ids:
+    room_element = ET.SubElement(rooms_element, "room", id=str(room_ids[room]), capacity=str(room_capacities[room_ids[room]]))
+    # for each room, create travel times to other rooms
+    for room2 in room_ids:
+        if room_ids[room] != room_ids[room2]:
+            travel_element = ET.SubElement(room_element, "travel", room=str(room_ids[room2]), value=str(travel_times[(room_ids[room], room_ids[room2])][0]))
+
+# create the courses element
+courses_element = ET.SubElement(root, "courses")
+# for each course, create a course element, with id
+for course in courses:
+    course_element = ET.SubElement(courses_element, "course", id=course)
+    # for each course, create a subpart element, with id
+    for subpart, activity, weeks, duration in courses[course]:
+        subpart_element = ET.SubElement(course_element, "subpart", id=subpart)
+        class_element = ET.SubElement(subpart_element, "activity", id=activity, limit=")
+        weeks_element = ET.SubElement(activity_element, "weeks")
+        for week in weeks:
+            week_element = ET.SubElement(weeks_element, "week", nr=str(week))
+
+# write XML to file
+with open("som_timetabling.xml", "wb") as file:
+    file.write(ET.tostring(root))
