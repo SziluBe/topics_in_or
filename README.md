@@ -1,1 +1,0 @@
-# The deliverable for the Mid-project report is the file som_timetabling.xml, see branch "mid-project" for last version before deadline
