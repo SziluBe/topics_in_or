@@ -138,6 +138,8 @@ for index, row in df.iterrows():
         print(activity)
         # subpart = activity.split("/")[0]
         # file.write(activity + "\n")
+        with open("bad_lectures.txt", "a") as file:
+            file.write(activity + "\n")
         continue # TODO
     elif "/" in activity:
         # print(activity)
@@ -247,9 +249,9 @@ for course in courses:
         # for week in weeks:
         #     week_element = ET.SubElement(weeks_element, "week", nr=str(week))
 
-# write XML to file
-with open("som_timetabling.xml", "wb") as file:
-    file.write(ET.tostring(root))
+# write XML to file #TODO: re-enable
+# with open("som_timetabling.xml", "wb") as file:
+#     file.write(ET.tostring(root))
 
 print(subparts)
 
