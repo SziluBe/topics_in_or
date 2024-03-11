@@ -1,5 +1,6 @@
 MATH1 Engineering Mathematics 1a - Studio Workshop/08                        |     *Workshop     |     9-19                 |     Wednesday     |     10:00     |     11:00     |     AT_M2 - Teaching Studio
 
+
 MATH1 Engineering Mathematics 1a - Studio Workshop/38 <9>                    |     *Workshop     |     9                    |     Wednesday     |     12:00     |     13:00     |     AT_2.05,AT_2.07,AT_2.11
 MATH1 Engineering Mathematics 1a - Studio Workshop/38 <10, 12-13, 16-19>     |     *Workshop     |     10, 12-13, 16-19     |     Wednesday     |     12:00     |     13:00     |     40GS_LG.07 - Teaching Studio
 MATH1 Engineering Mathematics 1a - Studio Workshop/38 <11>                   |     *Workshop     |     11                   |     Wednesday     |     12:00     |     13:00     |     40GS_LG.11
