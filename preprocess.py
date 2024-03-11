@@ -41,7 +41,7 @@ for index, row in df.iterrows():
     if "Mathematics 1a" in row['Course Name']:
         with open("eng_mat_1a.txt", "a") as file:
             file.write(str(row["Activity"]) + "     |     " + str(row["Activity Type Name"]) + "     |     " + str(row["Teaching Week Pattern"]) + "     |     " + str(row["Scheduled Days"]) + "     |     " + str(row["Scheduled Start Time"]) + "     |     " + str(row["Scheduled End Time"]) + "     |     " + str(row["Allocated Location Name"]) + "\n")
-    if "Credit Scoring" in row['Course Name'] and  "<" in row['Activity']:
+    if "Credit Scoring" in row['Course Name']:
         with open("credit_scoring.txt", "a") as file:
             file.write(str(row["Activity"]) + "     |     " + str(row["Activity Type Name"]) + "     |     " + str(row["Teaching Week Pattern"]) + "     |     " + str(row["Scheduled Days"]) + "     |     " + str(row["Scheduled Start Time"]) + "     |     " + str(row["Scheduled End Time"]) + "     |     " + str(row["Allocated Location Name"]) + "\n")
 
