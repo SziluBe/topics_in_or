@@ -135,15 +135,17 @@ for index, row in df.iterrows():
             break
     # with open("asd.txt", "a") as file:
     if "/" in activity and ("Lecture" in subpart or "lecture" in subpart):
-        print(activity)
+        # print(activity)
         # subpart = activity.split("/")[0]
         # file.write(activity + "\n")
-        with open("bad_lectures.txt", "a") as file:
+        with open("lectures_with_slash.txt", "a") as file:
             file.write(activity + "\n")
         continue # TODO
     elif "/" in activity:
-        # print(activity)
+        print(activity)
         subpart = activity.split("/")[0]
+        with open("non_lectures_with_slash.txt", "a") as file:
+            file.write(activity + "\n")
         # file.write(activity + "\n")
     else:
         subpart = activity
@@ -162,7 +164,7 @@ for course in subparts:
     for i in range(len(subparts[course])):
         subparts[course][i][0] = str(i + 1) + "_" + subparts[course][i][0]
 
-print(courses)
+# print(courses) #NOTE
 
 # match rooms with possible activity types #TODO: this will probably require some manual work
 rooms = {k: set() for k in room_ids.keys()}
@@ -171,7 +173,7 @@ activity_types = set()
 for at in activity_types_df:
     activity_types.add(at)
 
-print(activity_types)
+# print(activity_types) #NOTE
 
 # {'*Workshop', '*Lecture - Online Pre-recorded', 'Oral Presentation', '*Workshop - Online Live', 'Computer Workshop', 'Q&A Session', 'Self Study', 'Examples Class', '*Lecture', '*Lecture - Online Live'}
 # groupings:
@@ -207,7 +209,7 @@ for room in rooms:
         for activity2 in activity_groups[activity]:
             rooms[room].add(activity2)
 
-print(rooms)
+# print(rooms) #NOTE
 
 # generate the XML file
 
@@ -253,5 +255,5 @@ for course in courses:
 # with open("som_timetabling.xml", "wb") as file:
 #     file.write(ET.tostring(root))
 
-print(subparts)
+# print(subparts) #NOTE
 
