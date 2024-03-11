@@ -1,20 +1,20 @@
 MATHO Credit Scoring - Computer Workshop/04 <29, 33>     |     Computer Workshop     |     29, 33     |     Monday     |     14:00     |     15:00     |     MH_1.20 - Open Access/Teaching Computer Lab
-MATHO Credit Scoring - Computer Workshop/04 <27-28>      |     Computer Workshop     |     27-28      |     Monday     |     15:00     |     16:00     |     MH_1.20 - Open Access/Teaching Computer Lab
+MATHO Credit Scoring - Computer Workshop/04 <27-28>     |     Computer Workshop     |     27-28     |     Monday     |     15:00     |     16:00     |     MH_1.20 - Open Access/Teaching Computer Lab
 MATHO Credit Scoring - Computer Workshop/05 <29, 33>     |     Computer Workshop     |     29, 33     |     Monday     |     14:00     |     15:00     |     MH_1.20 - Open Access/Teaching Computer Lab
-MATHO Credit Scoring - Computer Workshop/05 <27-28>      |     Computer Workshop     |     27-28      |     Monday     |     15:00     |     16:00     |     MH_1.20 - Open Access/Teaching Computer Lab
+MATHO Credit Scoring - Computer Workshop/05 <27-28>     |     Computer Workshop     |     27-28     |     Monday     |     15:00     |     16:00     |     MH_1.20 - Open Access/Teaching Computer Lab
 MATHO Credit Scoring - Computer Workshop/06 <29, 33>     |     Computer Workshop     |     29, 33     |     Monday     |     15:00     |     16:00     |     JCMB_1512
-MATHO Credit Scoring - Computer Workshop/06 <27-28>      |     Computer Workshop     |     27-28      |     Monday     |     16:00     |     17:00     |     MH_1.20 - Open Access/Teaching Computer Lab
+MATHO Credit Scoring - Computer Workshop/06 <27-28>     |     Computer Workshop     |     27-28     |     Monday     |     16:00     |     17:00     |     MH_1.20 - Open Access/Teaching Computer Lab
 MATHO Credit Scoring - Computer Workshop/07 <29, 33>     |     Computer Workshop     |     29, 33     |     Monday     |     15:00     |     16:00     |     MH_1.20 - Open Access/Teaching Computer Lab
-MATHO Credit Scoring - Computer Workshop/07 <27-28>      |     Computer Workshop     |     27-28      |     Monday     |     16:00     |     17:00     |     MH_1.20 - Open Access/Teaching Computer Lab
+MATHO Credit Scoring - Computer Workshop/07 <27-28>     |     Computer Workshop     |     27-28     |     Monday     |     16:00     |     17:00     |     MH_1.20 - Open Access/Teaching Computer Lab
 MATHO Credit Scoring - Computer Workshop/08 <29, 33>     |     Computer Workshop     |     29, 33     |     Monday     |     15:00     |     16:00     |     MH_1.20 - Open Access/Teaching Computer Lab
-MATHO Credit Scoring - Computer Workshop/08 <27-28>      |     Computer Workshop     |     27-28      |     Monday     |     16:00     |     17:00     |     MH_1.20 - Open Access/Teaching Computer Lab
+MATHO Credit Scoring - Computer Workshop/08 <27-28>     |     Computer Workshop     |     27-28     |     Monday     |     16:00     |     17:00     |     MH_1.20 - Open Access/Teaching Computer Lab
 MATHO Credit Scoring - Computer Workshop/09 <29, 33>     |     Computer Workshop     |     29, 33     |     Monday     |     15:00     |     16:00     |     MH_1.20 - Open Access/Teaching Computer Lab
-MATHO Credit Scoring - Computer Workshop/09 <27-28>      |     Computer Workshop     |     27-28      |     Monday     |     16:00     |     17:00     |     MH_1.20 - Open Access/Teaching Computer Lab
+MATHO Credit Scoring - Computer Workshop/09 <27-28>     |     Computer Workshop     |     27-28     |     Monday     |     16:00     |     17:00     |     MH_1.20 - Open Access/Teaching Computer Lab
 MATHO Credit Scoring - Computer Workshop/10 <29, 33>     |     Computer Workshop     |     29, 33     |     Monday     |     15:00     |     16:00     |     MH_1.20 - Open Access/Teaching Computer Lab
-MATHO Credit Scoring - Computer Workshop/10 <27-28>      |     Computer Workshop     |     27-28      |     Monday     |     16:00     |     17:00     |     MH_1.20 - Open Access/Teaching Computer Lab
+MATHO Credit Scoring - Computer Workshop/10 <27-28>     |     Computer Workshop     |     27-28     |     Monday     |     16:00     |     17:00     |     MH_1.20 - Open Access/Teaching Computer Lab
 MATHO Credit Scoring - Computer Workshop/02 <29, 33>     |     Computer Workshop     |     29, 33     |     Monday     |     14:00     |     15:00     |     MH_1.20 - Open Access/Teaching Computer Lab
-MATHO Credit Scoring - Computer Workshop/02 <27-28>      |     Computer Workshop     |     27-28      |     Monday     |     15:00     |     16:00     |     MH_1.20 - Open Access/Teaching Computer Lab
+MATHO Credit Scoring - Computer Workshop/02 <27-28>     |     Computer Workshop     |     27-28     |     Monday     |     15:00     |     16:00     |     MH_1.20 - Open Access/Teaching Computer Lab
 MATHO Credit Scoring - Computer Workshop/03 <29, 33>     |     Computer Workshop     |     29, 33     |     Monday     |     14:00     |     15:00     |     MH_1.20 - Open Access/Teaching Computer Lab
-MATHO Credit Scoring - Computer Workshop/03 <27-28>      |     Computer Workshop     |     27-28      |     Monday     |     15:00     |     16:00     |     MH_1.20 - Open Access/Teaching Computer Lab
+MATHO Credit Scoring - Computer Workshop/03 <27-28>     |     Computer Workshop     |     27-28     |     Monday     |     15:00     |     16:00     |     MH_1.20 - Open Access/Teaching Computer Lab
 MATHO Credit Scoring - Computer Workshop/01 <29, 33>     |     Computer Workshop     |     29, 33     |     Monday     |     14:00     |     15:00     |     MH_1.20 - Open Access/Teaching Computer Lab
-MATHO Credit Scoring - Computer Workshop/01 <27-28>      |     Computer Workshop     |     27-28      |     Monday     |     15:00     |     16:00     |     MH_1.20 - Open Access/Teaching Computer Lab
+MATHO Credit Scoring - Computer Workshop/01 <27-28>     |     Computer Workshop     |     27-28     |     Monday     |     15:00     |     16:00     |     MH_1.20 - Open Access/Teaching Computer Lab
