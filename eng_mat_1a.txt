@@ -1,7 +1,39 @@
+MATH1 Engineering Mathematics 1a - Studio Workshop/33     |     *Workshop     |     9-19     |     Wednesday     |     09:00     |     10:00     |     40GS_LG.07 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/10     |     *Workshop     |     9-19     |     Wednesday     |     11:00     |     12:00     |     AT_M2 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/11     |     *Workshop     |     9-19     |     Wednesday     |     11:00     |     12:00     |     AT_M2 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/12     |     *Workshop     |     9-19     |     Wednesday     |     11:00     |     12:00     |     AT_M2 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/13     |     *Workshop     |     9-19     |     Wednesday     |     11:00     |     12:00     |     AT_M2 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/14     |     *Workshop     |     9-19     |     Wednesday     |     11:00     |     12:00     |     AT_M2 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/15     |     *Workshop     |     9-19     |     Wednesday     |     11:00     |     12:00     |     AT_M2 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/18     |     *Workshop     |     9-19     |     Wednesday     |     12:00     |     13:00     |     AT_M2 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/16     |     *Workshop     |     9-19     |     Wednesday     |     11:00     |     12:00     |     AT_M2 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/19     |     *Workshop     |     9-19     |     Wednesday     |     12:00     |     13:00     |     AT_M2 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/20     |     *Workshop     |     9-19     |     Wednesday     |     12:00     |     13:00     |     AT_M2 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/21     |     *Workshop     |     9-19     |     Wednesday     |     12:00     |     13:00     |     AT_M2 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/22     |     *Workshop     |     9-19     |     Wednesday     |     12:00     |     13:00     |     AT_M2 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/23     |     *Workshop     |     9-19     |     Wednesday     |     12:00     |     13:00     |     AT_M2 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/24     |     *Workshop     |     9-19     |     Wednesday     |     12:00     |     13:00     |     AT_M2 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/26     |     *Workshop     |     9-19     |     Wednesday     |     09:00     |     10:00     |     AT_M2 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/27     |     *Workshop     |     9-19     |     Wednesday     |     09:00     |     10:00     |     AT_M2 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/28     |     *Workshop     |     9-19     |     Wednesday     |     09:00     |     10:00     |     AT_M2 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/29     |     *Workshop     |     9-19     |     Wednesday     |     09:00     |     10:00     |     AT_M2 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/30     |     *Workshop     |     9-19     |     Wednesday     |     09:00     |     10:00     |     AT_M2 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/31     |     *Workshop     |     9-19     |     Wednesday     |     09:00     |     10:00     |     AT_M2 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/32     |     *Workshop     |     9-19     |     Wednesday     |     09:00     |     10:00     |     AT_M2 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/02     |     *Workshop     |     9-19     |     Wednesday     |     10:00     |     11:00     |     AT_M2 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/03     |     *Workshop     |     9-19     |     Wednesday     |     10:00     |     11:00     |     AT_M2 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/04     |     *Workshop     |     9-19     |     Wednesday     |     10:00     |     11:00     |     AT_M2 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/05     |     *Workshop     |     9-19     |     Wednesday     |     10:00     |     11:00     |     AT_M2 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/06     |     *Workshop     |     9-19     |     Wednesday     |     10:00     |     11:00     |     AT_M2 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/07     |     *Workshop     |     9-19     |     Wednesday     |     10:00     |     11:00     |     AT_M2 - Teaching Studio
 MATH1 Engineering Mathematics 1a - Studio Workshop/08     |     *Workshop     |     9-19     |     Wednesday     |     10:00     |     11:00     |     AT_M2 - Teaching Studio
 MATH1 Engineering Mathematics 1a - Lecture <9-11, 13-19>     |     *Lecture     |     9-11, 13-19     |     Tuesday     |     11:00     |     12:00     |     GALT_ Gordon Aikman Lecture Theatre
 MATH1 Engineering Mathematics 1a - Lecture <12>     |     *Lecture     |     12     |     Tuesday     |     11:00     |     12:00     |     AT_Lecture Theatre 2
 MATH1 Engineering Mathematics 1a - Examples Class     |     Examples Class     |     10-16     |     Monday     |     11:00     |     12:00     |     GALT_ Gordon Aikman Lecture Theatre
+MATH1 Engineering Mathematics 1a - Studio Workshop/01     |     *Workshop     |     9-19     |     Wednesday     |     10:00     |     11:00     |     AT_M2 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/09     |     *Workshop     |     9-19     |     Wednesday     |     11:00     |     12:00     |     AT_M2 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/17     |     *Workshop     |     9-19     |     Wednesday     |     12:00     |     13:00     |     AT_M2 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/25     |     *Workshop     |     9-19     |     Wednesday     |     09:00     |     10:00     |     AT_M2 - Teaching Studio
 MATH1 Engineering Mathematics 1a - Studio Workshop/38 <9>     |     *Workshop     |     9     |     Wednesday     |     12:00     |     13:00     |     AT_2.05,AT_2.07,AT_2.11
 MATH1 Engineering Mathematics 1a - Lecture/overflow     |     *Lecture     |     9-19     |     Tuesday     |     11:00     |     12:00     |     40GS_13.07
 MATH1 Engineering Mathematics 1a - Lecture/overflow     |     *Lecture     |     9-19     |     Tuesday     |     11:00     |     12:00     |     AT_2.05
@@ -13,3 +45,7 @@ MATH1 Engineering Mathematics 1a - Lecture <9-11, 13-19>     |     *Lecture     
 MATH1 Engineering Mathematics 1a - Lecture Online Live     |     *Lecture - Online Live     |     12     |     Thursday     |     14:00     |     15:00     |     nan
 MATH1 Engineering Mathematics 1a - Lecture/overflow     |     *Lecture     |     9-19     |     Tuesday     |     11:00     |     12:00     |     CMB_Seminar Room 5
 MATH1 Engineering Mathematics 1a - Lecture/overflow     |     *Lecture     |     9-19     |     Thursday     |     14:00     |     15:00     |     OC_Usha Kasera Lecture Theatre
+MATH1 Engineering Mathematics 1a - Studio Workshop/34     |     *Workshop     |     9-19     |     Wednesday     |     09:00     |     10:00     |     40GS_LG.07 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/35     |     *Workshop     |     9-19     |     Wednesday     |     09:00     |     10:00     |     40GS_LG.07 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/36     |     *Workshop     |     9-19     |     Wednesday     |     09:00     |     10:00     |     40GS_LG.07 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/37     |     *Workshop     |     9-19     |     Wednesday     |     09:00     |     10:00     |     40GS_LG.07 - Teaching Studio
