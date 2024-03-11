@@ -23,17 +23,23 @@ print(room_ids)
 room_capacities = {}
 room_zones = {}
 
-# iterate over the rows of the dataframe
-for index, row in df.iterrows():
-    # get the room id and capacity
-    room_name = row['Allocated Location Name']
-    room_id = room_ids[room_name]
-    occupancy = max(row['Planned Size'], row['Real Size'])
-    zone = row['Zone Name']
-    # add the room to the dictionary
-    if room_id not in room_capacities or room_capacities[room_id] < occupancy:
-        room_capacities[room_id] = occupancy
-    room_zones[room_id] = zone
+# delete contents of stuff.txt
+open("eng_mat_1a.txt", "w").close()
+
+with open("eng_mat_1a.txt", "a") as file:
+    # iterate over the rows of the dataframe
+    for index, row in df.iterrows():
+        # get the room id and capacity
+        room_name = row['Allocated Location Name']
+        room_id = room_ids[room_name]
+        occupancy = max(row['Planned Size'], row['Real Size'])
+        zone = row['Zone Name']
+        # add the room to the dictionary
+        if room_id not in room_capacities or room_capacities[room_id] < occupancy:
+            room_capacities[room_id] = occupancy
+        room_zones[room_id] = zone
+        if "Mathematics 1a" in row['Course Name']:
+            file.write(str(row["Activity"]) + "     |     " + str(row["Activity Type Name"]) + "     |     " + str(row["Teaching Week Pattern"]) + "     |     " + str(row["Scheduled Days"]) + "     |     " + str(row["Scheduled Start Time"]) + "     |     " + str(row["Scheduled End Time"]) + "     |     " + str(row["Allocated Location Name"]) + "\n")
 
 print(room_capacities)
 

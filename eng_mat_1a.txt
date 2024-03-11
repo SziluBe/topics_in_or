@@ -1,0 +1,15 @@
+MATH1 Engineering Mathematics 1a - Studio Workshop/08     |     *Workshop     |     9-19     |     Wednesday     |     10:00     |     11:00     |     AT_M2 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Lecture <9-11, 13-19>     |     *Lecture     |     9-11, 13-19     |     Tuesday     |     11:00     |     12:00     |     GALT_ Gordon Aikman Lecture Theatre
+MATH1 Engineering Mathematics 1a - Lecture <12>     |     *Lecture     |     12     |     Tuesday     |     11:00     |     12:00     |     AT_Lecture Theatre 2
+MATH1 Engineering Mathematics 1a - Examples Class     |     Examples Class     |     10-16     |     Monday     |     11:00     |     12:00     |     GALT_ Gordon Aikman Lecture Theatre
+MATH1 Engineering Mathematics 1a - Studio Workshop/38 <9>     |     *Workshop     |     9     |     Wednesday     |     12:00     |     13:00     |     AT_2.05,AT_2.07,AT_2.11
+MATH1 Engineering Mathematics 1a - Lecture/overflow     |     *Lecture     |     9-19     |     Tuesday     |     11:00     |     12:00     |     40GS_13.07
+MATH1 Engineering Mathematics 1a - Lecture/overflow     |     *Lecture     |     9-19     |     Tuesday     |     11:00     |     12:00     |     AT_2.05
+MATH1 Engineering Mathematics 1a - Studio Workshop/38 <15>     |     *Workshop     |     15     |     Wednesday     |     12:00     |     13:00     |     40GS_LG.09
+MATH1 Engineering Mathematics 1a - Studio Workshop/38 <10, 12-13, 16-19>     |     *Workshop     |     10, 12-13, 16-19     |     Wednesday     |     12:00     |     13:00     |     40GS_LG.07 - Teaching Studio
+MATH1 Engineering Mathematics 1a - Studio Workshop/38 <11>     |     *Workshop     |     11     |     Wednesday     |     12:00     |     13:00     |     40GS_LG.11
+MATH1 Engineering Mathematics 1a - Studio Workshop/38 <14>     |     *Workshop     |     14     |     Wednesday     |     12:00     |     13:00     |     AT_2.12
+MATH1 Engineering Mathematics 1a - Lecture <9-11, 13-19>     |     *Lecture     |     9-11, 13-19     |     Thursday     |     14:00     |     15:00     |     GALT_ Gordon Aikman Lecture Theatre
+MATH1 Engineering Mathematics 1a - Lecture Online Live     |     *Lecture - Online Live     |     12     |     Thursday     |     14:00     |     15:00     |     nan
+MATH1 Engineering Mathematics 1a - Lecture/overflow     |     *Lecture     |     9-19     |     Tuesday     |     11:00     |     12:00     |     CMB_Seminar Room 5
+MATH1 Engineering Mathematics 1a - Lecture/overflow     |     *Lecture     |     9-19     |     Thursday     |     14:00     |     15:00     |     OC_Usha Kasera Lecture Theatre
