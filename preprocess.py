@@ -245,13 +245,171 @@ bad_df = pd.concat([non_unique, weird_slash, bad_df])
 assert len(df) + len(bad_df) == og_len
 bad_df.to_excel("dirtied.xlsx")
 
+
+
+
+
+print("#"*20)
+print("Unique Week Patterns")
+u = df['Teaching Week Pattern'].unique()
+# for pattern in u:
+#     print(pattern)
+# print(len(u))
+
+print("#"*20)
+
+weekssem1 = []
+weekssem2 = []
+
+def week_pattern_to_list(pattern):
+    weeks_split = pattern.split(', ')
+    weeks = []
+    # if any of the weeks is a range, expand it
+    for i in range(len(weeks_split)):
+        if '-' in weeks_split[i]:
+            start, end = weeks_split[i].split('-')
+            weeks.extend(range(int(start), int(end) + 1))
+        else:
+            weeks.append(int(weeks_split[i]))
+    return weeks
+
+def sem2_pattern(pattern):
+    weeks = week_pattern_to_list(pattern)
+    return any([x > 20 for x in weeks])
+
+for pattern in u:
+    weeks = week_pattern_to_list(pattern)
+    print(pattern, weeks)
+    if any([x <= 20 for x in weeks]) and any([x > 20 for x in weeks]):
+        print("^Two-semester class")
+    elif any([x <= 20 for x in weeks]):
+        weekssem1.append(weeks)
+    elif any([x > 20 for x in weeks]):
+        weekssem2.append(weeks)
+
+print("#"*20)
+print("Week patterns in Semester 1")
+for weeks in weekssem1:
+    print(weeks)
+
+# [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19] - All (11) - 319
+
+# [9, 10, 11, 12, 13, 14, 15, 16, 17, 18] - All-Except-Last (10) - 21
+
+# [10, 11, 12, 13, 14, 15, 16, 17, 18, 19] - All-Except-First (10) - 7
+
+# [11, 12, 13, 14, 15, 16, 17, 18, 19, 20] - Three-Till-Twelve (10) - 1
+
+# [10, 11, 12, 13, 14, 15, 16] - Two-Till-Eight (7) - 1
+
+# [9, 11, 13, 15, 17, 19] - Odd-Last (6) -  110
+    
+# [10, 12, 14, 16, 18, 19] - Even-And-Last (6) - 1
+
+# [10, 12, 14, 16, 18] - Even (5) - 90
+# [11, 13, 15, 17, 19] - Odd-No-First (5) - 3
+
+# [9, 11, 13, 15, 17] - Odd-No-Last (5) - 1
+
+# [11, 14, 17] - Three-Five-Seven (3) - 5
+
+# [9, 12, 15] - One-Three-Five (3) - 1
+
+# [9] - First - 6
+
+# [19] - Last - 3
+
+
+
+
+
+print("#"*20)
+print("Week patterns in Semester 2")
+for weeks in weekssem2:
+    print(weeks)
+
+# Reading week: 31
+# [26, 27, 28, 29, 30, 32, 33, 34, 35, 36, 37] - All (11) - 296
+
+# [26, 27, 28, 29, 30, 32, 33, 34, 35, 36] - All-Except-Last (10) - 2
+
+# [27, 28, 29, 30, 32, 33, 34] - Two-Till-Eight (7) - 1
+
+# [26, 28, 30, 33, 35, 37] - Odd (6) - 71
+# [32, 33, 34, 35, 36, 37] - Six-Till-Eleven (6) - 2
+    
+# [27, 29, 32, 34, 36] - Even (5) - 93
+# [28, 30, 33, 35, 37] - Odd-No-First (5) - 38
+
+# [26, 27, 28, 29, 30] - One-Till-Five (5) - 1
+# [27, 28, 29, 30, 32] - Two-Till-Six (5) - 6
+
+# [29, 32, 34, 36] - Even-No-Second (4) - 32
+
+# [28, 30, 35] - 3-5-9 (3) - 5
+
+# [29, 34] - Four-And-Eight (2) - 6
+
+# [26] - First - 2
+
+# [37] - Last - 1
+
+
+print("#"*20)
+
+
+sem1df = df[df['Teaching Week Pattern'].apply(lambda x: not sem2_pattern(x))]
+sem2df = df[df['Teaching Week Pattern'].apply(lambda x: sem2_pattern(x))]
+print(len(sem1df))
+print(len(sem2df))
+print(len(df))
+print(len(sem1df) + len(sem2df))
+assert len(sem1df) + len(sem2df) == len(df)
+
+sem1df.to_excel("sem1df.xlsx")
+sem2df.to_excel("sem2df.xlsx")
+
+print("#"*20)
+
+
+sem1patterncounter = {}
+sem2patterncounter = {}
+for index, row in sem1df.iterrows():
+    pattern = row['Teaching Week Pattern']
+    weeks = tuple(week_pattern_to_list(pattern))
+    if weeks in sem1patterncounter:
+        sem1patterncounter[weeks] += 1
+    else:
+        sem1patterncounter[weeks] = 1
+for index, row in sem2df.iterrows():
+    pattern = row['Teaching Week Pattern']
+    weeks = tuple(week_pattern_to_list(pattern))
+    if weeks in sem2patterncounter:
+        sem2patterncounter[weeks] += 1
+    else:
+        sem2patterncounter[weeks] = 1
+
+print("Semester 1 Week Patterns")
+for pattern in sem1patterncounter:
+    print(pattern, sem1patterncounter[pattern])
+print("Semester 2 Week Patterns")
+for pattern in sem2patterncounter:
+    print(pattern, sem2patterncounter[pattern])
+
+
+
+
+
+
 # courses = {course: [] for course in courses} # courses only have ids as attributes and have 1 config each by our decision, and subparts under the config
 # subparts = {course: [] for course in courses} # subparts only have ids, and classes under them
 courses = set()
 subparts = set() # (course, subpart) pairs
 classes = {} # classes have ids, parents, and limits, and rooms and times under them, additionally, we store a duration for each to later help with generating the time constraints
 
-for index, row in df.iterrows():
+# for df in [sem1df, sem2df]:
+# for index, row in df.iterrows():
+for index, row in sem1df.iterrows():
     course = row['Course Code']
     # subpart = row['Activity'].split("/")[0] + "_" + row['Scheduled Days'] # unique by selection
     if "/" in row['Activity']:
@@ -276,61 +434,7 @@ print(subparts)
 print("CLASSES")
 print(classes)
 
-print("#"*20)
-print("Unique Week Patterns")
-u = df['Teaching Week Pattern'].unique()
-# for pattern in u:
-#     print(pattern)
-# print(len(u))
 
-print("#"*20)
-
-weekssem1 = []
-weekssem2 = []
-for pattern in u:
-    weeks_split = pattern.split(', ')
-    weeks = []
-    # if any of the weeks is a range, expand it
-    for i in range(len(weeks_split)):
-        if '-' in weeks_split[i]:
-            start, end = weeks_split[i].split('-')
-            weeks.extend(range(int(start), int(end) + 1))
-        else:
-            weeks.append(int(weeks_split[i]))
-    print(pattern, weeks)
-    if any([x <= 20 for x in weeks]) and any([x > 20 for x in weeks]):
-        print("^Two-semester class")
-    elif any([x <= 20 for x in weeks]):
-        weekssem1.append(weeks)
-    elif any([x > 20 for x in weeks]):
-        weekssem2.append(weeks)
-
-print("#"*20)
-print("Week patterns in Semester 1")
-for weeks in weekssem1:
-    print(weeks)
-
-# [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19] - All
-# [9] - First
-# [19] - Last
-# [9, 11, 13, 15, 17, 19] - Odd-Last
-# [10, 12, 14, 16, 18] - Even
-# [10, 11, 12, 13, 14, 15, 16] - Two-Till-Eight
-# [11, 14, 17] - Three-Five-Seven
-# [9, 11, 13, 15, 17] - Odd-No-Last
-# [9, 10, 11, 12, 13, 14, 15, 16, 17, 18] - All-Except-Last
-# [9, 12, 15] - One-Three-Five
-# [10, 11, 12, 13, 14, 15, 16, 17, 18, 19] - All-Except-First
-# [11, 12, 13, 14, 15, 16, 17, 18, 19, 20] - Three-Till-Twelve
-# [10, 12, 14, 16, 18, 19] - Even-And-Last
-# [11, 13, 15, 17, 19] - Odd-No-First
-
-print("#"*20)
-print("Week patterns in Semester 2")
-for weeks in weekssem2:
-    print(weeks)
-
-print("#"*20)
 
 
 
