@@ -1,0 +1,28 @@
+- Deal with weird activity types
+  - Self Study
+  - Examples Class
+  - ~ Anything Online or Q&A Session
+  - Oral Presentation
+
+
+- Deal with weird course structures and overflow lectures
+  - Eng Mat 1a
+  - Probability
+  - CAP
+  - ILA
+  - SVCDE
+  - Bayesian Data Analysis
+  - FPM
+  - PPS
+  - Credit Scoring
+
+
+- Numbered Workshops
+- "(reserve)" workshop slots
+- Parent classes (structure)
+- Penalties (rooms, times, anything else)
+- Distribution constraints
+- Many small workshops in one room
+
+- #TODO: ask Luke to make sure it is fine to drop non-maths courses from consideration in the students table #DONE Students -> merge into big XML and remove non-maths courses
+- #TODO: ask Luke about whatever we think is not obvious

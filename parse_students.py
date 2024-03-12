@@ -1,5 +1,6 @@
 import pandas as pd
-import numpy as np
+import xml.etree.ElementTree as ET
+
 
 # Load the data into a pandas table
 df = pd.read_excel("Anon Enrollment Data.xlsx")
@@ -15,7 +16,21 @@ uuns = {uuns[i]: set() for i in range(len(uuns))}
 for index, row in df.iterrows():
     uun = row['UUN']
     course = row['Course Code']
-    uuns[uun].add(course)
+    if "MATH" in course:
+        uuns[uun].add(course)
 
 print(uuns)
+
+# create a new xml tree
+root = ET.Element("students")
+
+# add a student element for each UUN
+for uun in uuns:
+    student = ET.SubElement(root, "student", id=uun)
+    for course in uuns[uun]:
+        ET.SubElement(student, "course", id=course)
+
+# write the tree to a file
+with open("students.xml", "wb") as f:
+    f.write(ET.tostring(root))        
 

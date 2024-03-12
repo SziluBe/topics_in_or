@@ -26,6 +26,8 @@ room_zones = {}
 # delete contents of stuff.txt
 open("eng_mat_1a.txt", "w").close()
 open("credit_scoring.txt", "w").close()
+open("lectures_with_slash.txt", "w").close()
+open("non_lectures_with_slash.txt", "w").close()
 
 # iterate over the rows of the dataframe
 for index, row in df.iterrows():
@@ -45,7 +47,10 @@ for index, row in df.iterrows():
         with open("credit_scoring.txt", "a") as file:
             file.write(str(row["Activity"]) + "     |     " + str(row["Activity Type Name"]) + "     |     " + str(row["Teaching Week Pattern"]) + "     |     " + str(row["Scheduled Days"]) + "     |     " + str(row["Scheduled Start Time"]) + "     |     " + str(row["Scheduled End Time"]) + "     |     " + str(row["Allocated Location Name"]) + "\n")
 
+print("#"*20)
+print("ROOM CAPACITIES")
 print(room_capacities)
+print("#"*20)
 
 # generate travel times between rooms
 travel_times = {}
@@ -102,7 +107,10 @@ for room_id in room_ids.values():
         if room_id != room_id2:
             travel_times[(room_id, room_id2)] = [distances.get((room_zones[room_id], room_zones[room_id2]), distances.get((room_zones[room_id2], room_zones[room_id]), "nan")), room_zones[room_id], room_zones[room_id2]]
 
+print("#"*20)
+print("TRAVEL TIMES")
 print(travel_times)
+print("#"*20)
 
 # (course) : (subpart, activity, weeks)
 # TODO: find semester by "Delivery Semester" column for each course
@@ -113,6 +121,13 @@ print(travel_times)
 # for two-semester courses, we can add two courses to the dictionary,
 # suffixing the course code with "A" and "B" for the first and second semester, respectively
 courses = df['Course Code'].unique()
+
+all_math_prefixed = True
+for course in courses:
+    if "MATH" not in course:
+        all_math_prefixed = False
+        break
+print("All courses are prefixed with 'MATH':", all_math_prefixed)
 
 courses = {course: [] for course in courses}
 subparts = {course: [] for course in courses}
@@ -152,7 +167,7 @@ for index, row in df.iterrows():
             file.write(activity + "\n")
         continue # TODO
     elif "/" in activity:
-        print(activity)
+        # print(activity)
         subpart = activity.split("/")[0]
         with open("non_lectures_with_slash.txt", "a") as file:
             file.write(activity + "\n")
@@ -174,7 +189,10 @@ for course in subparts:
     for i in range(len(subparts[course])):
         subparts[course][i][0] = str(i + 1) + "_" + subparts[course][i][0]
 
-# print(courses) #NOTE
+print("#"*20)
+print("COURSES")
+print(courses) #NOTE
+print("#"*20)
 
 # match rooms with possible activity types #TODO: this will probably require some manual work
 rooms = {k: set() for k in room_ids.keys()}
@@ -183,7 +201,10 @@ activity_types = set()
 for at in activity_types_df:
     activity_types.add(at)
 
-# print(activity_types) #NOTE
+print("#"*20)
+print("ACTIVITY TYPES")
+print(activity_types) #NOTE
+print("#"*20)
 
 # {'*Workshop', '*Lecture - Online Pre-recorded', 'Oral Presentation', '*Workshop - Online Live', 'Computer Workshop', 'Q&A Session', 'Self Study', 'Examples Class', '*Lecture', '*Lecture - Online Live'}
 # groupings:
@@ -219,7 +240,10 @@ for room in rooms:
         for activity2 in activity_groups[activity]:
             rooms[room].add(activity2)
 
-# print(rooms) #NOTE
+print("#"*20)
+print("ROOMS")
+print(rooms) #NOTE
+print("#"*20)
 
 # generate the XML file
 
@@ -265,5 +289,8 @@ for course in courses:
 # with open("som_timetabling.xml", "wb") as file:
 #     file.write(ET.tostring(root))
 
-# print(subparts) #NOTE
+print("#"*20)
+print("SUBPARTS")
+print(subparts) #NOTE
+print("#"*20)
 
