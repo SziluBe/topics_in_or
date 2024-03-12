@@ -129,6 +129,134 @@ for course in courses:
         break
 print("All courses are prefixed with 'MATH':", all_math_prefixed)
 
+
+
+
+#####
+# Re-doing courses
+#####
+
+# Check if Activity - Scheduled Days pairs are unique
+# Separate non-unique pairs into a separate dataframe
+non_unique = df[df.duplicated(subset=['Activity', 'Scheduled Days'], keep=False)]
+# non_unique = df[df.duplicated(subset=['Activity'], keep=False)]
+print(non_unique)
+# output non_unique to an excel file
+non_unique.to_excel("non_unique.xlsx")
+
+og_len = len(df)
+print(len(df))
+
+# Remove all duplicates from the dataframe (don't even keep the first occurrence)
+df = df.drop_duplicates(subset=['Activity', 'Scheduled Days'], keep=False)
+# df = df.drop_duplicates(subset=['Activity'], keep=False)
+print("#"*20)
+
+for index, row in df.iterrows():
+    activity = row['Activity']
+    days = row['Scheduled Days']
+    if df[(df['Activity'] == activity) & (df['Scheduled Days'] == days)].shape[0] > 1:
+    # if df[(df['Activity'] == activity)].shape[0] > 1:
+        print(activity, days)
+
+print(len(df))
+print(len(non_unique))
+assert len(df) + len(non_unique) == og_len
+print("#"*20)
+
+# Extract rows with both "/" and "Lecture" or "<" in Activity
+weird_slash = df[((df['Activity'].str.contains("/")) & (df['Activity'].str.contains("Lecture"))) | (df['Activity'].str.contains("<")) | (df['Activity'].str.contains("Q&A")) | (df['Activity'].str.contains("Online"))]
+print(weird_slash.columns)
+print(weird_slash)
+
+# output weird_lecture_slash to an excel file
+weird_slash.to_excel("weird_slash.xlsx")
+
+# Drop rows with both "/" and "Lecture" in Activity
+df = df[~(((df['Activity'].str.contains("/")) & (df['Activity'].str.contains("Lecture"))) | (df['Activity'].str.contains("<")) | (df['Activity'].str.contains("Q&A")) | (df['Activity'].str.contains("Online")))]
+print(len(df[((df['Activity'].str.contains("/")) & (df['Activity'].str.contains("Lecture"))) | (df['Activity'].str.contains("<")) | (df['Activity'].str.contains("Q&A")) | (df['Activity'].str.contains("Online"))]))
+print(len(df))
+print(len(non_unique))
+print(len(weird_slash))
+print(og_len)
+assert len(df) + len(non_unique) + len(weird_slash) == og_len
+
+# Make sure classes with a "/" are all in the same weeks
+# If not, output them to a file
+# If they are, just remove the "/" and keep the first part
+
+copy_df = df.copy()
+copy_df = copy_df[copy_df['Activity'].str.contains("/")]
+copy_df['Activity'] = copy_df['Activity'].apply(lambda x: x.split("/")[0])
+
+# Find unique Activity - Teaching Week Pattern pairs
+unique_activity_weeks = copy_df[['Activity', 'Teaching Week Pattern']].drop_duplicates()
+
+# bad_weeks_df = pd.DataFrame(columns=df.columns)
+
+# for index, row in df.iterrows():
+#     if "/" in row['Activity']:
+#         weeks_str = row['Teaching Week Pattern']
+#         for index2, row2 in df.iterrows():
+#             if row2['Activity'] == row['Activity'] and row2['Teaching Week Pattern'] != weeks_str:
+#                 bad_weeks_df = bad_weeks_df.append(row2)
+
+print(unique_activity_weeks)
+
+print(len(unique_activity_weeks['Activity'].unique()))
+
+# Keep only non-unique Acticity rows
+unique_activity_weeks = unique_activity_weeks[unique_activity_weeks.duplicated(subset=['Activity'], keep=False)]
+
+print(unique_activity_weeks)
+print(len(unique_activity_weeks))
+
+# Get index column
+index_col = unique_activity_weeks.index
+
+# Get these indices from the original dataframe
+bad_df = df.loc[index_col]
+
+print(bad_df)
+
+# output bad_df to an excel file
+bad_df.to_excel("bad_weeks.xlsx")
+
+# Remove these rows from the original dataframe
+df = df.drop(index_col)
+
+print(len(df))
+print(len(non_unique))
+print(len(weird_slash))
+print(len(bad_df))
+print(og_len)
+
+assert len(df) + len(non_unique) + len(weird_slash) + len(bad_df) == og_len
+
+print(df['Activity Type Name'].unique())
+
+df.to_excel("cleaned.xlsx")
+
+courses = {course: [] for course in courses}
+subparts = {course: [] for course in courses}
+
+for index, row in df.iterrows():
+    course = row['Course Code']
+    subpart = row['Activity Type Name'].split("/")[0]
+
+
+
+quit()
+
+
+
+
+
+
+
+
+
+
 courses = {course: [] for course in courses}
 subparts = {course: [] for course in courses}
 

@@ -17,12 +17,16 @@
   - Credit Scoring
 
 
+- Time constraints for courses
+
+
 - Numbered Workshops
 - "(reserve)" workshop slots
 - Parent classes (structure)
 - Penalties (rooms, times, anything else)
 - Distribution constraints
 - Many small workshops in one room
+- Check all students fit into each subpart (i.e. students on the course are <= capacity of classes in each subpart)
 
 - #TODO: ask Luke to make sure it is fine to drop non-maths courses from consideration in the students table #DONE Students -> merge into big XML and remove non-maths courses
 - #TODO: ask Luke about whatever we think is not obvious
