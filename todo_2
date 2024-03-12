@@ -27,6 +27,8 @@
 - Distribution constraints
 - Many small workshops in one room
 - Check all students fit into each subpart (i.e. students on the course are <= capacity of classes in each subpart)
+- Functions to convert lists of week numbers to binary week strings, depending on semester (sem1: 9-20, sem2: 26-37)
+- Ask about whether odd week patterns with first or last included are preferred (see preprocess.py)
 
 - #TODO: ask Luke to make sure it is fine to drop non-maths courses from consideration in the students table #DONE Students -> merge into big XML and remove non-maths courses
 - #TODO: ask Luke about whatever we think is not obvious
