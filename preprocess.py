@@ -477,6 +477,14 @@ for pattern in sem2patterncounter:
     print(pattern, sem2patterncounter[pattern])
 
 
+def day_to_bitstring(day, week_len):
+    bitstring = ""
+    for i in range(week_len):
+        if i % 7 == day:
+            bitstring += "1"
+        else:
+            bitstring += "0"
+    return bitstring
 
 def generate_time_constraints(row):
     weeks = [w - 8 for w in week_pattern_to_list(row['Teaching Week Pattern'])]
@@ -488,15 +496,15 @@ def generate_time_constraints(row):
     duration = int(int(duration.split(':')[0]) * 12 + int(duration.split(':')[1]) / 5)
     
     constraints = []
-    penalty = 0
     for day in range(5):
+        penalty = 0
         if day == 2: # Wednesday
             penalty = 10 #TODO: Wednesday penalty (are we only considering afternoon?)
         for slot in range(# 9am till 7pm, 5 minute slots; 19 - 9 = 10; 10 * 60 = 600; 600 / 5 = 120, step size is an hour: 60 / 5 = 12
             0, 120 - duration + 1, 12 # TODO: do we need smaller step sizes?
         ):
             constraints.append(
-                {"days": day, "start": slot, "length": duration, "weeks": weeks, "penalty": penalty} # TODO: day needs to be bitstring
+                {"days": day_to_bitstring(day, 5), "start": slot, "length": duration, "weeks": weeks, "penalty": penalty} # TODO: day needs to be bitstring
             )
     return constraints
 
