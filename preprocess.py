@@ -496,7 +496,7 @@ def generate_time_constraints(row):
             0, 120 - duration + 1, 12 # TODO: do we need smaller step sizes?
         ):
             constraints.append(
-                {"days": day, "start": slot, "length": duration, "weeks": weeks, "penalty": penalty}
+                {"days": day, "start": slot, "length": duration, "weeks": weeks, "penalty": penalty} # TODO: day needs to be bitstring
             )
     return constraints
 
@@ -685,7 +685,7 @@ root.append(students_element)
 
 
 # write XML to file
-with open("som_timetabling.xml", "wb") as file:
+with open("sem1_som_timetabling.xml", "wb") as file:
     file.write(ET.tostring(root))
 
 
