@@ -2,6 +2,8 @@ import pandas as pd
 # elementTree for generating XML
 import xml.etree.ElementTree as ET
 
+import parse_students
+
 # Specify the file path
 file_path = "School of Mathematics - Timetable Data.xlsx"
 
@@ -503,12 +505,13 @@ def generate_room_constraints(row, rooms, activity_groups):
     for room in rooms:
         if any([x in activity_groups[row['Activity Type Name']] for x in rooms[room]]):
             constraints.append({"id": room, "penalty": 0}) #TODO: penalty
+    return constraints
 
 
 # courses = {course: [] for course in courses} # courses only have ids as attributes and have 1 config each by our decision, and subparts under the config
 # subparts = {course: [] for course in courses} # subparts only have ids, and classes under them
-courses = set()
-subparts = set() # (course, subpart) pairs
+# courses = set()
+# subparts = set() # (course, subpart) pairs
 classes = {} # classes have ids, parents, and limits, and rooms and times under them, additionally, we store a duration for each to later help with generating the time constraints
 
 # for df in [sem1df, sem2df]:
@@ -528,19 +531,34 @@ for index, row in sem1df.iterrows():
                          "room_constraints": generate_room_constraints(row, rooms, activity_groups),
                          "limit": max(int(row['Planned Size']), int(row['Real Size']))}
     # TODO: times
-    courses.add(course)
-    subparts.add((course, subpart))
+    # courses.add(course)
+    # subparts.add((course, subpart))
 
 print("#"*20)
-print("COURSES")
-print(courses)
-print("SUBPARTS")
-print(subparts)
+# print("COURSES")
+# print(courses)
+# print("SUBPARTS")
+# print(subparts)
 print("CLASSES")
 print(classes)
 print(len(classes))
 assert len(classes) == len(sem1df)
 
+courses = {}
+
+for class_id in classes:
+    course = classes[class_id]['course']
+    subpart = classes[class_id]['subpart']
+    if course not in courses:
+        courses[course] = {}
+    if subpart not in courses[course]:
+        courses[course][subpart] = []
+    courses[course][subpart].append(class_id)
+
+print("#"*20)
+print("COURSES")
+print(courses)
+print("#"*20)
 
 
 
@@ -645,8 +663,30 @@ for room in room_ids:
 
 # create the courses element
 courses_element = ET.SubElement(root, "courses")
+for course in courses:
+    course_element = ET.SubElement(courses_element, "course", id=course)
+    config_element = ET.SubElement(course_element, "config", id=course+"_1")
+    for subpart in courses[course]:
+        subpart_element = ET.SubElement(config_element, "subpart", id=subpart)
+        for class_id in courses[course][subpart]:
+            class_element = ET.SubElement(subpart_element, "class", id=class_id, limit=str(classes[class_id]["limit"]))
+            for room_constraint in classes[class_id]["room_constraints"]:
+                room_element = ET.SubElement(class_element, "room", id=str(room_constraint["id"]), penalty=str(room_constraint["penalty"]))
+            for time_constraint in classes[class_id]["time_constraints"]:
+                time_element = ET.SubElement(class_element, "time", days=str(time_constraint["days"]),
+                                                                    start=str(time_constraint["start"]),
+                                                                    length=str(time_constraint["length"]),
+                                                                    weeks=str(time_constraint["weeks"]),
+                                                                    penalty=str(time_constraint["penalty"]))
 
 
+students_element = parse_students.main()
+root.append(students_element)
+
+
+# write XML to file
+with open("som_timetabling.xml", "wb") as file:
+    file.write(ET.tostring(root))
 
 
 # for each course, create a course element, with id
@@ -674,8 +714,8 @@ courses_element = ET.SubElement(root, "courses")
 # with open("som_timetabling.xml", "wb") as file:
 #     file.write(ET.tostring(root))
 
-print("#"*20)
-print("SUBPARTS")
-print(subparts) #NOTE
-print("#"*20)
+# print("#"*20)
+# print("SUBPARTS")
+# print(subparts) #NOTE
+# print("#"*20)
 
