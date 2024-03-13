@@ -683,7 +683,7 @@ for course in courses:
     for subpart in courses[course]:
         subpart_element = ET.SubElement(config_element, "subpart", id=subpart)
         for class_id in courses[course][subpart]:
-            class_element = ET.SubElement(subpart_element, "class", id=class_id, limit=str(classes[class_id]["limit"]))
+            class_element = ET.SubElement(subpart_element, "class", id=class_id, limit=str(classes[class_id]["limit"])) # TODO: skip classes with limit 0
             for room_constraint in classes[class_id]["room_constraints"]:
                 room_element = ET.SubElement(class_element, "room", id=str(room_constraint["id"]), penalty=str(room_constraint["penalty"]))
             for time_constraint in classes[class_id]["time_constraints"]:
