@@ -4,6 +4,9 @@ import xml.etree.ElementTree as ET
 
 import parse_students
 
+SEMESTER = 2
+
+
 # Specify the file path
 file_path = "School of Mathematics - Timetable Data.xlsx"
 
@@ -487,7 +490,10 @@ def day_to_bitstring(day, week_len):
     return bitstring
 
 def generate_time_constraints(row):
-    weeks = [w - 8 for w in week_pattern_to_list(row['Teaching Week Pattern'])]
+    if SEMESTER == 1:
+        weeks = [w - 9 for w in week_pattern_to_list(row['Teaching Week Pattern'])]
+    elif SEMESTER == 2:
+        weeks = [w - 26 for w in week_pattern_to_list(row['Teaching Week Pattern'])]
     # turn list of ints into binary string
     weeks = ''.join(['1' if i in weeks else '0' for i in range(12)])
 
@@ -524,7 +530,7 @@ classes = {} # classes have ids, parents, and limits, and rooms and times under 
 
 # for df in [sem1df, sem2df]:
 # for index, row in df.iterrows():
-for index, row in sem1df.iterrows():
+for index, row in sem1df.iterrows() if SEMESTER == 1 else sem2df.iterrows():
     course = row['Course Code']
     # subpart = row['Activity'].split("/")[0] + "_" + row['Scheduled Days'] # unique by selection
     if "/" in row['Activity']:
@@ -550,7 +556,7 @@ print("#"*20)
 print("CLASSES")
 print(classes)
 print(len(classes))
-assert len(classes) == len(sem1df)
+assert len(classes) == len(sem1df if SEMESTER == 1 else sem2df)
 
 courses = {}
 
@@ -655,7 +661,7 @@ print("#"*20)
 # create the root element, weeks: 9 to 37, i.e. 29 weeks (9 is included, so is 37), TODO: slotsperday, 5 minute slots, currently gives 24 hrs, should try 9am-5pm or 6pm
 
 ################### Semester 1: 9 to 19 normally, #TODO: 1 class in 20
-root = ET.Element("problem", name="som_timetabling", nrDays="5", nrWeeks="12", slotsPerday="288") #NOTE: nrDays was changed to 5
+root = ET.Element("problem", name="sem1_som_timetabling" if SEMESTER == 1 else "sem2_som_timetabling", nrDays="5", nrWeeks="12", slotsPerday="288") #NOTE: nrDays was changed to 5
 
 optimization_element = ET.SubElement(root, "optimization", time="2", room="1", distribution="1", student="2")
 
@@ -693,7 +699,7 @@ root.append(students_element)
 
 
 # write XML to file
-with open("sem1_som_timetabling.xml", "wb") as file:
+with open("sem1_som_timetabling.xml" if SEMESTER == 1 else "sem2_som_timetabling.xml", "wb") as file:
     file.write(ET.tostring(root))
 
 
