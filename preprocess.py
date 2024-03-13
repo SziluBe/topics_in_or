@@ -206,11 +206,13 @@ unique_activity_weeks = copy_df[['Activity', 'Teaching Week Pattern']].drop_dupl
 #             if row2['Activity'] == row['Activity'] and row2['Teaching Week Pattern'] != weeks_str:
 #                 bad_weeks_df = bad_weeks_df.append(row2)
 
+print("#"*20)
+print("UNIQUE ACTIVITY WEEKS")
 print(unique_activity_weeks)
 
 print(len(unique_activity_weeks['Activity'].unique()))
 
-# Keep only non-unique Acticity rows
+# Keep only non-unique Activity rows
 unique_activity_weeks = unique_activity_weeks[unique_activity_weeks.duplicated(subset=['Activity'], keep=False)]
 
 print(unique_activity_weeks)
@@ -240,7 +242,7 @@ assert len(df) + len(non_unique) + len(weird_slash) + len(bad_df) == og_len
 
 print(df['Activity Type Name'].unique())
 
-# df.to_excel("cleaned.xlsx") #TODO: re-enable
+df.to_excel("cleaned.xlsx") #TODO: re-enable
 
 
 
@@ -254,7 +256,7 @@ bad_df.to_excel("dirtied.xlsx")
 
 
 
-
+quit()
 
 
 
@@ -546,7 +548,7 @@ print("#"*20)
 
 # generate the XML file
 
-# create the root element, weeks: 9 to 37, i.e. 29 weeks (9 is included, so is 37), TODO: slotsperday, 5 minute slots, currently gives 24 hrs, should try 9am-5pm or 6pm
+# create the root element, (#NOTE: changed, now counts from start of sem instead of: - weeks: 9 to 37, i.e. 29 weeks (9 is included, so is 37))
 
 ################### Semester 1: 9 to 19 normally, #TODO: 1 class in 20
 root = ET.Element("problem", name="sem1_som_timetabling" if SEMESTER == 1 else "sem2_som_timetabling", nrDays="5", nrWeeks="12", slotsPerday="288") #NOTE: nrDays was changed to 5
