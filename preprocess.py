@@ -312,26 +312,6 @@ print(rooms) #NOTE
 print("#"*20)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 print("#"*20)
 print("Unique Week Patterns")
 u = df['Teaching Week Pattern'].unique()
@@ -517,19 +497,15 @@ def generate_time_constraints(row):
 def generate_room_constraints(row, rooms, activity_groups):
     constraints = []
     for room in rooms:
-        if any([x in activity_groups[row['Activity Type Name']] for x in rooms[room]]):
+        if (any([x in activity_groups[row['Activity Type Name']] for x in rooms[room]]) and
+                row['Planned Size'] <= room_capacities[room_ids[room]] and # the presence of 'room_ids' is giving legacy vibes but oops
+                row['Real Size'] <= room_capacities[room_ids[room]]):
             constraints.append({"id": room, "penalty": 0}) #TODO: penalty
     return constraints
 
 
-# courses = {course: [] for course in courses} # courses only have ids as attributes and have 1 config each by our decision, and subparts under the config
-# subparts = {course: [] for course in courses} # subparts only have ids, and classes under them
-# courses = set()
-# subparts = set() # (course, subpart) pairs
 classes = {} # classes have ids, parents, and limits, and rooms and times under them, additionally, we store a duration for each to later help with generating the time constraints
 
-# for df in [sem1df, sem2df]:
-# for index, row in df.iterrows():
 for index, row in sem1df.iterrows() if SEMESTER == 1 else sem2df.iterrows():
     course = row['Course Code']
     # subpart = row['Activity'].split("/")[0] + "_" + row['Scheduled Days'] # unique by selection
@@ -544,15 +520,8 @@ for index, row in sem1df.iterrows() if SEMESTER == 1 else sem2df.iterrows():
                          "time_constraints": generate_time_constraints(row),
                          "room_constraints": generate_room_constraints(row, rooms, activity_groups),
                          "limit": max(int(row['Planned Size']), int(row['Real Size']))}
-    # TODO: times
-    # courses.add(course)
-    # subparts.add((course, subpart))
 
 print("#"*20)
-# print("COURSES")
-# print(courses)
-# print("SUBPARTS")
-# print(subparts)
 print("CLASSES")
 print(classes)
 print(len(classes))
@@ -573,87 +542,6 @@ print("#"*20)
 print("COURSES")
 print(courses)
 print("#"*20)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# courses = {course: [] for course in courses}
-# subparts = {course: [] for course in courses}
-
-# for index, row in df.iterrows():
-#     course = row['Course Code']
-#     subpart = row['Activity Type Name']
-#     activity_type = row['Activity Type Name']
-#     activity = row['Activity']
-#     weeks_str = row['Teaching Week Pattern']
-#     # split weeks_str on ', '
-#     weeks_split = weeks_str.split(', ')
-#     weeks = []
-#     # if any of the weeks is a range, expand it
-#     for i in range(len(weeks_split)):
-#         if '-' in weeks_split[i]:
-#             start, end = weeks_split[i].split('-')
-#             weeks.extend(range(int(start), int(end) + 1))
-#         else:
-#             weeks.append(int(weeks_split[i]))
-#     duration = row['Duration']
-#     # Convert duration from hours string (hh:mm) to multiples of 5 minutes
-#     duration = int(int(duration.split(':')[0]) * 12 + int(duration.split(':')[1]) / 5)
-#     day = row["Scheduled Days"]
-#     start = row["Scheduled Start Time"]
-#     parent = None
-#     for i in range(len(courses[course]), -1, -1):
-#         if "Lecture" in subpart:
-#             parent = i
-#             break
-#     # with open("asd.txt", "a") as file:
-#     if "/" in activity and ("Lecture" in subpart or "lecture" in subpart):
-#         # print(activity)
-#         # subpart = activity.split("/")[0]
-#         # file.write(activity + "\n")
-#         with open("lectures_with_slash.txt", "a") as file:
-#             file.write(activity + "\n")
-#         continue # TODO
-#     elif "/" in activity:
-#         # print(activity)
-#         subpart = activity.split("/")[0]
-#         with open("non_lectures_with_slash.txt", "a") as file:
-#             file.write(activity + "\n")
-#         # file.write(activity + "\n")
-#     else:
-#         subpart = activity
-#     penalties = ...
-#     courses[course].append((subpart, activity, weeks, duration))
-#     # if subpart not in subparts[course]:
-#     have_subpart = False
-#     for i in range(len(subparts[course])):
-#         if subpart == subparts[course][i][0]:
-#             have_subpart = True
-#             break
-#     if not have_subpart:
-#         subparts[course].append([subpart, activity_type])
-
-# for course in subparts:
-#     for i in range(len(subparts[course])):
-#         subparts[course][i][0] = str(i + 1) + "_" + subparts[course][i][0]
-
-# print("#"*20)
-# print("COURSES")
-# print(courses) #NOTE
-# print("#"*20)
-
 
 
 # generate the XML file
@@ -701,35 +589,3 @@ root.append(students_element)
 # write XML to file
 with open("sem1_som_timetabling.xml" if SEMESTER == 1 else "sem2_som_timetabling.xml", "wb") as file:
     file.write(ET.tostring(root))
-
-
-# for each course, create a course element, with id
-# for course in courses:
-#     course_element = ET.SubElement(courses_element, "course", id=course)
-#     config_element = ET.SubElement(course_element, "config", id=course+"_1")
-#     lectures = [x[1] for x in subparts[course] if "Lecture" in x[0]]
-#     for subpart in subparts[course]:
-#         subpart_element = ET.SubElement(config_element, "subpart", id=subpart[0])
-#         class_element = ET.SubElement(subpart_element, "class", id=subpart[0]) #TODO: limit, add more copies of the same activity if needed
-#         # room elements
-#         for room in rooms:
-#             if any([x in activity_groups[subpart[1]] for x in rooms[room]]):
-#                 room_element = ET.SubElement(class_element, "room", id=str(room_ids[room]), penalty="0") #TODO: penalty
-        #TODO: times for each activity
-    # for each course, create a subpart element, with id
-    # for subpart, activity, weeks, duration in courses[course]:
-    #     subpart_element = ET.SubElement(config_element, "subpart", id=subpart)
-        # class_element = ET.SubElement(subpart_element, "activity", id=activity, limit=")
-        # weeks_element = ET.SubElement(activity_element, "weeks")
-        # for week in weeks:
-        #     week_element = ET.SubElement(weeks_element, "week", nr=str(week))
-
-# write XML to file #TODO: re-enable
-# with open("som_timetabling.xml", "wb") as file:
-#     file.write(ET.tostring(root))
-
-# print("#"*20)
-# print("SUBPARTS")
-# print(subparts) #NOTE
-# print("#"*20)
-
