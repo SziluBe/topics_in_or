@@ -249,6 +249,84 @@ bad_df.to_excel("dirtied.xlsx")
 
 
 
+
+
+
+
+
+
+# match rooms with possible activity types #TODO: this will probably require some manual work
+rooms = {k: set() for k in room_ids.keys()}
+activity_types_df = df['Activity Type Name'].unique()
+activity_types = set()
+for at in activity_types_df:
+    activity_types.add(at)
+
+print("#"*20)
+print("ACTIVITY TYPES")
+print(activity_types) #NOTE
+print("#"*20)
+
+# {'*Workshop', '*Lecture - Online Pre-recorded', 'Oral Presentation', '*Workshop - Online Live', 'Computer Workshop', 'Q&A Session', 'Self Study', 'Examples Class', '*Lecture', '*Lecture - Online Live'}
+# groupings:
+# Lecture: *Lecture
+# Online: *Lecture - Online Pre-recorded, *Lecture - Online Live, Q&A Session, *Workshop - Online Live
+# Workshop: *Workshop
+# Computer Workshop: Computer Workshop
+# Special: Oral Presentation, Self Study, Examples Class
+
+activity_groups = {
+    "*Lecture": ["*Lecture"],
+    "*Lecture - Online Pre-recorded": ["*Lecture - Online Pre-recorded", "*Lecture - Online Live", "Q&A Session", "*Workshop - Online Live"],
+    "*Lecture - Online Live": ["*Lecture - Online Pre-recorded", "*Lecture - Online Live", "Q&A Session", "*Workshop - Online Live"],
+    "Q&A Session": ["*Lecture - Online Pre-recorded", "*Lecture - Online Live", "Q&A Session", "*Workshop - Online Live"],
+    "*Workshop - Online Live": ["*Lecture - Online Pre-recorded", "*Lecture - Online Live", "Q&A Session", "*Workshop - Online Live"],
+    "*Workshop": ["*Workshop"],
+    "Computer Workshop": ["Computer Workshop"],
+    "Oral Presentation": ["Oral Presentation"], #TODO: manually add to rooms where it can be held (due to few examples we may miss a lot)
+    "Self Study": ["Self Study"], #TODO: manually add to rooms where it can be held (due to few examples we may miss a lot)
+    "Examples Class": ["Examples Class"] #TODO: manually add to rooms where it can be held (due to few examples we may miss a lot)
+} # TODO: manually check that all rooms have all the activities they can hold, manually add the missing ones
+
+for index, row in df.iterrows():
+    room_name = row['Allocated Location Name']
+    # room_id = room_ids[room_name]
+    activity_type = row['Activity Type Name']
+    rooms[room_name].add(activity_type)
+
+# add the missing activities to the rooms (very inefficient, but it's a small dataset)
+for room in rooms:
+    temp = rooms[room].copy()
+    for activity in temp:
+        for activity2 in activity_groups[activity]:
+            rooms[room].add(activity2)
+
+print("#"*20)
+print("ROOMS")
+print(rooms) #NOTE
+print("#"*20)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 print("#"*20)
 print("Unique Week Patterns")
 u = df['Teaching Week Pattern'].unique()
@@ -302,7 +380,7 @@ for weeks in weekssem1:
 
 # [10, 11, 12, 13, 14, 15, 16] - Two-Till-Eight (7) - 1
 
-# [9, 11, 13, 15, 17, 19] - Odd-Last (6) -  110
+# [9, 11, 13, 15, 17, 19] - Odd (6) -  110
     
 # [10, 12, 14, 16, 18, 19] - Even-And-Last (6) - 1
 
@@ -346,7 +424,7 @@ for weeks in weekssem2:
 
 # [29, 32, 34, 36] - Even-No-Second (4) - 32
 
-# [28, 30, 35] - 3-5-9 (3) - 5
+# [28, 30, 35] - Three-Five-Nine (3) - 5
 
 # [29, 34] - Four-And-Eight (2) - 6
 
@@ -398,7 +476,33 @@ for pattern in sem2patterncounter:
 
 
 
+def generate_time_constraints(row):
+    weeks = [w - 8 for w in week_pattern_to_list(row['Teaching Week Pattern'])]
+    # turn list of ints into binary string
+    weeks = ''.join(['1' if i in weeks else '0' for i in range(12)])
 
+    duration = row['Duration']
+    # Convert duration from hours string (hh:mm) to multiples of 5 minutes
+    duration = int(int(duration.split(':')[0]) * 12 + int(duration.split(':')[1]) / 5)
+    
+    constraints = []
+    penalty = 0
+    for day in range(5):
+        if day == 2: # Wednesday
+            penalty = 10 #TODO: Wednesday penalty (are we only considering afternoon?)
+        for slot in range(# 9am till 7pm, 5 minute slots; 19 - 9 = 10; 10 * 60 = 600; 600 / 5 = 120, step size is an hour: 60 / 5 = 12
+            0, 120 - duration + 1, 12 # TODO: do we need smaller step sizes?
+        ):
+            constraints.append(
+                {"days": day, "start": slot, "length": duration, "weeks": weeks, "penalty": penalty}
+            )
+    return constraints
+
+def generate_room_constraints(row, rooms, activity_groups):
+    constraints = []
+    for room in rooms:
+        if any([x in activity_groups[row['Activity Type Name']] for x in rooms[room]]):
+            constraints.append({"id": room, "penalty": 0}) #TODO: penalty
 
 
 # courses = {course: [] for course in courses} # courses only have ids as attributes and have 1 config each by our decision, and subparts under the config
@@ -416,13 +520,14 @@ for index, row in sem1df.iterrows():
         subpart = row['Activity'].split("/")[0]
     else:
         subpart = row['Activity'] + "_" + row['Scheduled Days'] # unique by selection
-    class_id = row['Activity']
+    class_id = row['Activity'] + "_" + row['Scheduled Days']
     activity_type = row['Activity Type Name'] # to tell what rooms can be used
-    duration = row['Duration']
-    # Convert duration from hours string (hh:mm) to multiples of 5 minutes
-    duration = int(int(duration.split(':')[0]) * 12 + int(duration.split(':')[1]) / 5)
+    # weeks, #TODO: maybe do groupings of week patterns that can be swapped between (a class on even weeks can be swapped to odd weeks, etc.)
+    classes[class_id] = {"subpart": subpart, "course": course, "activity_type": activity_type,
+                         "time_constraints": generate_time_constraints(row),
+                         "room_constraints": generate_room_constraints(row, rooms, activity_groups),
+                         "limit": max(int(row['Planned Size']), int(row['Real Size']))}
     # TODO: times
-    classes[class_id] = {"subpart": subpart, "course": course, "activity_type": activity_type, "duration": duration}
     courses.add(course)
     subparts.add((course, subpart))
 
@@ -433,16 +538,8 @@ print("SUBPARTS")
 print(subparts)
 print("CLASSES")
 print(classes)
-
-
-
-
-
-
-
-quit()
-
-
+print(len(classes))
+assert len(classes) == len(sem1df)
 
 
 
@@ -451,126 +548,88 @@ quit()
 
 
 
-courses = {course: [] for course in courses}
-subparts = {course: [] for course in courses}
 
-for index, row in df.iterrows():
-    course = row['Course Code']
-    subpart = row['Activity Type Name']
-    activity_type = row['Activity Type Name']
-    activity = row['Activity']
-    weeks_str = row['Teaching Week Pattern']
-    # split weeks_str on ', '
-    weeks_split = weeks_str.split(', ')
-    weeks = []
-    # if any of the weeks is a range, expand it
-    for i in range(len(weeks_split)):
-        if '-' in weeks_split[i]:
-            start, end = weeks_split[i].split('-')
-            weeks.extend(range(int(start), int(end) + 1))
-        else:
-            weeks.append(int(weeks_split[i]))
-    duration = row['Duration']
-    # Convert duration from hours string (hh:mm) to multiples of 5 minutes
-    duration = int(int(duration.split(':')[0]) * 12 + int(duration.split(':')[1]) / 5)
-    day = row["Scheduled Days"]
-    start = row["Scheduled Start Time"]
-    parent = None
-    for i in range(len(courses[course]), -1, -1):
-        if "Lecture" in subpart:
-            parent = i
-            break
-    # with open("asd.txt", "a") as file:
-    if "/" in activity and ("Lecture" in subpart or "lecture" in subpart):
-        # print(activity)
-        # subpart = activity.split("/")[0]
-        # file.write(activity + "\n")
-        with open("lectures_with_slash.txt", "a") as file:
-            file.write(activity + "\n")
-        continue # TODO
-    elif "/" in activity:
-        # print(activity)
-        subpart = activity.split("/")[0]
-        with open("non_lectures_with_slash.txt", "a") as file:
-            file.write(activity + "\n")
-        # file.write(activity + "\n")
-    else:
-        subpart = activity
-    penalties = ...
-    courses[course].append((subpart, activity, weeks, duration))
-    # if subpart not in subparts[course]:
-    have_subpart = False
-    for i in range(len(subparts[course])):
-        if subpart == subparts[course][i][0]:
-            have_subpart = True
-            break
-    if not have_subpart:
-        subparts[course].append([subpart, activity_type])
 
-for course in subparts:
-    for i in range(len(subparts[course])):
-        subparts[course][i][0] = str(i + 1) + "_" + subparts[course][i][0]
 
-print("#"*20)
-print("COURSES")
-print(courses) #NOTE
-print("#"*20)
 
-# match rooms with possible activity types #TODO: this will probably require some manual work
-rooms = {k: set() for k in room_ids.keys()}
-activity_types_df = df['Activity Type Name'].unique()
-activity_types = set()
-for at in activity_types_df:
-    activity_types.add(at)
 
-print("#"*20)
-print("ACTIVITY TYPES")
-print(activity_types) #NOTE
-print("#"*20)
 
-# {'*Workshop', '*Lecture - Online Pre-recorded', 'Oral Presentation', '*Workshop - Online Live', 'Computer Workshop', 'Q&A Session', 'Self Study', 'Examples Class', '*Lecture', '*Lecture - Online Live'}
-# groupings:
-# Lecture: *Lecture
-# Online: *Lecture - Online Pre-recorded, *Lecture - Online Live, Q&A Session, *Workshop - Online Live
-# Workshop: *Workshop
-# Computer Workshop: Computer Workshop
-# Special: Oral Presentation, Self Study, Examples Class
 
-activity_groups = {
-    "*Lecture": ["*Lecture"],
-    "*Lecture - Online Pre-recorded": ["*Lecture - Online Pre-recorded", "*Lecture - Online Live", "Q&A Session", "*Workshop - Online Live"],
-    "*Lecture - Online Live": ["*Lecture - Online Pre-recorded", "*Lecture - Online Live", "Q&A Session", "*Workshop - Online Live"],
-    "Q&A Session": ["*Lecture - Online Pre-recorded", "*Lecture - Online Live", "Q&A Session", "*Workshop - Online Live"],
-    "*Workshop - Online Live": ["*Lecture - Online Pre-recorded", "*Lecture - Online Live", "Q&A Session", "*Workshop - Online Live"],
-    "*Workshop": ["*Workshop"],
-    "Computer Workshop": ["Computer Workshop"],
-    "Oral Presentation": ["Oral Presentation"], #TODO: manually add to rooms where it can be held (due to few examples we may miss a lot)
-    "Self Study": ["Self Study"], #TODO: manually add to rooms where it can be held (due to few examples we may miss a lot)
-    "Examples Class": ["Examples Class"] #TODO: manually add to rooms where it can be held (due to few examples we may miss a lot)
-} # TODO: manually check that all rooms have all the activities they can hold, manually add the missing ones
 
-for index, row in df.iterrows():
-    room_name = row['Allocated Location Name']
-    # room_id = room_ids[room_name]
-    activity_type = row['Activity Type Name']
-    rooms[room_name].add(activity_type)
 
-# add the missing activities to the rooms (very inefficient, but it's a small dataset)
-for room in rooms:
-    temp = rooms[room].copy()
-    for activity in temp:
-        for activity2 in activity_groups[activity]:
-            rooms[room].add(activity2)
+# courses = {course: [] for course in courses}
+# subparts = {course: [] for course in courses}
 
-print("#"*20)
-print("ROOMS")
-print(rooms) #NOTE
-print("#"*20)
+# for index, row in df.iterrows():
+#     course = row['Course Code']
+#     subpart = row['Activity Type Name']
+#     activity_type = row['Activity Type Name']
+#     activity = row['Activity']
+#     weeks_str = row['Teaching Week Pattern']
+#     # split weeks_str on ', '
+#     weeks_split = weeks_str.split(', ')
+#     weeks = []
+#     # if any of the weeks is a range, expand it
+#     for i in range(len(weeks_split)):
+#         if '-' in weeks_split[i]:
+#             start, end = weeks_split[i].split('-')
+#             weeks.extend(range(int(start), int(end) + 1))
+#         else:
+#             weeks.append(int(weeks_split[i]))
+#     duration = row['Duration']
+#     # Convert duration from hours string (hh:mm) to multiples of 5 minutes
+#     duration = int(int(duration.split(':')[0]) * 12 + int(duration.split(':')[1]) / 5)
+#     day = row["Scheduled Days"]
+#     start = row["Scheduled Start Time"]
+#     parent = None
+#     for i in range(len(courses[course]), -1, -1):
+#         if "Lecture" in subpart:
+#             parent = i
+#             break
+#     # with open("asd.txt", "a") as file:
+#     if "/" in activity and ("Lecture" in subpart or "lecture" in subpart):
+#         # print(activity)
+#         # subpart = activity.split("/")[0]
+#         # file.write(activity + "\n")
+#         with open("lectures_with_slash.txt", "a") as file:
+#             file.write(activity + "\n")
+#         continue # TODO
+#     elif "/" in activity:
+#         # print(activity)
+#         subpart = activity.split("/")[0]
+#         with open("non_lectures_with_slash.txt", "a") as file:
+#             file.write(activity + "\n")
+#         # file.write(activity + "\n")
+#     else:
+#         subpart = activity
+#     penalties = ...
+#     courses[course].append((subpart, activity, weeks, duration))
+#     # if subpart not in subparts[course]:
+#     have_subpart = False
+#     for i in range(len(subparts[course])):
+#         if subpart == subparts[course][i][0]:
+#             have_subpart = True
+#             break
+#     if not have_subpart:
+#         subparts[course].append([subpart, activity_type])
+
+# for course in subparts:
+#     for i in range(len(subparts[course])):
+#         subparts[course][i][0] = str(i + 1) + "_" + subparts[course][i][0]
+
+# print("#"*20)
+# print("COURSES")
+# print(courses) #NOTE
+# print("#"*20)
+
+
 
 # generate the XML file
 
 # create the root element, weeks: 9 to 37, i.e. 29 weeks (9 is included, so is 37), TODO: slotsperday, 5 minute slots, currently gives 24 hrs, should try 9am-5pm or 6pm
-root = ET.Element("problem", name="som_timetabling", nrDays="7", nrWeeks="29", slotsPerday="288")
+
+################### Semester 1: 9 to 19 normally, #TODO: 1 class in 20
+root = ET.Element("problem", name="som_timetabling", nrDays="5", nrWeeks="12", slotsPerday="288") #NOTE: nrDays was changed to 5
 
 optimization_element = ET.SubElement(root, "optimization", time="2", room="1", distribution="1", student="2")
 
@@ -586,18 +645,22 @@ for room in room_ids:
 
 # create the courses element
 courses_element = ET.SubElement(root, "courses")
+
+
+
+
 # for each course, create a course element, with id
-for course in courses:
-    course_element = ET.SubElement(courses_element, "course", id=course)
-    config_element = ET.SubElement(course_element, "config", id=course+"_1")
-    lectures = [x[1] for x in subparts[course] if "Lecture" in x[0]]
-    for subpart in subparts[course]:
-        subpart_element = ET.SubElement(config_element, "subpart", id=subpart[0])
-        class_element = ET.SubElement(subpart_element, "class", id=subpart[0]) #TODO: limit, add more copies of the same activity if needed
-        # room elements
-        for room in rooms:
-            if any([x in activity_groups[subpart[1]] for x in rooms[room]]):
-                room_element = ET.SubElement(class_element, "room", id=str(room_ids[room]), penalty="0") #TODO: penalty
+# for course in courses:
+#     course_element = ET.SubElement(courses_element, "course", id=course)
+#     config_element = ET.SubElement(course_element, "config", id=course+"_1")
+#     lectures = [x[1] for x in subparts[course] if "Lecture" in x[0]]
+#     for subpart in subparts[course]:
+#         subpart_element = ET.SubElement(config_element, "subpart", id=subpart[0])
+#         class_element = ET.SubElement(subpart_element, "class", id=subpart[0]) #TODO: limit, add more copies of the same activity if needed
+#         # room elements
+#         for room in rooms:
+#             if any([x in activity_groups[subpart[1]] for x in rooms[room]]):
+#                 room_element = ET.SubElement(class_element, "room", id=str(room_ids[room]), penalty="0") #TODO: penalty
         #TODO: times for each activity
     # for each course, create a subpart element, with id
     # for subpart, activity, weeks, duration in courses[course]:
