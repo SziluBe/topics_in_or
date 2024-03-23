@@ -136,16 +136,74 @@ print("All courses are prefixed with 'MATH':", all_math_prefixed)
 
 
 
+def week_pattern_to_list(pattern):
+    weeks_split = pattern.split(', ')
+    weeks = []
+    # if any of the weeks is a range, expand it
+    for i in range(len(weeks_split)):
+        if '-' in weeks_split[i]:
+            start, end = weeks_split[i].split('-')
+            weeks.extend(range(int(start), int(end) + 1))
+        else:
+            weeks.append(int(weeks_split[i]))
+    return weeks
+
+def week_pattern_to_tuple(pattern):
+    return tuple(week_pattern_to_list(pattern))
+
+def sem2_pattern(pattern):
+    weeks = week_pattern_to_list(pattern)
+    return any([x > 20 for x in weeks])
+
+def time_string_to_int(time):
+    return int(time.split(':')[0]) * 60 + int(time.split(':')[1])
+
 
 #####
 # Re-doing courses
 #####
 
+
+####################
+# Cleaning dataset
+####################
+
+
+# Map "Scheduled Start Time" and "Scheduled End Time" to integers
+df['Scheduled Start Time'] = df['Scheduled Start Time'].apply(time_string_to_int)
+df['Scheduled End Time'] = df['Scheduled End Time'].apply(time_string_to_int)
+
+# Map "Teaching Week Pattern" to a list of integers
+df['Teaching Week Pattern'] = df['Teaching Week Pattern'].apply(week_pattern_to_tuple)
+
+print(df)
+
+# Check if we have courses overlapping and in the same room, but from different courses
+df = df.sort_values(by=['Course Code', 'Teaching Week Pattern', 'Scheduled Days', 'Scheduled Start Time', 'Scheduled End Time', 'Allocated Location Name', 'Activity'])
+# Find overlapping activities
+overlapping = df[df.duplicated(subset=['Scheduled Days', 'Scheduled Start Time', 'Scheduled End Time', 'Allocated Location Name'], keep=False)]
+overlapping = overlapping.sort_values(by=['Scheduled Days', 'Scheduled Start Time', 'Scheduled End Time', 'Allocated Location Name', 'Course Code', 'Teaching Week Pattern', 'Activity'])
+
+# output overlapping to an excel file
+overlapping.to_excel("overlapping.xlsx")
+
+
+
+quit()
+
+
+
+
+####################
 # Check if Activity - Scheduled Days pairs are unique
+####################
+
 # Separate non-unique pairs into a separate dataframe
 non_unique = df[df.duplicated(subset=['Activity', 'Scheduled Days'], keep=False)]
 # non_unique = df[df.duplicated(subset=['Activity'], keep=False)]
 print(non_unique)
+# sort by Teaching Week Pattern
+non_unique = non_unique.sort_values(by=['Course Code', 'Teaching Week Pattern', 'Scheduled Days', 'Activity'])
 # output non_unique to an excel file
 non_unique.to_excel("non_unique.xlsx")
 
@@ -169,7 +227,12 @@ print(len(non_unique))
 assert len(df) + len(non_unique) == og_len
 print("#"*20)
 
+
+
+####################
 # Extract rows with both "/" and "Lecture" or "<" in Activity
+####################
+
 weird_slash = df[((df['Activity'].str.contains("/")) & (df['Activity'].str.contains("Lecture"))) | (df['Activity'].str.contains("<")) | (df['Activity'].str.contains("Q&A")) | (df['Activity'].str.contains("Online"))]
 print(weird_slash.columns)
 print(weird_slash)
@@ -194,7 +257,12 @@ copy_df = df.copy()
 copy_df = copy_df[copy_df['Activity'].str.contains("/")]
 copy_df['Activity'] = copy_df['Activity'].apply(lambda x: x.split("/")[0])
 
+
+
+####################
 # Find unique Activity - Teaching Week Pattern pairs
+####################
+
 unique_activity_weeks = copy_df[['Activity', 'Teaching Week Pattern']].drop_duplicates()
 
 # bad_weeks_df = pd.DataFrame(columns=df.columns)
@@ -245,8 +313,10 @@ print(df['Activity Type Name'].unique())
 df.to_excel("cleaned.xlsx") #TODO: re-enable
 
 
-
+####################
 # Merge bad dfs and output to an excel file
+####################
+
 bad_df = pd.concat([non_unique, weird_slash, bad_df])
 
 assert len(df) + len(bad_df) == og_len
@@ -256,7 +326,7 @@ bad_df.to_excel("dirtied.xlsx")
 
 
 
-quit()
+# quit()
 
 
 
@@ -326,21 +396,7 @@ print("#"*20)
 weekssem1 = []
 weekssem2 = []
 
-def week_pattern_to_list(pattern):
-    weeks_split = pattern.split(', ')
-    weeks = []
-    # if any of the weeks is a range, expand it
-    for i in range(len(weeks_split)):
-        if '-' in weeks_split[i]:
-            start, end = weeks_split[i].split('-')
-            weeks.extend(range(int(start), int(end) + 1))
-        else:
-            weeks.append(int(weeks_split[i]))
-    return weeks
 
-def sem2_pattern(pattern):
-    weeks = week_pattern_to_list(pattern)
-    return any([x > 20 for x in weeks])
 
 for pattern in u:
     weeks = week_pattern_to_list(pattern)
@@ -423,8 +479,8 @@ for weeks in weekssem2:
 print("#"*20)
 
 
-sem1df = df[df['Teaching Week Pattern'].apply(lambda x: not sem2_pattern(x))]
-sem2df = df[df['Teaching Week Pattern'].apply(lambda x: sem2_pattern(x))]
+sem1df = df[df['Teaching Week Pattern'].apply(lambda x: not sem2_pattern(x))] #TODO
+sem2df = df[df['Teaching Week Pattern'].apply(lambda x: sem2_pattern(x))] #TODO
 print(len(sem1df))
 print(len(sem2df))
 print(len(df))
@@ -440,14 +496,14 @@ print("#"*20)
 sem1patterncounter = {}
 sem2patterncounter = {}
 for index, row in sem1df.iterrows():
-    pattern = row['Teaching Week Pattern']
+    pattern = row['Teaching Week Pattern'] #TODO
     weeks = tuple(week_pattern_to_list(pattern))
     if weeks in sem1patterncounter:
         sem1patterncounter[weeks] += 1
     else:
         sem1patterncounter[weeks] = 1
 for index, row in sem2df.iterrows():
-    pattern = row['Teaching Week Pattern']
+    pattern = row['Teaching Week Pattern'] #TODO
     weeks = tuple(week_pattern_to_list(pattern))
     if weeks in sem2patterncounter:
         sem2patterncounter[weeks] += 1
@@ -473,9 +529,9 @@ def day_to_bitstring(day, week_len):
 
 def generate_time_constraints(row):
     if SEMESTER == 1:
-        weeks = [w - 9 for w in week_pattern_to_list(row['Teaching Week Pattern'])]
+        weeks = [w - 9 for w in week_pattern_to_list(row['Teaching Week Pattern'])] #TODO
     elif SEMESTER == 2:
-        weeks = [w - 26 for w in week_pattern_to_list(row['Teaching Week Pattern'])]
+        weeks = [w - 26 for w in week_pattern_to_list(row['Teaching Week Pattern'])] #TODO
     # turn list of ints into binary string
     weeks = ''.join(['1' if i in weeks else '0' for i in range(12)])
 
