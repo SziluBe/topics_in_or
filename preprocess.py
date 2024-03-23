@@ -655,7 +655,7 @@ for course in courses:
                                                                     length=str(time_constraint["length"]),
                                                                     weeks=str(time_constraint["weeks"]),
                                                                     penalty=str(time_constraint["penalty"]))
-distributions_element = ET.SubElement(course_element, "distributions")
+distributions_element = ET.SubElement(root, "distributions")
 # SameAttendees
 for course in courses:
     course_id = course_ids[course]
