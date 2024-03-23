@@ -110,7 +110,8 @@ distances = {
 for room_id in room_ids.values():
     for room_id2 in room_ids.values():
         if room_id != room_id2:
-            travel_times[(room_id, room_id2)] = [distances.get((room_zones[room_id], room_zones[room_id2]), distances.get((room_zones[room_id2], room_zones[room_id]), "nan")), room_zones[room_id], room_zones[room_id2]]
+            # NOTE: if the distance is undefined, it is set to 0 ---> #TODO: check if this is correct
+            travel_times[(room_id, room_id2)] = [distances.get((room_zones[room_id], room_zones[room_id2]), distances.get((room_zones[room_id2], room_zones[room_id]), 0)), room_zones[room_id], room_zones[room_id2]]
 
 print("#"*20)
 print("TRAVEL TIMES")
@@ -572,10 +573,10 @@ for index, row in sem1df.iterrows() if SEMESTER == 1 else sem2df.iterrows():
         subpart = row['Activity'].split("/")[0]
     else:
         subpart = row['Activity'] + "_" + row['Scheduled Days'] # unique by selection
-    class_id = row['Activity'] + "_" + row['Scheduled Days']
+    class_name = row['Activity'] + "_" + row['Scheduled Days']
     activity_type = row['Activity Type Name'] # to tell what rooms can be used
     # weeks, #TODO: maybe do groupings of week patterns that can be swapped between (a class on even weeks can be swapped to odd weeks, etc.)
-    classes[class_id] = {"subpart": subpart, "course": course, "activity_type": activity_type,
+    classes[class_name] = {"subpart": subpart, "course": course, "activity_type": activity_type,
                          "time_constraints": generate_time_constraints(row),
                          "room_constraints": generate_room_constraints(row, rooms, activity_groups),
                          "limit": max(int(row['Planned Size']), int(row['Real Size']))}
@@ -588,14 +589,14 @@ assert len(classes) == len(sem1df if SEMESTER == 1 else sem2df)
 
 courses = {}
 
-for class_id in classes:
-    course = classes[class_id]['course']
-    subpart = classes[class_id]['subpart']
+for class_name in classes:
+    course = classes[class_name]['course']
+    subpart = classes[class_name]['subpart']
     if course not in courses:
         courses[course] = {}
     if subpart not in courses[course]:
         courses[course][subpart] = []
-    courses[course][subpart].append(class_id)
+    courses[course][subpart].append(class_name)
 
 print("#"*20)
 print("COURSES")
@@ -622,26 +623,58 @@ for room in room_ids:
         if room_ids[room] != room_ids[room2]:
             travel_element = ET.SubElement(room_element, "travel", room=str(room_ids[room2]), value=str(travel_times[(room_ids[room], room_ids[room2])][0]))
 
+course_ids = {}
+subpart_ids = {}
+class_ids = {}
+
+next_course_id = 0
+next_subpart_id = 0
+next_class_id = 0
+
 # create the courses element
 courses_element = ET.SubElement(root, "courses")
 for course in courses:
-    course_element = ET.SubElement(courses_element, "course", id=course)
-    config_element = ET.SubElement(course_element, "config", id=course+"_1")
+    course_id = course_ids[course] = next_course_id
+    # course_element = ET.SubElement(courses_element, "course", id=course)
+    course_element = ET.SubElement(courses_element, "course", id=str(next_course_id))
+    next_course_id += 1
+    config_element = ET.SubElement(course_element, "config", id="0")
     for subpart in courses[course]:
-        subpart_element = ET.SubElement(config_element, "subpart", id=subpart)
-        for class_id in courses[course][subpart]:
-            class_element = ET.SubElement(subpart_element, "class", id=class_id, limit=str(classes[class_id]["limit"])) # TODO: skip classes with limit 0
-            for room_constraint in classes[class_id]["room_constraints"]:
+        subpart_id = subpart_ids[subpart] = next_subpart_id
+        subpart_element = ET.SubElement(config_element, "subpart", id=str(next_subpart_id))
+        next_subpart_id += 1
+        for class_name in courses[course][subpart]:
+            class_id = class_ids[class_name] = next_class_id
+            class_element = ET.SubElement(subpart_element, "class", id=str(class_id), limit=str(classes[class_name]["limit"])) # TODO: skip classes with limit 0
+            next_class_id += 1
+            for room_constraint in classes[class_name]["room_constraints"]:
                 room_element = ET.SubElement(class_element, "room", id=str(room_constraint["id"]), penalty=str(room_constraint["penalty"]))
-            for time_constraint in classes[class_id]["time_constraints"]:
+            for time_constraint in classes[class_name]["time_constraints"]:
                 time_element = ET.SubElement(class_element, "time", days=str(time_constraint["days"]),
                                                                     start=str(time_constraint["start"]),
                                                                     length=str(time_constraint["length"]),
                                                                     weeks=str(time_constraint["weeks"]),
                                                                     penalty=str(time_constraint["penalty"]))
+distributions_element = ET.SubElement(course_element, "distributions")
+# SameAttendees
+for course in courses:
+    course_id = course_ids[course]
+    for subpart in courses[course]:
+        subpart_id = subpart_ids[subpart]
+        if "lecture" in subpart.lower():
+            for class_name in courses[course][subpart]:
+                distribution_element = ET.SubElement(distributions_element, "distribution", type="SameAttendees", required="true")
+                class_id = class_ids[class_name]
+                class_element = ET.SubElement(distribution_element, "class", id=str(class_id))
+                for subpart2 in courses[course]:
+                    subpart_id2 = subpart_ids[subpart2]
+                    if subpart_id != subpart_id2:
+                        for class_name2 in courses[course][subpart2]:
+                            class_id2 = class_ids[class_name2]
+                            class_element2 = ET.SubElement(distribution_element, "class", id=str(class_id2))
 
 
-students_element = parse_students.main()
+students_element = parse_students.main(course_ids)
 root.append(students_element)
 
 

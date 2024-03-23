@@ -2,7 +2,7 @@ import pandas as pd
 import xml.etree.ElementTree as ET
 
 
-def main():
+def main(course_ids):
     # Load the data into a pandas table
     df = pd.read_excel("Anon Enrollment Data.xlsx")
 
@@ -25,11 +25,17 @@ def main():
     # create a new xml tree
     root = ET.Element("students")
 
+    student_ids = {}
+    next_student_id = 0
+
     # add a student element for each UUN
     for uun in uuns:
-        student = ET.SubElement(root, "student", id=uun)
+        student_ids[uun] = next_student_id
+        next_student_id += 1
+        student = ET.SubElement(root, "student", id=str(student_ids[uun]))
         for course in uuns[uun]:
-            ET.SubElement(student, "course", id=course)
+            if course in course_ids: # NOTE: otherwise course is in a different semester
+                ET.SubElement(student, "course", id=str(course_ids[course]))
 
     # write the tree to a file
     # with open("students.xml", "wb") as f:
