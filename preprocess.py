@@ -4,7 +4,7 @@ import xml.etree.ElementTree as ET
 
 import parse_students
 
-SEMESTER = 2
+SEMESTER = 1
 
 
 # Specify the file path
@@ -152,7 +152,7 @@ def week_pattern_to_tuple(pattern):
     return tuple(week_pattern_to_list(pattern))
 
 def sem2_pattern(pattern):
-    weeks = week_pattern_to_list(pattern)
+    weeks = pattern
     return any([x > 20 for x in weeks])
 
 def time_string_to_int(time):
@@ -189,7 +189,7 @@ overlapping.to_excel("overlapping.xlsx")
 
 
 
-quit()
+# quit()
 
 
 
@@ -399,7 +399,8 @@ weekssem2 = []
 
 
 for pattern in u:
-    weeks = week_pattern_to_list(pattern)
+    # weeks = week_pattern_to_list(pattern)
+    weeks = pattern
     print(pattern, weeks)
     if any([x <= 20 for x in weeks]) and any([x > 20 for x in weeks]):
         print("^Two-semester class")
@@ -497,14 +498,14 @@ sem1patterncounter = {}
 sem2patterncounter = {}
 for index, row in sem1df.iterrows():
     pattern = row['Teaching Week Pattern'] #TODO
-    weeks = tuple(week_pattern_to_list(pattern))
+    weeks = pattern
     if weeks in sem1patterncounter:
         sem1patterncounter[weeks] += 1
     else:
         sem1patterncounter[weeks] = 1
 for index, row in sem2df.iterrows():
     pattern = row['Teaching Week Pattern'] #TODO
-    weeks = tuple(week_pattern_to_list(pattern))
+    weeks = pattern
     if weeks in sem2patterncounter:
         sem2patterncounter[weeks] += 1
     else:
@@ -529,9 +530,9 @@ def day_to_bitstring(day, week_len):
 
 def generate_time_constraints(row):
     if SEMESTER == 1:
-        weeks = [w - 9 for w in week_pattern_to_list(row['Teaching Week Pattern'])] #TODO
+        weeks = [w - 9 for w in row['Teaching Week Pattern']] #TODO
     elif SEMESTER == 2:
-        weeks = [w - 26 for w in week_pattern_to_list(row['Teaching Week Pattern'])] #TODO
+        weeks = [w - 26 for w in row['Teaching Week Pattern']] #TODO
     # turn list of ints into binary string
     weeks = ''.join(['1' if i in weeks else '0' for i in range(12)])
 
@@ -558,7 +559,7 @@ def generate_room_constraints(row, rooms, activity_groups):
         if (any([x in activity_groups[row['Activity Type Name']] for x in rooms[room]]) and
                 row['Planned Size'] <= room_capacities[room_ids[room]] and # the presence of 'room_ids' is giving legacy vibes but oops
                 row['Real Size'] <= room_capacities[room_ids[room]]):
-            constraints.append({"id": room, "penalty": 0}) #TODO: penalty
+            constraints.append({"id": room_ids[room], "penalty": 0}) #TODO: penalty
     return constraints
 
 
