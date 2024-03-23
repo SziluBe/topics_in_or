@@ -607,7 +607,7 @@ print("#"*20)
 # create the root element, (#NOTE: changed, now counts from start of sem instead of: - weeks: 9 to 37, i.e. 29 weeks (9 is included, so is 37))
 
 ################### Semester 1: 9 to 19 normally, #TODO: 1 class in 20
-root = ET.Element("problem", name="sem1_som_timetabling" if SEMESTER == 1 else "sem2_som_timetabling", nrDays="5", nrWeeks="12", slotsPerday="288") #NOTE: nrDays was changed to 5
+root = ET.Element("problem", name="sem1_som_timetabling" if SEMESTER == 1 else "sem2_som_timetabling", nrDays="5", nrWeeks="12", slotsPerDay="288") #NOTE: nrDays was changed to 5
 
 optimization_element = ET.SubElement(root, "optimization", time="2", room="1", distribution="1", student="2")
 
