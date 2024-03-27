@@ -1,0 +1,773 @@
+26-Mar-24 02:50:54.330 [main] WARN  util.Progress> Class <A href='classDetail.do?cid=55'>C55</A> has zero class limit.
+26-Mar-24 02:50:54.331 [main] WARN  util.Progress> Class <A href='classDetail.do?cid=67'>C67</A> has zero class limit.
+26-Mar-24 02:50:54.682 [main] WARN  util.Progress> Class <A href='classDetail.do?cid=211'>C211</A> has zero class limit.
+26-Mar-24 02:50:54.683 [main] WARN  util.Progress> Class <A href='classDetail.do?cid=212'>C212</A> has zero class limit.
+26-Mar-24 02:50:54.694 [main] WARN  util.Progress> Class <A href='classDetail.do?cid=213'>C213</A> has zero class limit.
+26-Mar-24 02:50:54.694 [main] WARN  util.Progress> Class <A href='classDetail.do?cid=214'>C214</A> has zero class limit.
+26-Mar-24 02:50:54.695 [main] WARN  util.Progress> Class <A href='classDetail.do?cid=215'>C215</A> has zero class limit.
+26-Mar-24 02:50:54.695 [main] WARN  util.Progress> Class <A href='classDetail.do?cid=221'>C221</A> has zero class limit.
+26-Mar-24 02:50:54.695 [main] WARN  util.Progress> Class <A href='classDetail.do?cid=222'>C222</A> has zero class limit.
+26-Mar-24 02:50:54.696 [main] WARN  util.Progress> Class <A href='classDetail.do?cid=223'>C223</A> has zero class limit.
+26-Mar-24 02:50:54.696 [main] WARN  util.Progress> Class <A href='classDetail.do?cid=224'>C224</A> has zero class limit.
+26-Mar-24 02:50:54.696 [main] WARN  util.Progress> Class <A href='classDetail.do?cid=225'>C225</A> has zero class limit.
+26-Mar-24 02:50:54.697 [main] WARN  util.Progress> Class <A href='classDetail.do?cid=231'>C231</A> has zero class limit.
+26-Mar-24 02:50:54.697 [main] WARN  util.Progress> Class <A href='classDetail.do?cid=232'>C232</A> has zero class limit.
+26-Mar-24 02:50:54.697 [main] WARN  util.Progress> Class <A href='classDetail.do?cid=233'>C233</A> has zero class limit.
+26-Mar-24 02:50:54.697 [main] WARN  util.Progress> Class <A href='classDetail.do?cid=234'>C234</A> has zero class limit.
+26-Mar-24 02:50:54.698 [main] WARN  util.Progress> Class <A href='classDetail.do?cid=235'>C235</A> has zero class limit.
+26-Mar-24 02:50:54.698 [main] WARN  util.Progress> Class <A href='classDetail.do?cid=241'>C241</A> has zero class limit.
+26-Mar-24 02:50:54.698 [main] WARN  util.Progress> Class <A href='classDetail.do?cid=242'>C242</A> has zero class limit.
+26-Mar-24 02:50:54.698 [main] WARN  util.Progress> Class <A href='classDetail.do?cid=243'>C243</A> has zero class limit.
+26-Mar-24 02:50:54.698 [main] WARN  util.Progress> Class <A href='classDetail.do?cid=244'>C244</A> has zero class limit.
+26-Mar-24 02:50:54.699 [main] WARN  util.Progress> Class <A href='classDetail.do?cid=245'>C245</A> has zero class limit.
+26-Mar-24 02:50:54.788 [main] WARN  util.Progress> Class <A href='classDetail.do?cid=466'>C466</A> has zero class limit.
+26-Mar-24 02:50:54.789 [main] WARN  util.Progress> Class <A href='classDetail.do?cid=462'>C462</A> has zero class limit.
+26-Mar-24 02:50:54.794 [main] WARN  util.Progress> Class <A href='classDetail.do?cid=511'>C511</A> has zero class limit.
+26-Mar-24 02:51:00.372 [Solver] INFO  util.Progress> [Solving problem ...]
+26-Mar-24 02:51:00.386 [Solver] INFO  solver.Solver> Using org.cpsolver.ifs.termination.MPPTerminationCondition
+26-Mar-24 02:51:00.394 [Solver] INFO  solver.Solver> Using org.cpsolver.coursett.heuristics.TimetableComparator
+26-Mar-24 02:51:00.399 [Solver] INFO  solver.Solver> Using org.cpsolver.ifs.algorithms.SimpleSearch
+26-Mar-24 02:51:00.409 [Solver] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.coursett.heuristics.PlacementSelection
+26-Mar-24 02:51:00.416 [Solver] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.coursett.heuristics.LectureSelection
+26-Mar-24 02:51:00.426 [Solver] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.coursett.heuristics.PlacementSelection
+26-Mar-24 02:51:00.426 [Solver] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.coursett.heuristics.LectureSelection
+26-Mar-24 02:51:00.461 [Solver] INFO  solver.Solver> Using org.cpsolver.coursett.heuristics.UniversalPerturbationsCounter
+26-Mar-24 02:51:00.467 [Solver] INFO  solver.Solver> Using org.cpsolver.ifs.extension.ConflictStatistics
+26-Mar-24 02:51:00.489 [Solver] INFO  util.JProf> Using wall time.
+26-Mar-24 02:51:00.522 [Solver] INFO  solver.Solver> Initial solution:[
+    Assigned variables: 0.00% (0/569)
+    Distribution preferences: 100.00% (0.00)
+    Iteration: 0
+    Memory usage: 169.16M
+    Overall solution value: 0.00
+    Room preferences: 100.00% (0)
+    Same subpart balancing penalty: 0.00
+    Student conflicts: 0 [committed:0, distance:0, hard:0]
+    Time: 0.00 min
+    Time preferences: 100.00% (0.00)
+    Too big rooms: 0.00% (0)
+    Useless half-hours: 0.00% (0 + 0)
+  ]
+26-Mar-24 02:51:00.542 [Solver] INFO  coursett.Test> **BEST[0]** V:0/569, T:0.00
+26-Mar-24 02:51:00.543 [Solver] INFO  util.Progress> [Solver] Construction...
+26-Mar-24 02:51:00.674 [Solver] INFO  coursett.Test> **BEST[1]** V:1/569, T:0.00
+26-Mar-24 02:51:00.701 [Solver] INFO  coursett.Test> **BEST[2]** V:2/569, T:0.00
+26-Mar-24 02:51:00.732 [Solver] INFO  coursett.Test> **BEST[3]** V:3/569, T:0.00
+26-Mar-24 02:51:00.755 [Solver] INFO  coursett.Test> **BEST[4]** V:4/569, T:0.00
+26-Mar-24 02:51:00.785 [Solver] INFO  coursett.Test> **BEST[5]** V:5/569, T:0.00
+26-Mar-24 02:51:00.859 [Solver] INFO  coursett.Test> **BEST[6]** V:6/569, T:0.00
+26-Mar-24 02:51:00.911 [Solver] INFO  coursett.Test> **BEST[7]** V:7/569, T:0.00
+26-Mar-24 02:51:00.952 [Solver] INFO  coursett.Test> **BEST[8]** V:8/569, T:0.00
+26-Mar-24 02:51:00.966 [Solver] INFO  coursett.Test> **BEST[9]** V:9/569, T:0.00
+26-Mar-24 02:51:00.999 [Solver] INFO  coursett.Test> **BEST[10]** V:10/569, T:0.00
+26-Mar-24 02:51:01.115 [Solver] INFO  coursett.Test> **BEST[11]** V:11/569, T:0.00
+26-Mar-24 02:51:01.190 [Solver] INFO  coursett.Test> **BEST[12]** V:12/569, T:0.00
+26-Mar-24 02:51:01.202 [Solver] INFO  coursett.Test> **BEST[13]** V:13/569, T:0.00
+26-Mar-24 02:51:01.215 [Solver] INFO  coursett.Test> **BEST[14]** V:14/569, T:0.00
+26-Mar-24 02:51:01.251 [Solver] INFO  coursett.Test> **BEST[15]** V:15/569, T:0.00
+26-Mar-24 02:51:01.267 [Solver] INFO  coursett.Test> **BEST[16]** V:16/569, T:0.00
+26-Mar-24 02:51:01.278 [Solver] INFO  coursett.Test> **BEST[17]** V:17/569, T:0.00
+26-Mar-24 02:51:01.310 [Solver] INFO  coursett.Test> **BEST[18]** V:18/569, T:0.00
+26-Mar-24 02:51:01.378 [Solver] INFO  coursett.Test> **BEST[19]** V:19/569, T:0.00
+26-Mar-24 02:51:01.452 [Solver] INFO  coursett.Test> **BEST[20]** V:20/569, T:0.00
+26-Mar-24 02:51:01.474 [Solver] INFO  coursett.Test> **BEST[21]** V:21/569, T:0.00
+26-Mar-24 02:51:01.512 [Solver] INFO  coursett.Test> **BEST[22]** V:22/569, T:0.00
+26-Mar-24 02:51:01.526 [Solver] INFO  coursett.Test> **BEST[23]** V:23/569, T:0.00
+26-Mar-24 02:51:01.546 [Solver] INFO  coursett.Test> **BEST[24]** V:24/569, T:0.00
+26-Mar-24 02:51:01.588 [Solver] INFO  coursett.Test> **BEST[25]** V:25/569, T:0.00
+26-Mar-24 02:51:01.617 [Solver] INFO  coursett.Test> **BEST[26]** V:26/569, T:0.00
+26-Mar-24 02:51:01.638 [Solver] INFO  coursett.Test> **BEST[27]** V:27/569, T:0.00
+26-Mar-24 02:51:01.646 [Solver] INFO  coursett.Test> **BEST[28]** V:28/569, T:0.00
+26-Mar-24 02:51:01.682 [Solver] INFO  coursett.Test> **BEST[29]** V:29/569, T:0.00
+26-Mar-24 02:51:01.712 [Solver] INFO  coursett.Test> **BEST[30]** V:30/569, T:0.00
+26-Mar-24 02:51:01.727 [Solver] INFO  coursett.Test> **BEST[31]** V:31/569, T:0.00
+26-Mar-24 02:51:01.757 [Solver] INFO  coursett.Test> **BEST[32]** V:32/569, T:0.00
+26-Mar-24 02:51:02.325 [Solver] INFO  coursett.Test> **BEST[33]** V:33/569, T:0.00
+26-Mar-24 02:51:02.338 [Solver] INFO  coursett.Test> **BEST[34]** V:34/569, T:0.00
+26-Mar-24 02:51:02.365 [Solver] INFO  coursett.Test> **BEST[35]** V:35/569, T:0.00
+26-Mar-24 02:51:02.471 [Solver] INFO  coursett.Test> **BEST[36]** V:36/569, T:0.00
+26-Mar-24 02:51:02.509 [Solver] INFO  coursett.Test> **BEST[37]** V:37/569, T:0.00
+26-Mar-24 02:51:02.516 [Solver] INFO  coursett.Test> **BEST[38]** V:38/569, T:0.00
+26-Mar-24 02:51:02.554 [Solver] INFO  coursett.Test> **BEST[39]** V:39/569, T:0.00
+26-Mar-24 02:51:02.583 [Solver] INFO  coursett.Test> **BEST[40]** V:40/569, T:0.00
+26-Mar-24 02:51:02.593 [Solver] INFO  coursett.Test> **BEST[41]** V:41/569, T:0.00
+26-Mar-24 02:51:02.634 [Solver] INFO  coursett.Test> **BEST[42]** V:42/569, T:0.00
+26-Mar-24 02:51:02.664 [Solver] INFO  coursett.Test> **BEST[43]** V:43/569, T:0.00
+26-Mar-24 02:51:02.672 [Solver] INFO  coursett.Test> **BEST[44]** V:44/569, T:0.00
+26-Mar-24 02:51:02.687 [Solver] INFO  coursett.Test> **BEST[45]** V:45/569, T:0.00
+26-Mar-24 02:51:02.717 [Solver] INFO  coursett.Test> **BEST[46]** V:46/569, T:0.00
+26-Mar-24 02:51:02.760 [Solver] INFO  coursett.Test> **BEST[47]** V:47/569, T:0.00
+26-Mar-24 02:51:02.788 [Solver] INFO  coursett.Test> **BEST[48]** V:48/569, T:0.00
+26-Mar-24 02:51:02.818 [Solver] INFO  coursett.Test> **BEST[49]** V:49/569, T:0.00
+26-Mar-24 02:51:02.854 [Solver] INFO  coursett.Test> **BEST[50]** V:50/569, T:0.00
+26-Mar-24 02:51:02.860 [Solver] INFO  coursett.Test> **BEST[51]** V:51/569, T:0.00
+26-Mar-24 02:51:02.876 [Solver] INFO  coursett.Test> **BEST[52]** V:52/569, T:0.00
+26-Mar-24 02:51:03.477 [Solver] INFO  coursett.Test> **BEST[53]** V:53/569, T:0.00
+26-Mar-24 02:51:03.514 [Solver] INFO  coursett.Test> **BEST[54]** V:54/569, T:0.00
+26-Mar-24 02:51:03.530 [Solver] INFO  coursett.Test> **BEST[55]** V:55/569, T:0.00
+26-Mar-24 02:51:03.541 [Solver] INFO  coursett.Test> **BEST[56]** V:56/569, T:0.00
+26-Mar-24 02:51:03.552 [Solver] INFO  coursett.Test> **BEST[57]** V:57/569, T:0.00
+26-Mar-24 02:51:03.565 [Solver] INFO  coursett.Test> **BEST[58]** V:58/569, T:0.00
+26-Mar-24 02:51:03.574 [Solver] INFO  coursett.Test> **BEST[59]** V:59/569, T:0.00
+26-Mar-24 02:51:03.581 [Solver] INFO  coursett.Test> **BEST[60]** V:60/569, T:0.00
+26-Mar-24 02:51:03.593 [Solver] INFO  coursett.Test> **BEST[61]** V:61/569, T:0.00
+26-Mar-24 02:51:03.611 [Solver] INFO  coursett.Test> **BEST[62]** V:62/569, T:0.00
+26-Mar-24 02:51:03.618 [Solver] INFO  coursett.Test> **BEST[63]** V:63/569, T:0.00
+26-Mar-24 02:51:03.644 [Solver] INFO  coursett.Test> **BEST[64]** V:64/569, T:0.00
+26-Mar-24 02:51:03.678 [Solver] INFO  coursett.Test> **BEST[65]** V:65/569, T:0.00
+26-Mar-24 02:51:03.695 [Solver] INFO  coursett.Test> **BEST[66]** V:66/569, T:0.00
+26-Mar-24 02:51:03.710 [Solver] INFO  coursett.Test> **BEST[67]** V:67/569, T:0.00
+26-Mar-24 02:51:03.724 [Solver] INFO  coursett.Test> **BEST[68]** V:68/569, T:0.00
+26-Mar-24 02:51:03.752 [Solver] INFO  coursett.Test> **BEST[69]** V:69/569, T:0.00
+26-Mar-24 02:51:03.771 [Solver] INFO  coursett.Test> **BEST[70]** V:70/569, T:0.00
+26-Mar-24 02:51:03.792 [Solver] INFO  coursett.Test> **BEST[71]** V:71/569, T:0.00
+26-Mar-24 02:51:03.802 [Solver] INFO  coursett.Test> **BEST[72]** V:72/569, T:0.00
+26-Mar-24 02:51:03.812 [Solver] INFO  coursett.Test> **BEST[73]** V:73/569, T:0.00
+26-Mar-24 02:51:03.845 [Solver] INFO  coursett.Test> **BEST[74]** V:74/569, T:0.00
+26-Mar-24 02:51:03.851 [Solver] INFO  coursett.Test> **BEST[75]** V:75/569, T:0.00
+26-Mar-24 02:51:03.863 [Solver] INFO  coursett.Test> **BEST[76]** V:76/569, T:0.00
+26-Mar-24 02:51:03.870 [Solver] INFO  coursett.Test> **BEST[77]** V:77/569, T:0.00
+26-Mar-24 02:51:03.890 [Solver] INFO  coursett.Test> **BEST[78]** V:78/569, T:0.00
+26-Mar-24 02:51:03.909 [Solver] INFO  coursett.Test> **BEST[79]** V:79/569, T:0.00
+26-Mar-24 02:51:03.932 [Solver] INFO  coursett.Test> **BEST[80]** V:80/569, T:0.00
+26-Mar-24 02:51:03.938 [Solver] INFO  coursett.Test> **BEST[81]** V:81/569, T:0.00
+26-Mar-24 02:51:03.944 [Solver] INFO  coursett.Test> **BEST[82]** V:82/569, T:0.00
+26-Mar-24 02:51:03.967 [Solver] INFO  coursett.Test> **BEST[83]** V:83/569, T:0.00
+26-Mar-24 02:51:03.976 [Solver] INFO  coursett.Test> **BEST[84]** V:84/569, T:0.00
+26-Mar-24 02:51:04.015 [Solver] INFO  coursett.Test> **BEST[85]** V:85/569, T:0.00
+26-Mar-24 02:51:04.027 [Solver] INFO  coursett.Test> **BEST[86]** V:86/569, T:0.00
+26-Mar-24 02:51:04.059 [Solver] INFO  coursett.Test> **BEST[87]** V:87/569, T:0.00
+26-Mar-24 02:51:04.066 [Solver] INFO  coursett.Test> **BEST[88]** V:88/569, T:0.00
+26-Mar-24 02:51:04.087 [Solver] INFO  coursett.Test> **BEST[89]** V:89/569, T:0.00
+26-Mar-24 02:51:04.118 [Solver] INFO  coursett.Test> **BEST[90]** V:90/569, T:0.00
+26-Mar-24 02:51:04.122 [Solver] INFO  coursett.Test> **BEST[91]** V:91/569, T:0.00
+26-Mar-24 02:51:04.129 [Solver] INFO  coursett.Test> **BEST[92]** V:92/569, T:0.00
+26-Mar-24 02:51:04.143 [Solver] INFO  coursett.Test> **BEST[93]** V:93/569, T:0.00
+26-Mar-24 02:51:04.152 [Solver] INFO  coursett.Test> **BEST[94]** V:94/569, T:0.00
+26-Mar-24 02:51:04.188 [Solver] INFO  coursett.Test> **BEST[95]** V:95/569, T:0.00
+26-Mar-24 02:51:04.195 [Solver] INFO  coursett.Test> **BEST[96]** V:96/569, T:0.00
+26-Mar-24 02:51:04.200 [Solver] INFO  coursett.Test> **BEST[97]** V:97/569, T:0.00
+26-Mar-24 02:51:04.220 [Solver] INFO  coursett.Test> **BEST[98]** V:98/569, T:0.00
+26-Mar-24 02:51:04.230 [Solver] INFO  coursett.Test> **BEST[99]** V:99/569, T:0.00
+26-Mar-24 02:51:04.247 [Solver] INFO  coursett.Test> **BEST[100]** V:100/569, T:0.00
+26-Mar-24 02:51:04.254 [Solver] INFO  coursett.Test> **BEST[101]** V:101/569, T:0.00
+26-Mar-24 02:51:04.288 [Solver] INFO  coursett.Test> **BEST[102]** V:102/569, T:0.00
+26-Mar-24 02:51:04.314 [Solver] INFO  coursett.Test> **BEST[103]** V:103/569, T:0.00
+26-Mar-24 02:51:04.328 [Solver] INFO  coursett.Test> **BEST[104]** V:104/569, T:0.00
+26-Mar-24 02:51:04.349 [Solver] INFO  coursett.Test> **BEST[105]** V:105/569, T:0.00
+26-Mar-24 02:51:04.371 [Solver] INFO  coursett.Test> **BEST[106]** V:106/569, T:0.00
+26-Mar-24 02:51:04.390 [Solver] INFO  coursett.Test> **BEST[107]** V:107/569, T:0.00
+26-Mar-24 02:51:04.404 [Solver] INFO  coursett.Test> **BEST[108]** V:108/569, T:0.00
+26-Mar-24 02:51:04.416 [Solver] INFO  coursett.Test> **BEST[109]** V:109/569, T:0.00
+26-Mar-24 02:51:04.430 [Solver] INFO  coursett.Test> **BEST[110]** V:110/569, T:0.00
+26-Mar-24 02:51:04.442 [Solver] INFO  coursett.Test> **BEST[111]** V:111/569, T:0.00
+26-Mar-24 02:51:04.484 [Solver] INFO  coursett.Test> **BEST[112]** V:112/569, T:0.00
+26-Mar-24 02:51:04.495 [Solver] INFO  coursett.Test> **BEST[113]** V:113/569, T:0.00
+26-Mar-24 02:51:04.502 [Solver] INFO  coursett.Test> **BEST[114]** V:114/569, T:0.00
+26-Mar-24 02:51:04.514 [Solver] INFO  coursett.Test> **BEST[115]** V:115/569, T:0.00
+26-Mar-24 02:51:04.528 [Solver] INFO  coursett.Test> **BEST[116]** V:116/569, T:0.00
+26-Mar-24 02:51:04.536 [Solver] INFO  coursett.Test> **BEST[117]** V:117/569, T:0.00
+26-Mar-24 02:51:04.567 [Solver] INFO  coursett.Test> **BEST[118]** V:118/569, T:0.00
+26-Mar-24 02:51:04.579 [Solver] INFO  coursett.Test> **BEST[119]** V:119/569, T:0.00
+26-Mar-24 02:51:04.587 [Solver] INFO  coursett.Test> **BEST[120]** V:120/569, T:0.00
+26-Mar-24 02:51:04.663 [Solver] INFO  coursett.Test> **BEST[121]** V:121/569, T:1.20, SDC:3
+26-Mar-24 02:51:04.675 [Solver] INFO  coursett.Test> **BEST[122]** V:122/569, T:1.20, SDC:3
+26-Mar-24 02:51:04.696 [Solver] INFO  coursett.Test> **BEST[123]** V:123/569, T:1.20, SDC:3
+26-Mar-24 02:51:04.749 [Solver] INFO  coursett.Test> **BEST[124]** V:124/569, T:1.20, SDC:3
+26-Mar-24 02:51:04.783 [Solver] INFO  coursett.Test> **BEST[125]** V:125/569, T:1.20, SDC:3
+26-Mar-24 02:51:04.828 [Solver] INFO  coursett.Test> **BEST[126]** V:126/569, T:1.20, SDC:3
+26-Mar-24 02:51:04.842 [Solver] INFO  coursett.Test> **BEST[127]** V:127/569, T:1.20, SDC:3
+26-Mar-24 02:51:04.862 [Solver] INFO  coursett.Test> **BEST[128]** V:128/569, T:1.20, SDC:3
+26-Mar-24 02:51:04.873 [Solver] INFO  coursett.Test> **BEST[129]** V:129/569, T:1.20, SDC:3
+26-Mar-24 02:51:04.882 [Solver] INFO  coursett.Test> **BEST[130]** V:130/569, T:1.20, SDC:3
+26-Mar-24 02:51:04.915 [Solver] INFO  coursett.Test> **BEST[131]** V:131/569, T:1.20, SDC:3
+26-Mar-24 02:51:04.943 [Solver] INFO  coursett.Test> **BEST[132]** V:132/569, T:1.20, SDC:3
+26-Mar-24 02:51:04.968 [Solver] INFO  coursett.Test> **BEST[133]** V:133/569, T:1.20, SDC:3
+26-Mar-24 02:51:04.994 [Solver] INFO  coursett.Test> **BEST[134]** V:134/569, T:1.60, SDC:3, SOC:1
+26-Mar-24 02:51:05.037 [Solver] INFO  coursett.Test> **BEST[135]** V:135/569, T:1.60, SDC:3, SOC:1
+26-Mar-24 02:51:05.066 [Solver] INFO  coursett.Test> **BEST[136]** V:136/569, T:1.60, SDC:3, SOC:1
+26-Mar-24 02:51:05.079 [Solver] INFO  coursett.Test> **BEST[137]** V:137/569, T:1.60, SDC:3, SOC:1
+26-Mar-24 02:51:05.102 [Solver] INFO  coursett.Test> **BEST[138]** V:138/569, T:1.60, SDC:3, SOC:1
+26-Mar-24 02:51:05.112 [Solver] INFO  coursett.Test> **BEST[139]** V:139/569, T:1.60, SDC:3, SOC:1
+26-Mar-24 02:51:05.124 [Solver] INFO  coursett.Test> **BEST[140]** V:140/569, T:1.60, SDC:3, SOC:1
+26-Mar-24 02:51:05.148 [Solver] INFO  coursett.Test> **BEST[141]** V:141/569, T:1.60, SDC:3, SOC:1
+26-Mar-24 02:51:05.175 [Solver] INFO  coursett.Test> **BEST[142]** V:142/569, T:1.60, SDC:3, SOC:1
+26-Mar-24 02:51:05.185 [Solver] INFO  coursett.Test> **BEST[143]** V:143/569, T:1.60, SDC:3, SOC:1
+26-Mar-24 02:51:05.198 [Solver] INFO  coursett.Test> **BEST[144]** V:144/569, T:1.60, SDC:3, SOC:1
+26-Mar-24 02:51:05.208 [Solver] INFO  coursett.Test> **BEST[145]** V:145/569, T:1.60, SDC:3, SOC:1
+26-Mar-24 02:51:05.227 [Solver] INFO  coursett.Test> **BEST[146]** V:146/569, T:1.60, SDC:3, SOC:1
+26-Mar-24 02:51:05.251 [Solver] INFO  coursett.Test> **BEST[147]** V:147/569, T:1.60, SDC:3, SOC:1
+26-Mar-24 02:51:05.262 [Solver] INFO  coursett.Test> **BEST[148]** V:148/569, T:1.60, SDC:3, SOC:1
+26-Mar-24 02:51:05.276 [Solver] INFO  coursett.Test> **BEST[149]** V:149/569, T:1.60, SDC:3, SOC:1
+26-Mar-24 02:51:05.286 [Solver] INFO  coursett.Test> **BEST[150]** V:150/569, T:1.60, SDC:3, SOC:1
+26-Mar-24 02:51:05.292 [Solver] INFO  coursett.Test> **BEST[151]** V:151/569, T:1.60, SDC:3, SOC:1
+26-Mar-24 02:51:05.300 [Solver] INFO  coursett.Test> **BEST[152]** V:152/569, T:1.60, SDC:3, SOC:1
+26-Mar-24 02:51:05.318 [Solver] INFO  coursett.Test> **BEST[153]** V:153/569, T:1.60, SDC:3, SOC:1
+26-Mar-24 02:51:05.331 [Solver] INFO  coursett.Test> **BEST[154]** V:154/569, T:1.60, SDC:3, SOC:1
+26-Mar-24 02:51:05.360 [Solver] INFO  coursett.Test> **BEST[155]** V:155/569, T:1.60, SDC:3, SOC:1
+26-Mar-24 02:51:05.379 [Solver] INFO  coursett.Test> **BEST[156]** V:156/569, T:1.60, SDC:3, SOC:1
+26-Mar-24 02:51:05.400 [Solver] INFO  coursett.Test> **BEST[157]** V:157/569, T:1.60, SDC:3, SOC:1
+26-Mar-24 02:51:05.431 [Solver] INFO  coursett.Test> **BEST[158]** V:158/569, T:1.60, SDC:3, SOC:1
+26-Mar-24 02:51:05.448 [Solver] INFO  coursett.Test> **BEST[159]** V:159/569, T:4.00, SDC:3, SOC:7
+26-Mar-24 02:51:05.474 [Solver] INFO  coursett.Test> **BEST[160]** V:160/569, T:4.00, SDC:3, SOC:7
+26-Mar-24 02:51:05.490 [Solver] INFO  coursett.Test> **BEST[161]** V:161/569, T:4.00, SDC:3, SOC:7
+26-Mar-24 02:51:05.509 [Solver] INFO  coursett.Test> **BEST[162]** V:162/569, T:4.00, SDC:3, SOC:7
+26-Mar-24 02:51:05.540 [Solver] INFO  coursett.Test> **BEST[163]** V:163/569, T:4.00, SDC:3, SOC:7
+26-Mar-24 02:51:05.549 [Solver] INFO  coursett.Test> **BEST[164]** V:164/569, T:4.00, SDC:3, SOC:7
+26-Mar-24 02:51:05.564 [Solver] INFO  coursett.Test> **BEST[165]** V:165/569, T:4.00, SDC:3, SOC:7
+26-Mar-24 02:51:05.589 [Solver] INFO  coursett.Test> **BEST[166]** V:166/569, T:4.00, SDC:3, SOC:7
+26-Mar-24 02:51:05.604 [Solver] INFO  coursett.Test> **BEST[167]** V:167/569, T:4.00, SDC:3, SOC:7
+26-Mar-24 02:51:05.630 [Solver] INFO  coursett.Test> **BEST[168]** V:168/569, T:6.00, SHC:1, SDC:3, SOC:8
+26-Mar-24 02:51:05.660 [Solver] INFO  coursett.Test> **BEST[169]** V:169/569, T:6.00, SHC:1, SDC:3, SOC:8
+26-Mar-24 02:51:05.707 [Solver] INFO  coursett.Test> **BEST[170]** V:170/569, T:6.00, SHC:1, SDC:3, SOC:8
+26-Mar-24 02:51:05.735 [Solver] INFO  coursett.Test> **BEST[171]** V:171/569, T:26.00, TP:99.82%, SHC:1, SDC:3, SOC:8
+26-Mar-24 02:51:05.757 [Solver] INFO  coursett.Test> **BEST[172]** V:172/569, T:26.00, TP:99.82%, SHC:1, SDC:3, SOC:8
+26-Mar-24 02:51:05.773 [Solver] INFO  coursett.Test> **BEST[173]** V:173/569, T:26.00, TP:99.82%, SHC:1, SDC:3, SOC:8
+26-Mar-24 02:51:05.789 [Solver] INFO  coursett.Test> **BEST[174]** V:174/569, T:26.00, TP:99.82%, SHC:1, SDC:3, SOC:8
+26-Mar-24 02:51:05.814 [Solver] INFO  coursett.Test> **BEST[175]** V:175/569, T:26.00, TP:99.82%, SHC:1, SDC:3, SOC:8
+26-Mar-24 02:51:05.827 [Solver] INFO  coursett.Test> **BEST[176]** V:176/569, T:26.00, TP:99.82%, SHC:1, SDC:3, SOC:8
+26-Mar-24 02:51:05.839 [Solver] INFO  coursett.Test> **BEST[177]** V:177/569, T:26.00, TP:99.82%, SHC:1, SDC:3, SOC:8
+26-Mar-24 02:51:05.858 [Solver] INFO  coursett.Test> **BEST[178]** V:178/569, T:46.00, TP:99.65%, SHC:1, SDC:3, SOC:8
+26-Mar-24 02:51:05.897 [Solver] INFO  coursett.Test> **BEST[179]** V:179/569, T:46.00, TP:99.65%, SHC:1, SDC:3, SOC:8
+26-Mar-24 02:51:05.910 [Solver] INFO  coursett.Test> **BEST[180]** V:180/569, T:46.00, TP:99.65%, SHC:1, SDC:3, SOC:8
+26-Mar-24 02:51:05.920 [Solver] INFO  coursett.Test> **BEST[181]** V:181/569, T:46.00, TP:99.65%, SHC:1, SDC:3, SOC:8
+26-Mar-24 02:51:05.931 [Solver] INFO  coursett.Test> **BEST[182]** V:182/569, T:46.00, TP:99.65%, SHC:1, SDC:3, SOC:8
+26-Mar-24 02:51:05.950 [Solver] INFO  coursett.Test> **BEST[183]** V:183/569, T:46.00, TP:99.65%, SHC:1, SDC:3, SOC:8
+26-Mar-24 02:51:05.967 [Solver] INFO  coursett.Test> **BEST[184]** V:184/569, T:46.00, TP:99.65%, SHC:1, SDC:3, SOC:8
+26-Mar-24 02:51:05.988 [Solver] INFO  coursett.Test> **BEST[185]** V:185/569, T:46.00, TP:99.65%, SHC:1, SDC:3, SOC:8
+26-Mar-24 02:51:06.000 [Solver] INFO  coursett.Test> **BEST[186]** V:186/569, T:46.00, TP:99.65%, SHC:1, SDC:3, SOC:8
+26-Mar-24 02:51:06.019 [Solver] INFO  coursett.Test> **BEST[187]** V:187/569, T:46.00, TP:99.65%, SHC:1, SDC:3, SOC:8
+26-Mar-24 02:51:06.032 [Solver] INFO  coursett.Test> **BEST[188]** V:188/569, T:46.00, TP:99.65%, SHC:1, SDC:3, SOC:8
+26-Mar-24 02:51:06.051 [Solver] INFO  coursett.Test> **BEST[189]** V:189/569, T:52.00, TP:99.65%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.060 [Solver] INFO  coursett.Test> **BEST[190]** V:190/569, T:52.00, TP:99.65%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.076 [Solver] INFO  coursett.Test> **BEST[191]** V:191/569, T:72.00, TP:99.47%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.093 [Solver] INFO  coursett.Test> **BEST[192]** V:192/569, T:72.00, TP:99.47%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.106 [Solver] INFO  coursett.Test> **BEST[193]** V:193/569, T:72.00, TP:99.47%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.118 [Solver] INFO  coursett.Test> **BEST[194]** V:194/569, T:72.00, TP:99.47%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.133 [Solver] INFO  coursett.Test> **BEST[195]** V:195/569, T:72.00, TP:99.47%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.147 [Solver] INFO  coursett.Test> **BEST[196]** V:196/569, T:72.00, TP:99.47%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.159 [Solver] INFO  coursett.Test> **BEST[197]** V:197/569, T:72.00, TP:99.47%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.181 [Solver] INFO  coursett.Test> **BEST[198]** V:198/569, T:72.00, TP:99.47%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.191 [Solver] INFO  coursett.Test> **BEST[199]** V:199/569, T:72.00, TP:99.47%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.202 [Solver] INFO  coursett.Test> **BEST[200]** V:200/569, T:72.00, TP:99.47%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.225 [Solver] INFO  coursett.Test> **BEST[201]** V:201/569, T:72.00, TP:99.47%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.243 [Solver] INFO  coursett.Test> **BEST[202]** V:202/569, T:72.00, TP:99.47%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.270 [Solver] INFO  coursett.Test> **BEST[203]** V:203/569, T:72.00, TP:99.47%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.280 [Solver] INFO  coursett.Test> **BEST[204]** V:204/569, T:72.00, TP:99.47%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.302 [Solver] INFO  coursett.Test> **BEST[205]** V:205/569, T:72.00, TP:99.47%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.312 [Solver] INFO  coursett.Test> **BEST[206]** V:206/569, T:72.00, TP:99.47%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.337 [Solver] INFO  coursett.Test> **BEST[207]** V:207/569, T:72.00, TP:99.47%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.351 [Solver] INFO  coursett.Test> **BEST[208]** V:208/569, T:72.00, TP:99.47%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.365 [Solver] INFO  coursett.Test> **BEST[209]** V:209/569, T:72.00, TP:99.47%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.377 [Solver] INFO  coursett.Test> **BEST[210]** V:210/569, T:72.00, TP:99.47%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.394 [Solver] INFO  coursett.Test> **BEST[211]** V:211/569, T:72.00, TP:99.47%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.407 [Solver] INFO  coursett.Test> **BEST[212]** V:212/569, T:72.00, TP:99.47%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.426 [Solver] INFO  coursett.Test> **BEST[213]** V:213/569, T:72.00, TP:99.47%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.451 [Solver] INFO  coursett.Test> **BEST[214]** V:214/569, T:72.00, TP:99.47%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.466 [Solver] INFO  coursett.Test> **BEST[215]** V:215/569, T:72.00, TP:99.47%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.480 [Solver] INFO  coursett.Test> **BEST[216]** V:216/569, T:72.00, TP:99.47%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.508 [Solver] INFO  coursett.Test> **BEST[217]** V:217/569, T:72.00, TP:99.47%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.532 [Solver] INFO  coursett.Test> **BEST[218]** V:218/569, T:72.00, TP:99.47%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.543 [Solver] INFO  coursett.Test> **BEST[219]** V:219/569, T:72.00, TP:99.47%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.551 [Solver] INFO  coursett.Test> **BEST[220]** V:220/569, T:72.00, TP:99.47%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.567 [Solver] INFO  coursett.Test> **BEST[221]** V:221/569, T:72.00, TP:99.47%, SHC:3, SDC:3, SOC:15
+26-Mar-24 02:51:06.595 [Solver] INFO  coursett.Test> **BEST[222]** V:222/569, T:77.60, TP:99.47%, SHC:3, SDC:3, SOC:29
+26-Mar-24 02:51:06.621 [Solver] INFO  coursett.Test> **BEST[223]** V:223/569, T:77.60, TP:99.47%, SHC:3, SDC:3, SOC:29
+26-Mar-24 02:51:06.651 [Solver] INFO  coursett.Test> **BEST[224]** V:224/569, T:77.60, TP:99.47%, SHC:3, SDC:3, SOC:29
+26-Mar-24 02:51:06.691 [Solver] INFO  coursett.Test> **BEST[225]** V:225/569, T:77.60, TP:99.47%, SHC:3, SDC:3, SOC:29
+26-Mar-24 02:51:06.727 [Solver] INFO  coursett.Test> **BEST[226]** V:226/569, T:77.60, TP:99.47%, SHC:3, SDC:3, SOC:29
+26-Mar-24 02:51:06.760 [Solver] INFO  coursett.Test> **BEST[227]** V:227/569, T:77.60, TP:99.47%, SHC:3, SDC:3, SOC:29
+26-Mar-24 02:51:06.809 [Solver] INFO  coursett.Test> **BEST[228]** V:228/569, T:77.60, TP:99.47%, SHC:3, SDC:3, SOC:29
+26-Mar-24 02:51:06.831 [Solver] INFO  coursett.Test> **BEST[229]** V:229/569, T:77.60, TP:99.47%, SHC:3, SDC:3, SOC:29
+26-Mar-24 02:51:06.853 [Solver] INFO  coursett.Test> **BEST[230]** V:230/569, T:77.60, TP:99.47%, SHC:3, SDC:3, SOC:29
+26-Mar-24 02:51:06.872 [Solver] INFO  coursett.Test> **BEST[231]** V:231/569, T:77.60, TP:99.47%, SHC:3, SDC:3, SOC:29
+26-Mar-24 02:51:06.921 [Solver] INFO  coursett.Test> **BEST[232]** V:232/569, T:77.60, TP:99.47%, SHC:3, SDC:3, SOC:29
+26-Mar-24 02:51:06.953 [Solver] INFO  coursett.Test> **BEST[233]** V:233/569, T:97.60, TP:99.3%, SHC:3, SDC:3, SOC:29
+26-Mar-24 02:51:06.971 [Solver] INFO  coursett.Test> **BEST[234]** V:234/569, T:97.60, TP:99.3%, SHC:3, SDC:3, SOC:29
+26-Mar-24 02:51:07.002 [Solver] INFO  coursett.Test> **BEST[235]** V:235/569, T:97.60, TP:99.3%, SHC:3, SDC:3, SOC:29
+26-Mar-24 02:51:07.023 [Solver] INFO  coursett.Test> **BEST[236]** V:236/569, T:117.60, TP:99.12%, SHC:3, SDC:3, SOC:29
+26-Mar-24 02:51:07.048 [Solver] INFO  coursett.Test> **BEST[237]** V:237/569, T:117.60, TP:99.12%, SHC:3, SDC:3, SOC:29
+26-Mar-24 02:51:07.071 [Solver] INFO  coursett.Test> **BEST[238]** V:238/569, T:117.60, TP:99.12%, SHC:3, SDC:3, SOC:29
+26-Mar-24 02:51:07.083 [Solver] INFO  coursett.Test> **BEST[239]** V:239/569, T:117.60, TP:99.12%, SHC:3, SDC:3, SOC:29
+26-Mar-24 02:51:07.109 [Solver] INFO  coursett.Test> **BEST[240]** V:240/569, T:118.00, TP:99.12%, SHC:3, SDC:3, SOC:30
+26-Mar-24 02:51:07.123 [Solver] INFO  coursett.Test> **BEST[241]** V:241/569, T:118.00, TP:99.12%, SHC:3, SDC:3, SOC:30
+26-Mar-24 02:51:07.138 [Solver] INFO  coursett.Test> **BEST[242]** V:242/569, T:118.00, TP:99.12%, SHC:3, SDC:3, SOC:30
+26-Mar-24 02:51:07.151 [Solver] INFO  coursett.Test> **BEST[243]** V:243/569, T:118.00, TP:99.12%, SHC:3, SDC:3, SOC:30
+26-Mar-24 02:51:07.161 [Solver] INFO  coursett.Test> **BEST[244]** V:244/569, T:118.00, TP:99.12%, SHC:3, SDC:3, SOC:30
+26-Mar-24 02:51:07.174 [Solver] INFO  coursett.Test> **BEST[245]** V:245/569, T:118.00, TP:99.12%, SHC:3, SDC:3, SOC:30
+26-Mar-24 02:51:07.197 [Solver] INFO  coursett.Test> **BEST[246]** V:246/569, T:138.00, TP:98.95%, SHC:3, SDC:3, SOC:30
+26-Mar-24 02:51:07.223 [Solver] INFO  coursett.Test> **BEST[247]** V:247/569, T:138.00, TP:98.95%, SHC:3, SDC:3, SOC:30
+26-Mar-24 02:51:07.251 [Solver] INFO  coursett.Test> **BEST[248]** V:248/569, T:138.00, TP:98.95%, SHC:3, SDC:3, SOC:30
+26-Mar-24 02:51:07.258 [Solver] INFO  coursett.Test> **BEST[249]** V:249/569, T:138.00, TP:98.95%, SHC:3, SDC:3, SOC:30
+26-Mar-24 02:51:07.284 [Solver] INFO  coursett.Test> **BEST[250]** V:250/569, T:138.00, TP:98.95%, SHC:3, SDC:3, SOC:30
+26-Mar-24 02:51:07.296 [Solver] INFO  coursett.Test> **BEST[251]** V:251/569, T:138.00, TP:98.95%, SHC:3, SDC:3, SOC:30
+26-Mar-24 02:51:07.314 [Solver] INFO  coursett.Test> **BEST[252]** V:252/569, T:138.00, TP:98.95%, SHC:3, SDC:3, SOC:30
+26-Mar-24 02:51:07.325 [Solver] INFO  coursett.Test> **BEST[253]** V:253/569, T:138.00, TP:98.95%, SHC:3, SDC:3, SOC:30
+26-Mar-24 02:51:07.339 [Solver] INFO  coursett.Test> **BEST[254]** V:254/569, T:138.00, TP:98.95%, SHC:3, SDC:3, SOC:30
+26-Mar-24 02:51:07.354 [Solver] INFO  coursett.Test> **BEST[255]** V:255/569, T:138.00, TP:98.95%, SHC:3, SDC:3, SOC:30
+26-Mar-24 02:51:07.866 [Solver] INFO  coursett.Test> **BEST[256]** V:256/569, T:137.20, TP:98.95%, SHC:3, SDC:4, SOC:27
+26-Mar-24 02:51:07.902 [Solver] INFO  coursett.Test> **BEST[257]** V:257/569, T:137.20, TP:98.95%, SHC:3, SDC:4, SOC:27
+26-Mar-24 02:51:07.908 [Solver] INFO  coursett.Test> **BEST[258]** V:258/569, T:137.20, TP:98.95%, SHC:3, SDC:4, SOC:27
+26-Mar-24 02:51:07.918 [Solver] INFO  coursett.Test> **BEST[259]** V:259/569, T:137.20, TP:98.95%, SHC:3, SDC:4, SOC:27
+26-Mar-24 02:51:07.938 [Solver] INFO  coursett.Test> **BEST[260]** V:260/569, T:137.20, TP:98.95%, SHC:3, SDC:4, SOC:27
+26-Mar-24 02:51:07.947 [Solver] INFO  coursett.Test> **BEST[261]** V:261/569, T:137.20, TP:98.95%, SHC:3, SDC:4, SOC:27
+26-Mar-24 02:51:07.969 [Solver] INFO  coursett.Test> **BEST[262]** V:262/569, T:137.20, TP:98.95%, SHC:3, SDC:4, SOC:27
+26-Mar-24 02:51:07.988 [Solver] INFO  coursett.Test> **BEST[263]** V:263/569, T:137.20, TP:98.95%, SHC:3, SDC:4, SOC:27
+26-Mar-24 02:51:08.004 [Solver] INFO  coursett.Test> **BEST[264]** V:264/569, T:137.20, TP:98.95%, SHC:3, SDC:4, SOC:27
+26-Mar-24 02:51:08.023 [Solver] INFO  coursett.Test> **BEST[265]** V:265/569, T:137.20, TP:98.95%, SHC:3, SDC:4, SOC:27
+26-Mar-24 02:51:08.038 [Solver] INFO  coursett.Test> **BEST[266]** V:266/569, T:157.20, TP:98.77%, SHC:3, SDC:4, SOC:27
+26-Mar-24 02:51:08.052 [Solver] INFO  coursett.Test> **BEST[267]** V:267/569, T:157.20, TP:98.77%, SHC:3, SDC:4, SOC:27
+26-Mar-24 02:51:08.064 [Solver] INFO  coursett.Test> **BEST[268]** V:268/569, T:157.20, TP:98.77%, SHC:3, SDC:4, SOC:27
+26-Mar-24 02:51:08.070 [Solver] INFO  coursett.Test> **BEST[269]** V:269/569, T:157.20, TP:98.77%, SHC:3, SDC:4, SOC:27
+26-Mar-24 02:51:08.086 [Solver] INFO  coursett.Test> **BEST[270]** V:270/569, T:157.20, TP:98.77%, SHC:3, SDC:4, SOC:27
+26-Mar-24 02:51:08.097 [Solver] INFO  coursett.Test> **BEST[271]** V:271/569, T:157.20, TP:98.77%, SHC:3, SDC:4, SOC:27
+26-Mar-24 02:51:08.108 [Solver] INFO  coursett.Test> **BEST[272]** V:272/569, T:157.20, TP:98.77%, SHC:3, SDC:4, SOC:27
+26-Mar-24 02:51:08.123 [Solver] INFO  coursett.Test> **BEST[273]** V:273/569, T:157.20, TP:98.77%, SHC:3, SDC:4, SOC:27
+26-Mar-24 02:51:08.130 [Solver] INFO  coursett.Test> **BEST[274]** V:274/569, T:157.20, TP:98.77%, SHC:3, SDC:4, SOC:27
+26-Mar-24 02:51:08.138 [Solver] INFO  coursett.Test> **BEST[275]** V:275/569, T:157.20, TP:98.77%, SHC:3, SDC:4, SOC:27
+26-Mar-24 02:51:08.148 [Solver] INFO  coursett.Test> **BEST[276]** V:276/569, T:157.20, TP:98.77%, SHC:3, SDC:4, SOC:27
+26-Mar-24 02:51:08.159 [Solver] INFO  coursett.Test> **BEST[277]** V:277/569, T:157.20, TP:98.77%, SHC:3, SDC:4, SOC:27
+26-Mar-24 02:51:08.168 [Solver] INFO  coursett.Test> **BEST[278]** V:278/569, T:157.20, TP:98.77%, SHC:3, SDC:4, SOC:27
+26-Mar-24 02:51:08.173 [Solver] INFO  coursett.Test> **BEST[279]** V:279/569, T:157.20, TP:98.77%, SHC:3, SDC:4, SOC:27
+26-Mar-24 02:51:08.181 [Solver] INFO  coursett.Test> **BEST[280]** V:280/569, T:157.20, TP:98.77%, SHC:3, SDC:4, SOC:27
+26-Mar-24 02:51:08.186 [Solver] INFO  coursett.Test> **BEST[281]** V:281/569, T:157.20, TP:98.77%, SHC:3, SDC:4, SOC:27
+26-Mar-24 02:51:08.193 [Solver] INFO  coursett.Test> **BEST[282]** V:282/569, T:157.20, TP:98.77%, SHC:3, SDC:4, SOC:27
+26-Mar-24 02:51:08.200 [Solver] INFO  coursett.Test> **BEST[283]** V:283/569, T:157.20, TP:98.77%, SHC:3, SDC:4, SOC:27
+26-Mar-24 02:51:08.213 [Solver] INFO  coursett.Test> **BEST[284]** V:284/569, T:157.20, TP:98.77%, SHC:3, SDC:4, SOC:27
+26-Mar-24 02:51:08.231 [Solver] INFO  coursett.Test> **BEST[285]** V:285/569, T:162.00, TP:98.77%, SHC:4, SDC:6, SOC:33
+26-Mar-24 02:51:08.249 [Solver] INFO  coursett.Test> **BEST[286]** V:286/569, T:162.00, TP:98.77%, SHC:4, SDC:6, SOC:33
+26-Mar-24 02:51:08.263 [Solver] INFO  coursett.Test> **BEST[287]** V:287/569, T:162.00, TP:98.77%, SHC:4, SDC:6, SOC:33
+26-Mar-24 02:51:08.277 [Solver] INFO  coursett.Test> **BEST[288]** V:288/569, T:162.00, TP:98.77%, SHC:4, SDC:6, SOC:33
+26-Mar-24 02:51:08.282 [Solver] INFO  coursett.Test> **BEST[289]** V:289/569, T:162.00, TP:98.77%, SHC:4, SDC:6, SOC:33
+26-Mar-24 02:51:08.825 [Solver] INFO  coursett.Test> **BEST[290]** V:290/569, T:162.00, TP:98.77%, SHC:4, SDC:6, SOC:33
+26-Mar-24 02:51:08.839 [Solver] INFO  coursett.Test> **BEST[291]** V:291/569, T:162.00, TP:98.77%, SHC:4, SDC:6, SOC:33
+26-Mar-24 02:51:08.852 [Solver] INFO  coursett.Test> **BEST[292]** V:292/569, T:162.00, TP:98.77%, SHC:4, SDC:6, SOC:33
+26-Mar-24 02:51:08.861 [Solver] INFO  coursett.Test> **BEST[293]** V:293/569, T:162.00, TP:98.77%, SHC:4, SDC:6, SOC:33
+26-Mar-24 02:51:08.884 [Solver] INFO  coursett.Test> **BEST[294]** V:294/569, T:162.00, TP:98.77%, SHC:4, SDC:6, SOC:33
+26-Mar-24 02:51:08.899 [Solver] INFO  coursett.Test> **BEST[295]** V:295/569, T:162.00, TP:98.77%, SHC:4, SDC:6, SOC:33
+26-Mar-24 02:51:08.906 [Solver] INFO  coursett.Test> **BEST[296]** V:296/569, T:162.00, TP:98.77%, SHC:4, SDC:6, SOC:33
+26-Mar-24 02:51:08.917 [Solver] INFO  coursett.Test> **BEST[297]** V:297/569, T:162.00, TP:98.77%, SHC:4, SDC:6, SOC:33
+26-Mar-24 02:51:08.931 [Solver] INFO  coursett.Test> **BEST[298]** V:298/569, T:162.00, TP:98.77%, SHC:4, SDC:6, SOC:33
+26-Mar-24 02:51:08.940 [Solver] INFO  coursett.Test> **BEST[299]** V:299/569, T:162.00, TP:98.77%, SHC:4, SDC:6, SOC:33
+26-Mar-24 02:51:08.955 [Solver] INFO  coursett.Test> **BEST[300]** V:300/569, T:182.00, TP:98.59%, SHC:4, SDC:6, SOC:33
+26-Mar-24 02:51:08.971 [Solver] INFO  coursett.Test> **BEST[302]** V:301/569, T:182.00, TP:98.59%, SHC:4, SDC:6, SOC:33
+26-Mar-24 02:51:08.981 [Solver] INFO  coursett.Test> **BEST[303]** V:302/569, T:182.80, TP:98.59%, SHC:4, SDC:6, SOC:35
+26-Mar-24 02:51:08.998 [Solver] INFO  coursett.Test> **BEST[304]** V:303/569, T:182.80, TP:98.59%, SHC:4, SDC:6, SOC:35
+26-Mar-24 02:51:09.015 [Solver] INFO  coursett.Test> **BEST[305]** V:304/569, T:182.80, TP:98.59%, SHC:4, SDC:6, SOC:35
+26-Mar-24 02:51:09.029 [Solver] INFO  coursett.Test> **BEST[306]** V:305/569, T:183.20, TP:98.59%, SHC:4, SDC:6, SOC:36
+26-Mar-24 02:51:09.048 [Solver] INFO  coursett.Test> **BEST[307]** V:306/569, T:183.20, TP:98.59%, SHC:4, SDC:6, SOC:36
+26-Mar-24 02:51:09.054 [Solver] INFO  coursett.Test> **BEST[308]** V:307/569, T:183.20, TP:98.59%, SHC:4, SDC:6, SOC:36
+26-Mar-24 02:51:09.073 [Solver] INFO  coursett.Test> **BEST[310]** V:308/569, T:183.20, TP:98.59%, SHC:4, SDC:6, SOC:36
+26-Mar-24 02:51:09.094 [Solver] INFO  coursett.Test> **BEST[311]** V:309/569, T:183.20, TP:98.59%, SHC:4, SDC:6, SOC:36
+26-Mar-24 02:51:09.114 [Solver] INFO  coursett.Test> **BEST[312]** V:310/569, T:184.00, TP:98.59%, SHC:4, SDC:6, SOC:38
+26-Mar-24 02:51:09.144 [Solver] INFO  coursett.Test> **BEST[313]** V:311/569, T:193.60, TP:98.59%, SHC:6, SDC:6, SOC:54
+26-Mar-24 02:51:09.165 [Solver] INFO  coursett.Test> **BEST[314]** V:312/569, T:193.60, TP:98.59%, SHC:6, SDC:6, SOC:54
+26-Mar-24 02:51:09.184 [Solver] INFO  coursett.Test> **BEST[315]** V:313/569, T:203.20, TP:98.59%, SHC:7, SDC:6, SOC:74
+26-Mar-24 02:51:09.190 [Solver] INFO  coursett.Test> **BEST[316]** V:314/569, T:203.20, TP:98.59%, SHC:7, SDC:6, SOC:74
+26-Mar-24 02:51:09.216 [Solver] INFO  coursett.Test> **BEST[317]** V:315/569, T:203.20, TP:98.59%, SHC:7, SDC:6, SOC:74
+26-Mar-24 02:51:09.231 [Solver] INFO  coursett.Test> **BEST[318]** V:316/569, T:203.20, TP:98.59%, SHC:7, SDC:6, SOC:74
+26-Mar-24 02:51:09.240 [Solver] INFO  coursett.Test> **BEST[319]** V:317/569, T:203.20, TP:98.59%, SHC:7, SDC:6, SOC:74
+26-Mar-24 02:51:09.252 [Solver] INFO  coursett.Test> **BEST[320]** V:318/569, T:203.20, TP:98.59%, SHC:7, SDC:6, SOC:74
+26-Mar-24 02:51:09.280 [Solver] INFO  coursett.Test> **BEST[321]** V:319/569, T:209.20, TP:98.59%, SHC:7, SDC:6, SOC:89
+26-Mar-24 02:51:09.292 [Solver] INFO  coursett.Test> **BEST[322]** V:320/569, T:209.20, TP:98.59%, SHC:7, SDC:6, SOC:89
+26-Mar-24 02:51:09.303 [Solver] INFO  coursett.Test> **BEST[323]** V:321/569, T:209.20, TP:98.59%, SHC:7, SDC:6, SOC:89
+26-Mar-24 02:51:09.315 [Solver] INFO  coursett.Test> **BEST[324]** V:322/569, T:209.20, TP:98.59%, SHC:7, SDC:6, SOC:89
+26-Mar-24 02:51:09.353 [Solver] INFO  coursett.Test> **BEST[325]** V:323/569, T:210.40, TP:98.59%, SHC:7, SDC:6, SOC:92
+26-Mar-24 02:51:09.364 [Solver] INFO  coursett.Test> **BEST[326]** V:324/569, T:210.40, TP:98.59%, SHC:7, SDC:6, SOC:92
+26-Mar-24 02:51:09.394 [Solver] INFO  coursett.Test> **BEST[327]** V:325/569, T:212.80, TP:98.59%, SHC:7, SDC:7, SOC:97
+26-Mar-24 02:51:09.420 [Solver] INFO  coursett.Test> **BEST[328]** V:326/569, T:217.20, TP:98.59%, SHC:7, SDC:7, SOC:108
+26-Mar-24 02:51:09.444 [Solver] INFO  coursett.Test> **BEST[330]** V:327/569, T:217.20, TP:98.59%, SHC:7, SDC:7, SOC:108
+26-Mar-24 02:51:09.481 [Solver] INFO  coursett.Test> **BEST[331]** V:328/569, T:218.40, TP:98.59%, SHC:7, SDC:9, SOC:109
+26-Mar-24 02:51:09.490 [Solver] INFO  coursett.Test> **BEST[332]** V:329/569, T:218.40, TP:98.59%, SHC:7, SDC:9, SOC:109
+26-Mar-24 02:51:09.508 [Solver] INFO  coursett.Test> **BEST[333]** V:330/569, T:218.40, TP:98.59%, SHC:7, SDC:9, SOC:109
+26-Mar-24 02:51:09.520 [Solver] INFO  coursett.Test> **BEST[334]** V:331/569, T:219.20, TP:98.59%, SHC:7, SDC:9, SOC:111
+26-Mar-24 02:51:09.524 [Solver] INFO  coursett.Test> **BEST[335]** V:332/569, T:219.20, TP:98.59%, SHC:7, SDC:9, SOC:111
+26-Mar-24 02:51:09.538 [Solver] INFO  coursett.Test> **BEST[336]** V:333/569, T:219.20, TP:98.59%, SHC:7, SDC:9, SOC:111
+26-Mar-24 02:51:09.559 [Solver] INFO  coursett.Test> **BEST[337]** V:334/569, T:219.20, TP:98.59%, SHC:7, SDC:9, SOC:111
+26-Mar-24 02:51:09.577 [Solver] INFO  coursett.Test> **BEST[338]** V:335/569, T:219.20, TP:98.59%, SHC:7, SDC:9, SOC:111
+26-Mar-24 02:51:09.601 [Solver] INFO  coursett.Test> **BEST[339]** V:336/569, T:220.40, TP:98.59%, SHC:7, SDC:9, SOC:114
+26-Mar-24 02:51:09.620 [Solver] INFO  coursett.Test> **BEST[340]** V:337/569, T:220.40, TP:98.59%, SHC:7, SDC:9, SOC:114
+26-Mar-24 02:51:09.648 [Solver] INFO  coursett.Test> **BEST[341]** V:338/569, T:221.60, TP:98.59%, SHC:7, SDC:9, SOC:117
+26-Mar-24 02:51:09.672 [Solver] INFO  coursett.Test> **BEST[342]** V:339/569, T:221.60, TP:98.59%, SHC:7, SDC:9, SOC:117
+26-Mar-24 02:51:09.678 [Solver] INFO  coursett.Test> **BEST[343]** V:340/569, T:221.60, TP:98.59%, SHC:7, SDC:9, SOC:117
+26-Mar-24 02:51:09.692 [Solver] INFO  coursett.Test> **BEST[344]** V:341/569, T:221.60, TP:98.59%, SHC:7, SDC:9, SOC:117
+26-Mar-24 02:51:09.701 [Solver] INFO  coursett.Test> **BEST[345]** V:342/569, T:221.60, TP:98.59%, SHC:7, SDC:9, SOC:117
+26-Mar-24 02:51:09.718 [Solver] INFO  coursett.Test> **BEST[347]** V:343/569, T:221.60, TP:98.59%, SHC:7, SDC:9, SOC:117
+26-Mar-24 02:51:09.724 [Solver] INFO  coursett.Test> **BEST[348]** V:344/569, T:221.60, TP:98.59%, SHC:7, SDC:9, SOC:117
+26-Mar-24 02:51:09.731 [Solver] INFO  coursett.Test> **BEST[349]** V:345/569, T:221.60, TP:98.59%, SHC:7, SDC:9, SOC:117
+26-Mar-24 02:51:09.756 [Solver] INFO  coursett.Test> **BEST[350]** V:346/569, T:222.40, TP:98.59%, SHC:7, SDC:11, SOC:117
+26-Mar-24 02:51:09.768 [Solver] INFO  coursett.Test> **BEST[351]** V:347/569, T:222.40, TP:98.59%, SHC:7, SDC:11, SOC:117
+26-Mar-24 02:51:09.780 [Solver] INFO  coursett.Test> **BEST[352]** V:348/569, T:222.40, TP:98.59%, SHC:7, SDC:11, SOC:117
+26-Mar-24 02:51:09.789 [Solver] INFO  coursett.Test> **BEST[353]** V:349/569, T:222.40, TP:98.59%, SHC:7, SDC:11, SOC:117
+26-Mar-24 02:51:09.806 [Solver] INFO  coursett.Test> **BEST[354]** V:350/569, T:222.40, TP:98.59%, SHC:7, SDC:11, SOC:117
+26-Mar-24 02:51:09.813 [Solver] INFO  coursett.Test> **BEST[355]** V:351/569, T:222.40, TP:98.59%, SHC:7, SDC:11, SOC:117
+26-Mar-24 02:51:09.839 [Solver] INFO  coursett.Test> **BEST[357]** V:352/569, T:222.40, TP:98.59%, SHC:7, SDC:11, SOC:117
+26-Mar-24 02:51:09.848 [Solver] INFO  coursett.Test> **BEST[358]** V:353/569, T:222.40, TP:98.59%, SHC:7, SDC:11, SOC:117
+26-Mar-24 02:51:09.859 [Solver] INFO  coursett.Test> **BEST[359]** V:354/569, T:222.40, TP:98.59%, SHC:7, SDC:11, SOC:117
+26-Mar-24 02:51:09.864 [Solver] INFO  coursett.Test> **BEST[360]** V:355/569, T:222.40, TP:98.59%, SHC:7, SDC:11, SOC:117
+26-Mar-24 02:51:09.892 [Solver] INFO  coursett.Test> **BEST[361]** V:356/569, T:242.00, TP:98.59%, SHC:8, SDC:35, SOC:138
+26-Mar-24 02:51:09.918 [Solver] INFO  coursett.Test> **BEST[362]** V:357/569, T:264.40, TP:98.42%, SHC:8, SDC:41, SOC:138
+26-Mar-24 02:51:09.923 [Solver] INFO  coursett.Test> **BEST[363]** V:358/569, T:264.40, TP:98.42%, SHC:8, SDC:41, SOC:138
+26-Mar-24 02:51:09.941 [Solver] INFO  coursett.Test> **BEST[364]** V:359/569, T:265.60, TP:98.42%, SHC:8, SDC:44, SOC:138
+26-Mar-24 02:51:09.951 [Solver] INFO  coursett.Test> **BEST[365]** V:360/569, T:265.60, TP:98.42%, SHC:8, SDC:44, SOC:138
+26-Mar-24 02:51:09.964 [Solver] INFO  coursett.Test> **BEST[366]** V:361/569, T:265.60, TP:98.42%, SHC:8, SDC:44, SOC:138
+26-Mar-24 02:51:09.974 [Solver] INFO  coursett.Test> **BEST[367]** V:361/569, T:264.40, TP:98.42%, SHC:8, SDC:41, SOC:138
+26-Mar-24 02:51:09.991 [Solver] INFO  coursett.Test> **BEST[368]** V:362/569, T:284.40, TP:98.24%, SHC:8, SDC:41, SOC:138
+26-Mar-24 02:51:10.001 [Solver] INFO  coursett.Test> **BEST[369]** V:363/569, T:284.40, TP:98.24%, SHC:8, SDC:41, SOC:138
+26-Mar-24 02:51:10.022 [Solver] INFO  coursett.Test> **BEST[370]** V:364/569, T:291.20, TP:98.24%, SHC:9, SDC:44, SOC:148
+26-Mar-24 02:51:10.034 [Solver] INFO  coursett.Test> **BEST[371]** V:365/569, T:291.20, TP:98.24%, SHC:9, SDC:44, SOC:148
+26-Mar-24 02:51:10.051 [Solver] INFO  coursett.Test> **BEST[372]** V:366/569, T:291.20, TP:98.24%, SHC:9, SDC:44, SOC:148
+26-Mar-24 02:51:10.063 [Solver] INFO  coursett.Test> **BEST[373]** V:367/569, T:291.20, TP:98.24%, SHC:9, SDC:44, SOC:148
+26-Mar-24 02:51:10.069 [Solver] INFO  coursett.Test> **BEST[374]** V:368/569, T:291.20, TP:98.24%, SHC:9, SDC:44, SOC:148
+26-Mar-24 02:51:10.080 [Solver] INFO  coursett.Test> **BEST[375]** V:369/569, T:291.20, TP:98.24%, SHC:9, SDC:44, SOC:148
+26-Mar-24 02:51:10.101 [Solver] INFO  coursett.Test> **BEST[376]** V:370/569, T:291.20, TP:98.24%, SHC:9, SDC:44, SOC:148
+26-Mar-24 02:51:10.113 [Solver] INFO  coursett.Test> **BEST[377]** V:371/569, T:291.20, TP:98.24%, SHC:9, SDC:44, SOC:148
+26-Mar-24 02:51:10.120 [Solver] INFO  coursett.Test> **BEST[378]** V:372/569, T:291.20, TP:98.24%, SHC:9, SDC:44, SOC:148
+26-Mar-24 02:51:10.130 [Solver] INFO  coursett.Test> **BEST[379]** V:373/569, T:291.20, TP:98.24%, SHC:9, SDC:44, SOC:148
+26-Mar-24 02:51:10.140 [Solver] INFO  coursett.Test> **BEST[380]** V:374/569, T:291.20, TP:98.24%, SHC:9, SDC:44, SOC:148
+26-Mar-24 02:51:10.147 [Solver] INFO  coursett.Test> **BEST[381]** V:375/569, T:291.20, TP:98.24%, SHC:9, SDC:44, SOC:148
+26-Mar-24 02:51:10.164 [Solver] INFO  coursett.Test> **BEST[382]** V:376/569, T:291.20, TP:98.24%, SHC:9, SDC:44, SOC:148
+26-Mar-24 02:51:10.188 [Solver] INFO  coursett.Test> **BEST[383]** V:377/569, T:311.20, TP:98.07%, SHC:9, SDC:44, SOC:148
+26-Mar-24 02:51:10.198 [Solver] INFO  coursett.Test> **BEST[384]** V:378/569, T:311.20, TP:98.07%, SHC:9, SDC:44, SOC:148
+26-Mar-24 02:51:10.217 [Solver] INFO  coursett.Test> **BEST[385]** V:379/569, T:312.40, TP:98.07%, SHC:9, SDC:47, SOC:148
+26-Mar-24 02:51:10.225 [Solver] INFO  coursett.Test> **BEST[386]** V:380/569, T:312.40, TP:98.07%, SHC:9, SDC:47, SOC:148
+26-Mar-24 02:51:10.249 [Solver] INFO  coursett.Test> **BEST[387]** V:381/569, T:312.40, TP:98.07%, SHC:9, SDC:47, SOC:148
+26-Mar-24 02:51:10.271 [Solver] INFO  coursett.Test> **BEST[388]** V:382/569, T:314.80, TP:98.07%, SHC:10, SDC:47, SOC:150
+26-Mar-24 02:51:10.283 [Solver] INFO  coursett.Test> **BEST[389]** V:383/569, T:314.80, TP:98.07%, SHC:10, SDC:47, SOC:150
+26-Mar-24 02:51:10.296 [Solver] INFO  coursett.Test> **BEST[390]** V:384/569, T:315.60, TP:98.07%, SHC:10, SDC:47, SOC:152
+26-Mar-24 02:51:10.309 [Solver] INFO  coursett.Test> **BEST[391]** V:385/569, T:315.60, TP:98.07%, SHC:10, SDC:47, SOC:152
+26-Mar-24 02:51:10.322 [Solver] INFO  coursett.Test> **BEST[392]** V:386/569, T:318.40, TP:98.07%, SHC:10, SDC:52, SOC:154
+26-Mar-24 02:51:10.339 [Solver] INFO  coursett.Test> **BEST[393]** V:387/569, T:318.40, TP:98.07%, SHC:10, SDC:52, SOC:154
+26-Mar-24 02:51:10.354 [Solver] INFO  coursett.Test> **BEST[395]** V:388/569, T:318.40, TP:98.07%, SHC:10, SDC:52, SOC:154
+26-Mar-24 02:51:10.369 [Solver] INFO  coursett.Test> **BEST[396]** V:389/569, T:319.60, TP:98.07%, SHC:10, SDC:52, SOC:157
+26-Mar-24 02:51:10.393 [Solver] INFO  coursett.Test> **BEST[397]** V:390/569, T:319.60, TP:98.07%, SHC:10, SDC:52, SOC:157
+26-Mar-24 02:51:10.398 [Solver] INFO  coursett.Test> **BEST[398]** V:391/569, T:319.60, TP:98.07%, SHC:10, SDC:52, SOC:157
+26-Mar-24 02:51:10.426 [Solver] INFO  coursett.Test> **BEST[400]** V:392/569, T:323.60, TP:98.07%, SHC:10, SDC:52, SOC:167
+26-Mar-24 02:51:10.455 [Solver] INFO  coursett.Test> **BEST[401]** V:393/569, T:343.60, TP:97.89%, SHC:10, SDC:52, SOC:167
+26-Mar-24 02:51:10.481 [Solver] INFO  coursett.Test> **BEST[402]** V:394/569, T:343.60, TP:97.89%, SHC:10, SDC:52, SOC:167
+26-Mar-24 02:51:10.492 [Solver] INFO  coursett.Test> **BEST[403]** V:395/569, T:343.60, TP:97.89%, SHC:10, SDC:52, SOC:167
+26-Mar-24 02:51:10.504 [Solver] INFO  coursett.Test> **BEST[404]** V:396/569, T:343.60, TP:97.89%, SHC:10, SDC:52, SOC:167
+26-Mar-24 02:51:10.520 [Solver] INFO  coursett.Test> **BEST[405]** V:397/569, T:343.60, TP:97.89%, SHC:10, SDC:52, SOC:167
+26-Mar-24 02:51:10.536 [Solver] INFO  coursett.Test> **BEST[406]** V:398/569, T:343.60, TP:97.89%, SHC:10, SDC:52, SOC:167
+26-Mar-24 02:51:10.563 [Solver] INFO  coursett.Test> **BEST[407]** V:399/569, T:368.40, TP:97.72%, SHC:10, SDC:52, SOC:179
+26-Mar-24 02:51:10.583 [Solver] INFO  coursett.Test> **BEST[408]** V:400/569, T:368.40, TP:97.72%, SHC:10, SDC:52, SOC:179
+26-Mar-24 02:51:10.597 [Solver] INFO  coursett.Test> **BEST[409]** V:401/569, T:368.40, TP:97.72%, SHC:10, SDC:52, SOC:179
+26-Mar-24 02:51:10.607 [Solver] INFO  coursett.Test> **BEST[410]** V:402/569, T:368.40, TP:97.72%, SHC:10, SDC:52, SOC:179
+26-Mar-24 02:51:10.619 [Solver] INFO  coursett.Test> **BEST[411]** V:403/569, T:368.40, TP:97.72%, SHC:10, SDC:52, SOC:179
+26-Mar-24 02:51:10.630 [Solver] INFO  coursett.Test> **BEST[412]** V:404/569, T:368.40, TP:97.72%, SHC:10, SDC:52, SOC:179
+26-Mar-24 02:51:10.657 [Solver] INFO  coursett.Test> **BEST[413]** V:405/569, T:388.40, TP:97.54%, SHC:10, SDC:52, SOC:179
+26-Mar-24 02:51:10.674 [Solver] INFO  coursett.Test> **BEST[414]** V:406/569, T:388.40, TP:97.54%, SHC:10, SDC:52, SOC:179
+26-Mar-24 02:51:10.696 [Solver] INFO  coursett.Test> **BEST[416]** V:407/569, T:388.40, TP:97.54%, SHC:10, SDC:52, SOC:179
+26-Mar-24 02:51:10.715 [Solver] INFO  coursett.Test> **BEST[417]** V:408/569, T:388.40, TP:97.54%, SHC:10, SDC:52, SOC:179
+26-Mar-24 02:51:10.725 [Solver] INFO  coursett.Test> **BEST[418]** V:409/569, T:388.40, TP:97.54%, SHC:10, SDC:52, SOC:179
+26-Mar-24 02:51:10.741 [Solver] INFO  coursett.Test> **BEST[419]** V:410/569, T:388.40, TP:97.54%, SHC:10, SDC:52, SOC:179
+26-Mar-24 02:51:10.805 [Solver] INFO  coursett.Test> **BEST[422]** V:411/569, T:388.40, TP:97.54%, SHC:10, SDC:52, SOC:179
+26-Mar-24 02:51:10.820 [Solver] INFO  coursett.Test> **BEST[423]** V:412/569, T:388.40, TP:97.54%, SHC:10, SDC:52, SOC:179
+26-Mar-24 02:51:10.865 [Solver] INFO  coursett.Test> **BEST[425]** V:413/569, T:392.40, TP:97.54%, SHC:11, SDC:57, SOC:180
+26-Mar-24 02:51:10.890 [Solver] INFO  coursett.Test> **BEST[426]** V:414/569, T:392.40, TP:97.54%, SHC:11, SDC:57, SOC:180
+26-Mar-24 02:51:10.909 [Solver] INFO  coursett.Test> **BEST[427]** V:415/569, T:392.40, TP:97.54%, SHC:11, SDC:57, SOC:180
+26-Mar-24 02:51:10.940 [Solver] INFO  coursett.Test> **BEST[429]** V:416/569, T:392.40, TP:97.54%, SHC:11, SDC:57, SOC:180
+26-Mar-24 02:51:10.951 [Solver] INFO  coursett.Test> **BEST[430]** V:417/569, T:392.40, TP:97.54%, SHC:11, SDC:57, SOC:180
+26-Mar-24 02:51:10.994 [Solver] INFO  coursett.Test> **BEST[431]** V:417/569, T:388.40, TP:97.54%, SHC:11, SDC:57, SOC:170
+26-Mar-24 02:51:11.026 [Solver] INFO  coursett.Test> **BEST[432]** V:418/569, T:413.20, TP:97.36%, SHC:11, SDC:57, SOC:182
+26-Mar-24 02:51:11.054 [Solver] INFO  coursett.Test> **BEST[433]** V:419/569, T:417.20, TP:97.36%, SHC:11, SDC:60, SOC:189
+26-Mar-24 02:51:11.064 [Solver] INFO  coursett.Test> **BEST[434]** V:420/569, T:417.20, TP:97.36%, SHC:11, SDC:60, SOC:189
+26-Mar-24 02:51:11.115 [Solver] INFO  coursett.Test> **BEST[436]** V:421/569, T:417.20, TP:97.36%, SHC:11, SDC:60, SOC:189
+26-Mar-24 02:51:11.155 [Solver] INFO  coursett.Test> **BEST[438]** V:422/569, T:417.20, TP:97.36%, SHC:11, SDC:60, SOC:189
+26-Mar-24 02:51:11.187 [Solver] INFO  coursett.Test> **BEST[439]** V:423/569, T:426.80, TP:97.36%, SHC:13, SDC:65, SOC:200
+26-Mar-24 02:51:11.216 [Solver] INFO  coursett.Test> **BEST[441]** V:424/569, T:426.80, TP:97.36%, SHC:13, SDC:65, SOC:200
+26-Mar-24 02:51:11.231 [Solver] INFO  coursett.Test> **BEST[443]** V:425/569, T:426.80, TP:97.36%, SHC:13, SDC:65, SOC:200
+26-Mar-24 02:51:11.251 [Solver] INFO  coursett.Test> **BEST[444]** V:426/569, T:426.80, TP:97.36%, SHC:13, SDC:65, SOC:200
+26-Mar-24 02:51:11.259 [Solver] INFO  coursett.Test> **BEST[445]** V:427/569, T:426.80, TP:97.36%, SHC:13, SDC:65, SOC:200
+26-Mar-24 02:51:11.292 [Solver] INFO  coursett.Test> **BEST[447]** V:428/569, T:426.80, TP:97.36%, SHC:13, SDC:65, SOC:200
+26-Mar-24 02:51:11.308 [Solver] INFO  coursett.Test> **BEST[448]** V:429/569, T:426.80, TP:97.36%, SHC:13, SDC:65, SOC:200
+26-Mar-24 02:51:11.328 [Solver] INFO  coursett.Test> **BEST[449]** V:430/569, T:426.80, TP:97.36%, SHC:13, SDC:65, SOC:200
+26-Mar-24 02:51:11.337 [Solver] INFO  coursett.Test> **BEST[450]** V:431/569, T:426.80, TP:97.36%, SHC:13, SDC:65, SOC:200
+26-Mar-24 02:51:11.351 [Solver] INFO  coursett.Test> **BEST[451]** V:432/569, T:426.80, TP:97.36%, SHC:13, SDC:65, SOC:200
+26-Mar-24 02:51:11.364 [Solver] INFO  coursett.Test> **BEST[452]** V:433/569, T:426.80, TP:97.36%, SHC:13, SDC:65, SOC:200
+26-Mar-24 02:51:11.388 [Solver] INFO  coursett.Test> **BEST[453]** V:434/569, T:426.80, TP:97.36%, SHC:13, SDC:65, SOC:200
+26-Mar-24 02:51:11.416 [Solver] INFO  coursett.Test> **BEST[455]** V:435/569, T:426.80, TP:97.36%, SHC:13, SDC:65, SOC:200
+26-Mar-24 02:51:11.426 [Solver] INFO  coursett.Test> **BEST[456]** V:436/569, T:426.80, TP:97.36%, SHC:13, SDC:65, SOC:200
+26-Mar-24 02:51:11.440 [Solver] INFO  coursett.Test> **BEST[457]** V:437/569, T:426.80, TP:97.36%, SHC:13, SDC:65, SOC:200
+26-Mar-24 02:51:11.466 [Solver] INFO  coursett.Test> **BEST[458]** V:438/569, T:430.00, TP:97.36%, SHC:13, SDC:65, SOC:208
+26-Mar-24 02:51:11.512 [Solver] INFO  coursett.Test> **BEST[459]** V:439/569, T:435.20, TP:97.36%, SHC:15, SDC:65, SOC:213
+26-Mar-24 02:51:11.559 [Solver] INFO  coursett.Test> **BEST[460]** V:440/569, T:444.00, TP:97.36%, SHC:19, SDC:65, SOC:219
+26-Mar-24 02:51:11.640 [Solver] INFO  coursett.Test> **BEST[464]** V:441/569, T:444.40, TP:97.36%, SHC:19, SDC:65, SOC:220
+26-Mar-24 02:51:11.676 [Solver] INFO  coursett.Test> **BEST[465]** V:442/569, T:444.40, TP:97.36%, SHC:19, SDC:65, SOC:220
+26-Mar-24 02:51:11.715 [Solver] INFO  coursett.Test> **BEST[466]** V:443/569, T:444.40, TP:97.36%, SHC:19, SDC:65, SOC:220
+26-Mar-24 02:51:11.746 [Solver] INFO  coursett.Test> **BEST[467]** V:444/569, T:444.40, TP:97.36%, SHC:19, SDC:65, SOC:220
+26-Mar-24 02:51:11.797 [Solver] INFO  coursett.Test> **BEST[468]** V:445/569, T:446.80, TP:97.36%, SHC:20, SDC:65, SOC:222
+26-Mar-24 02:51:11.868 [Solver] INFO  coursett.Test> **BEST[470]** V:446/569, T:448.80, TP:97.36%, SHC:20, SDC:68, SOC:224
+26-Mar-24 02:51:11.912 [Solver] INFO  coursett.Test> **BEST[471]** V:447/569, T:448.80, TP:97.36%, SHC:20, SDC:68, SOC:224
+26-Mar-24 02:51:11.929 [Solver] INFO  coursett.Test> **BEST[472]** V:448/569, T:448.80, TP:97.36%, SHC:20, SDC:68, SOC:224
+26-Mar-24 02:51:11.953 [Solver] INFO  coursett.Test> **BEST[473]** V:449/569, T:448.80, TP:97.36%, SHC:20, SDC:68, SOC:224
+26-Mar-24 02:51:11.982 [Solver] INFO  coursett.Test> **BEST[474]** V:450/569, T:448.80, TP:97.36%, SHC:20, SDC:68, SOC:224
+26-Mar-24 02:51:12.031 [Solver] INFO  coursett.Test> **BEST[475]** V:451/569, T:454.80, TP:97.36%, SHC:23, SDC:71, SOC:224
+26-Mar-24 02:51:12.071 [Solver] INFO  coursett.Test> **BEST[476]** V:452/569, T:474.80, TP:97.19%, SHC:23, SDC:71, SOC:224
+26-Mar-24 02:51:12.191 [Solver] INFO  coursett.Test> **BEST[479]** V:453/569, T:474.80, TP:97.19%, SHC:23, SDC:71, SOC:224
+26-Mar-24 02:51:12.225 [Solver] INFO  coursett.Test> **BEST[481]** V:454/569, T:474.80, TP:97.19%, SHC:23, SDC:71, SOC:224
+26-Mar-24 02:51:12.249 [Solver] INFO  coursett.Test> **BEST[482]** V:455/569, T:474.80, TP:97.19%, SHC:23, SDC:71, SOC:224
+26-Mar-24 02:51:12.318 [Solver] INFO  coursett.Test> **BEST[484]** V:456/569, T:494.80, TP:97.01%, SHC:23, SDC:71, SOC:224
+26-Mar-24 02:51:12.402 [Solver] INFO  coursett.Test> **BEST[486]** V:457/569, T:498.80, TP:97.01%, SHC:23, SDC:71, SOC:234
+26-Mar-24 02:51:12.433 [Solver] INFO  coursett.Test> **BEST[487]** V:458/569, T:498.80, TP:97.01%, SHC:23, SDC:71, SOC:234
+26-Mar-24 02:51:12.486 [Solver] INFO  coursett.Test> **BEST[489]** V:459/569, T:498.80, TP:97.01%, SHC:23, SDC:71, SOC:234
+26-Mar-24 02:51:12.511 [Solver] INFO  coursett.Test> **BEST[490]** V:460/569, T:498.80, TP:97.01%, SHC:23, SDC:71, SOC:234
+26-Mar-24 02:51:12.533 [Solver] INFO  coursett.Test> **BEST[491]** V:461/569, T:498.80, TP:97.01%, SHC:23, SDC:71, SOC:234
+26-Mar-24 02:51:12.584 [Solver] INFO  coursett.Test> **BEST[494]** V:462/569, T:499.20, TP:97.01%, SHC:23, SDC:71, SOC:235
+26-Mar-24 02:51:12.595 [Solver] INFO  coursett.Test> **BEST[495]** V:463/569, T:499.20, TP:97.01%, SHC:23, SDC:71, SOC:235
+26-Mar-24 02:51:12.633 [Solver] INFO  coursett.Test> **BEST[496]** V:464/569, T:500.00, TP:97.01%, SHC:23, SDC:71, SOC:237
+26-Mar-24 02:51:12.643 [Solver] INFO  coursett.Test> **BEST[497]** V:465/569, T:500.00, TP:97.01%, SHC:23, SDC:71, SOC:237
+26-Mar-24 02:51:12.690 [Solver] INFO  coursett.Test> **BEST[499]** V:466/569, T:500.00, TP:97.01%, SHC:23, SDC:71, SOC:237
+26-Mar-24 02:51:12.704 [Solver] INFO  coursett.Test> **BEST[500]** V:467/569, T:500.00, TP:97.01%, SHC:23, SDC:71, SOC:237
+26-Mar-24 02:51:12.732 [Solver] INFO  coursett.Test> **BEST[501]** V:468/569, T:500.00, TP:97.01%, SHC:23, SDC:71, SOC:237
+26-Mar-24 02:51:12.744 [Solver] INFO  coursett.Test> **BEST[502]** V:469/569, T:500.00, TP:97.01%, SHC:23, SDC:71, SOC:237
+26-Mar-24 02:51:12.788 [Solver] INFO  coursett.Test> **BEST[503]** V:470/569, T:500.00, TP:97.01%, SHC:23, SDC:71, SOC:237
+26-Mar-24 02:51:12.823 [Solver] INFO  coursett.Test> **BEST[504]** V:471/569, T:520.00, TP:96.84%, SHC:23, SDC:71, SOC:237
+26-Mar-24 02:51:12.856 [Solver] INFO  coursett.Test> **BEST[505]** V:472/569, T:540.00, TP:96.66%, SHC:23, SDC:71, SOC:237
+26-Mar-24 02:51:12.913 [Solver] INFO  coursett.Test> **BEST[508]** V:473/569, T:543.60, TP:96.66%, SHC:23, SDC:80, SOC:237
+26-Mar-24 02:51:12.934 [Solver] INFO  coursett.Test> **BEST[509]** V:474/569, T:543.60, TP:96.66%, SHC:23, SDC:80, SOC:237
+26-Mar-24 02:51:12.967 [Solver] INFO  coursett.Test> **BEST[511]** V:475/569, T:543.60, TP:96.66%, SHC:23, SDC:80, SOC:237
+26-Mar-24 02:51:13.006 [Solver] INFO  coursett.Test> **BEST[512]** V:476/569, T:545.60, TP:96.66%, SHC:24, SDC:81, SOC:237
+26-Mar-24 02:51:13.028 [Solver] INFO  coursett.Test> **BEST[514]** V:477/569, T:545.60, TP:96.66%, SHC:24, SDC:81, SOC:237
+26-Mar-24 02:51:13.047 [Solver] INFO  coursett.Test> **BEST[515]** V:478/569, T:545.60, TP:96.66%, SHC:24, SDC:81, SOC:237
+26-Mar-24 02:51:13.114 [Solver] INFO  coursett.Test> **BEST[518]** V:479/569, T:545.60, TP:96.66%, SHC:24, SDC:81, SOC:237
+26-Mar-24 02:51:13.169 [Solver] INFO  coursett.Test> **BEST[521]** V:480/569, T:545.60, TP:96.66%, SHC:24, SDC:81, SOC:237
+26-Mar-24 02:51:13.206 [Solver] INFO  coursett.Test> **BEST[522]** V:481/569, T:545.60, TP:96.66%, SHC:24, SDC:81, SOC:237
+26-Mar-24 02:51:13.217 [Solver] INFO  coursett.Test> **BEST[523]** V:482/569, T:545.60, TP:96.66%, SHC:24, SDC:81, SOC:237
+26-Mar-24 02:51:13.257 [Solver] INFO  coursett.Test> **BEST[525]** V:483/569, T:545.60, TP:96.66%, SHC:24, SDC:81, SOC:237
+26-Mar-24 02:51:13.285 [Solver] INFO  coursett.Test> **BEST[526]** V:484/569, T:545.60, TP:96.66%, SHC:24, SDC:81, SOC:237
+26-Mar-24 02:51:13.316 [Solver] INFO  coursett.Test> **BEST[527]** V:485/569, T:548.00, TP:96.66%, SHC:25, SDC:81, SOC:239
+26-Mar-24 02:51:13.335 [Solver] INFO  coursett.Test> **BEST[529]** V:486/569, T:568.00, TP:96.49%, SHC:25, SDC:81, SOC:239
+26-Mar-24 02:51:13.361 [Solver] INFO  coursett.Test> **BEST[530]** V:487/569, T:568.00, TP:96.49%, SHC:25, SDC:81, SOC:239
+26-Mar-24 02:51:13.382 [Solver] INFO  coursett.Test> **BEST[531]** V:488/569, T:568.00, TP:96.49%, SHC:25, SDC:81, SOC:239
+26-Mar-24 02:51:13.467 [Solver] INFO  coursett.Test> **BEST[536]** V:489/569, T:568.00, TP:96.49%, SHC:25, SDC:81, SOC:239
+26-Mar-24 02:51:13.512 [Solver] INFO  coursett.Test> **BEST[538]** V:489/569, T:564.00, TP:96.49%, SHC:25, SDC:81, SOC:229
+26-Mar-24 02:51:13.549 [Solver] INFO  coursett.Test> **BEST[540]** V:490/569, T:564.00, TP:96.49%, SHC:25, SDC:81, SOC:229
+26-Mar-24 02:51:13.588 [Solver] INFO  coursett.Test> **BEST[542]** V:491/569, T:564.00, TP:96.49%, SHC:25, SDC:81, SOC:229
+26-Mar-24 02:51:13.594 [Solver] INFO  coursett.Test> **BEST[543]** V:492/569, T:564.00, TP:96.49%, SHC:25, SDC:81, SOC:229
+26-Mar-24 02:51:13.605 [Solver] INFO  coursett.Test> **BEST[544]** V:493/569, T:564.00, TP:96.49%, SHC:25, SDC:81, SOC:229
+26-Mar-24 02:51:13.631 [Solver] INFO  coursett.Test> **BEST[546]** V:494/569, T:566.40, TP:96.49%, SHC:26, SDC:81, SOC:231
+26-Mar-24 02:51:13.639 [Solver] INFO  coursett.Test> **BEST[547]** V:495/569, T:566.40, TP:96.49%, SHC:26, SDC:81, SOC:231
+26-Mar-24 02:51:13.662 [Solver] INFO  coursett.Test> **BEST[548]** V:496/569, T:566.40, TP:96.49%, SHC:26, SDC:81, SOC:231
+26-Mar-24 02:51:13.694 [Solver] INFO  coursett.Test> **BEST[549]** V:497/569, T:575.60, TP:96.49%, SHC:30, SDC:82, SOC:237
+26-Mar-24 02:51:13.704 [Solver] INFO  coursett.Test> **BEST[550]** V:498/569, T:575.60, TP:96.49%, SHC:30, SDC:82, SOC:237
+26-Mar-24 02:51:13.733 [Solver] INFO  coursett.Test> **BEST[552]** V:499/569, T:575.60, TP:96.49%, SHC:30, SDC:82, SOC:237
+26-Mar-24 02:51:13.753 [Solver] INFO  coursett.Test> **BEST[553]** V:500/569, T:575.60, TP:96.49%, SHC:30, SDC:82, SOC:237
+26-Mar-24 02:51:13.796 [Solver] INFO  coursett.Test> **BEST[556]** V:501/569, T:576.80, TP:96.49%, SHC:30, SDC:82, SOC:240
+26-Mar-24 02:51:13.804 [Solver] INFO  coursett.Test> **BEST[557]** V:502/569, T:576.80, TP:96.49%, SHC:30, SDC:82, SOC:240
+26-Mar-24 02:51:13.841 [Solver] INFO  coursett.Test> **BEST[559]** V:502/569, T:576.00, TP:96.49%, SHC:30, SDC:81, SOC:239
+26-Mar-24 02:51:13.862 [Solver] INFO  coursett.Test> **BEST[561]** V:503/569, T:596.00, TP:96.31%, SHC:30, SDC:81, SOC:239
+26-Mar-24 02:51:13.883 [Solver] INFO  coursett.Test> **BEST[563]** V:504/569, T:596.00, TP:96.31%, SHC:30, SDC:81, SOC:239
+26-Mar-24 02:51:13.910 [Solver] INFO  coursett.Test> **BEST[565]** V:505/569, T:597.60, TP:96.31%, SHC:30, SDC:81, SOC:243
+26-Mar-24 02:51:13.938 [Solver] INFO  coursett.Test> **BEST[567]** V:506/569, T:597.60, TP:96.31%, SHC:30, SDC:81, SOC:243
+26-Mar-24 02:51:13.949 [Solver] INFO  coursett.Test> **BEST[568]** V:507/569, T:597.60, TP:96.31%, SHC:30, SDC:81, SOC:243
+26-Mar-24 02:51:13.963 [Solver] INFO  coursett.Test> **BEST[569]** V:508/569, T:597.60, TP:96.31%, SHC:30, SDC:81, SOC:243
+26-Mar-24 02:51:13.976 [Solver] INFO  coursett.Test> **BEST[570]** V:509/569, T:597.60, TP:96.31%, SHC:30, SDC:81, SOC:243
+26-Mar-24 02:51:14.033 [Solver] INFO  coursett.Test> **BEST[574]** V:510/569, T:597.60, TP:96.31%, SHC:30, SDC:81, SOC:243
+26-Mar-24 02:51:14.108 [Solver] INFO  coursett.Test> **BEST[578]** V:511/569, T:601.20, TP:96.31%, SHC:30, SDC:81, SOC:252
+26-Mar-24 02:51:14.143 [Solver] INFO  coursett.Test> **BEST[579]** V:512/569, T:601.20, TP:96.31%, SHC:30, SDC:81, SOC:252
+26-Mar-24 02:51:14.161 [Solver] INFO  coursett.Test> **BEST[580]** V:513/569, T:601.20, TP:96.31%, SHC:30, SDC:81, SOC:252
+26-Mar-24 02:51:14.198 [Solver] INFO  coursett.Test> **BEST[581]** V:514/569, T:601.20, TP:96.31%, SHC:30, SDC:81, SOC:252
+26-Mar-24 02:51:14.212 [Solver] INFO  coursett.Test> **BEST[582]** V:515/569, T:601.20, TP:96.31%, SHC:30, SDC:81, SOC:252
+26-Mar-24 02:51:14.283 [Solver] INFO  coursett.Test> **BEST[586]** V:516/569, T:601.60, TP:96.31%, SHC:30, SDC:81, SOC:253
+26-Mar-24 02:51:14.330 [Solver] INFO  coursett.Test> **BEST[589]** V:517/569, T:621.60, TP:96.13%, SHC:30, SDC:81, SOC:253
+26-Mar-24 02:51:14.383 [Solver] INFO  coursett.Test> **BEST[592]** V:518/569, T:621.60, TP:96.13%, SHC:30, SDC:81, SOC:253
+26-Mar-24 02:51:14.402 [Solver] INFO  coursett.Test> **BEST[593]** V:519/569, T:621.60, TP:96.13%, SHC:30, SDC:81, SOC:253
+26-Mar-24 02:51:14.460 [Solver] INFO  coursett.Test> **BEST[595]** V:520/569, T:621.60, TP:96.13%, SHC:30, SDC:81, SOC:253
+26-Mar-24 02:51:14.508 [Solver] INFO  coursett.Test> **BEST[596]** V:521/569, T:622.00, TP:96.13%, SHC:30, SDC:81, SOC:254
+26-Mar-24 02:51:14.596 [Solver] INFO  coursett.Test> **BEST[600]** V:522/569, T:627.60, TP:96.13%, SHC:30, SDC:81, SOC:268
+26-Mar-24 02:51:14.639 [Solver] INFO  coursett.Test> **BEST[602]** V:523/569, T:627.60, TP:96.13%, SHC:30, SDC:81, SOC:268
+26-Mar-24 02:51:14.669 [Solver] INFO  coursett.Test> **BEST[604]** V:524/569, T:627.60, TP:96.13%, SHC:30, SDC:81, SOC:268
+26-Mar-24 02:51:14.738 [Solver] INFO  coursett.Test> **BEST[607]** V:525/569, T:627.60, TP:96.13%, SHC:30, SDC:81, SOC:268
+26-Mar-24 02:51:14.774 [Solver] INFO  coursett.Test> **BEST[608]** V:526/569, T:629.60, TP:96.13%, SHC:30, SDC:81, SOC:273
+26-Mar-24 02:51:14.845 [Solver] INFO  coursett.Test> **BEST[613]** V:527/569, T:629.60, TP:96.13%, SHC:30, SDC:81, SOC:273
+26-Mar-24 02:51:14.869 [Solver] INFO  coursett.Test> **BEST[615]** V:528/569, T:629.60, TP:96.13%, SHC:30, SDC:81, SOC:273
+26-Mar-24 02:51:15.191 [Solver] INFO  coursett.Test> **BEST[631]** V:529/569, T:632.80, TP:96.13%, SHC:30, SDC:81, SOC:281
+26-Mar-24 02:51:15.201 [Solver] INFO  coursett.Test> **BEST[632]** V:530/569, T:632.80, TP:96.13%, SHC:30, SDC:81, SOC:281
+26-Mar-24 02:51:15.217 [Solver] INFO  coursett.Test> **BEST[633]** V:531/569, T:632.80, TP:96.13%, SHC:30, SDC:81, SOC:281
+26-Mar-24 02:51:15.317 [Solver] INFO  coursett.Test> **BEST[640]** V:532/569, T:632.80, TP:96.13%, SHC:30, SDC:81, SOC:281
+26-Mar-24 02:51:15.377 [Solver] INFO  coursett.Test> **BEST[645]** V:533/569, T:632.80, TP:96.13%, SHC:30, SDC:81, SOC:281
+26-Mar-24 02:51:15.389 [Solver] INFO  coursett.Test> **BEST[646]** V:534/569, T:632.80, TP:96.13%, SHC:30, SDC:81, SOC:281
+26-Mar-24 02:51:15.492 [Solver] INFO  coursett.Test> **BEST[651]** V:535/569, T:632.80, TP:96.13%, SHC:30, SDC:81, SOC:281
+26-Mar-24 02:51:15.513 [Solver] INFO  coursett.Test> **BEST[652]** V:536/569, T:653.60, TP:95.96%, SHC:30, SDC:81, SOC:283
+26-Mar-24 02:51:15.785 [Solver] INFO  coursett.Test> **BEST[663]** V:537/569, T:653.60, TP:95.96%, SHC:30, SDC:81, SOC:283
+26-Mar-24 02:51:16.674 [Solver] INFO  coursett.Test> **BEST[682]** V:537/569, T:653.20, TP:95.96%, SHC:30, SDC:81, SOC:282
+26-Mar-24 02:51:16.785 [Solver] INFO  coursett.Test> **BEST[686]** V:538/569, T:653.20, TP:95.96%, SHC:30, SDC:81, SOC:282
+26-Mar-24 02:51:17.435 [Solver] INFO  coursett.Test> **BEST[691]** V:538/569, T:650.40, TP:95.96%, SHC:30, SDC:81, SOC:275
+26-Mar-24 02:51:18.210 [Solver] INFO  coursett.Test> **BEST[739]** V:539/569, T:653.20, TP:95.96%, SHC:31, SDC:84, SOC:275
+26-Mar-24 02:51:18.866 [Solver] INFO  coursett.Test> **BEST[748]** V:540/569, T:673.20, TP:95.78%, SHC:31, SDC:84, SOC:275
+26-Mar-24 02:51:18.892 [Solver] INFO  coursett.Test> **BEST[750]** V:540/569, T:670.40, TP:95.78%, SHC:31, SDC:79, SOC:273
+26-Mar-24 02:51:19.452 [Solver] INFO  coursett.Test> **BEST[781]** V:541/569, T:672.40, TP:95.78%, SHC:31, SDC:81, SOC:276
+26-Mar-24 02:51:20.159 [Solver] INFO  coursett.Test> **BEST[830]** V:541/569, T:672.00, TP:95.78%, SHC:31, SDC:81, SOC:275
+26-Mar-24 02:51:21.583 [Solver] INFO  coursett.Test> **BEST[906]** V:541/569, T:670.40, TP:95.78%, SHC:31, SDC:81, SOC:271
+26-Mar-24 02:51:21.638 [Solver] INFO  coursett.Test> **BEST[909]** V:541/569, T:669.60, TP:95.78%, SHC:31, SDC:81, SOC:269
+26-Mar-24 02:51:24.638 [Solver] INFO  coursett.Test> **BEST[1076]** V:542/569, T:699.60, TP:95.61%, SHC:31, SDC:81, SOC:294
+26-Mar-24 02:51:25.776 [Solver] INFO  coursett.Test> **BEST[1161]** V:542/569, T:697.60, TP:95.61%, SHC:31, SDC:79, SOC:291
+26-Mar-24 02:51:31.098 [Solver] INFO  coursett.Test> **BEST[1404]** V:542/569, T:694.80, TP:95.61%, SHC:30, SDC:76, SOC:291
+26-Mar-24 02:57:13.083 [Solver] INFO  coursett.Test> **BEST[15282]** V:542/569, T:694.40, TP:95.61%, SHC:30, SDC:76, SOC:290
+26-Mar-24 02:57:48.877 [Solver] INFO  coursett.Test> **BEST[16355]** V:542/569, T:694.00, TP:95.61%, SHC:30, SDC:77, SOC:288
+26-Mar-24 02:58:08.292 [Solver] INFO  coursett.Test> **BEST[16970]** V:542/569, T:693.20, TP:95.61%, SHC:30, SDC:77, SOC:286
+26-Mar-24 02:58:10.789 [Solver] INFO  coursett.Test> **BEST[17127]** V:542/569, T:692.80, TP:95.61%, SHC:30, SDC:77, SOC:285
+26-Mar-24 02:58:13.993 [Solver] INFO  coursett.Test> **BEST[17232]** V:542/569, T:692.40, TP:95.61%, SHC:30, SDC:76, SOC:285
+26-Mar-24 02:59:11.350 [Solver] INFO  coursett.Test> **BEST[19089]** V:542/569, T:690.80, TP:95.61%, SHC:30, SDC:76, SOC:281
+26-Mar-24 02:59:55.591 [Solver] INFO  coursett.Test> **BEST[20403]** V:542/569, T:690.40, TP:95.61%, SHC:30, SDC:75, SOC:281
+26-Mar-24 03:02:45.814 [Solver] INFO  coursett.Test> **BEST[25175]** V:542/569, T:689.20, TP:95.61%, SHC:30, SDC:78, SOC:275
+26-Mar-24 03:02:46.548 [Solver] INFO  coursett.Test> **BEST[25190]** V:542/569, T:688.80, TP:95.61%, SHC:30, SDC:77, SOC:275
+26-Mar-24 03:04:30.433 [Solver] INFO  coursett.Test> **BEST[28135]** V:543/569, T:699.60, TP:95.61%, SHC:31, SDC:86, SOC:289
+26-Mar-24 03:04:30.482 [Solver] INFO  coursett.Test> **BEST[28137]** V:543/569, T:697.60, TP:95.61%, SHC:31, SDC:86, SOC:284
+26-Mar-24 03:04:30.556 [Solver] INFO  coursett.Test> **BEST[28139]** V:543/569, T:697.20, TP:95.61%, SHC:31, SDC:86, SOC:283
+26-Mar-24 03:04:30.760 [Solver] INFO  coursett.Test> **BEST[28145]** V:543/569, T:694.40, TP:95.61%, SHC:31, SDC:86, SOC:276
+26-Mar-24 03:04:31.147 [Solver] INFO  coursett.Test> **BEST[28153]** V:543/569, T:693.60, TP:95.61%, SHC:31, SDC:86, SOC:274
+26-Mar-24 03:04:42.550 [Solver] INFO  coursett.Test> **BEST[28478]** V:543/569, T:692.80, TP:95.61%, SHC:31, SDC:79, SOC:279
+26-Mar-24 03:04:42.584 [Solver] INFO  coursett.Test> **BEST[28479]** V:543/569, T:692.40, TP:95.61%, SHC:31, SDC:79, SOC:278
+26-Mar-24 03:04:50.470 [Solver] INFO  coursett.Test> **BEST[28741]** V:543/569, T:692.00, TP:95.61%, SHC:31, SDC:79, SOC:277
+26-Mar-24 03:05:29.362 [Solver] INFO  coursett.Test> **BEST[29731]** V:543/569, T:690.80, TP:95.61%, SHC:31, SDC:80, SOC:273
+26-Mar-24 03:06:50.505 [Solver] INFO  coursett.Test> **BEST[31859]** V:543/569, T:690.40, TP:95.61%, SHC:31, SDC:80, SOC:272
+26-Mar-24 03:17:21.673 [Solver] INFO  coursett.Test> **BEST[45630]** V:543/569, T:689.20, TP:95.61%, SHC:30, SDC:76, SOC:277
+26-Mar-24 03:17:23.112 [Solver] INFO  coursett.Test> **BEST[45675]** V:543/569, T:688.80, TP:95.61%, SHC:30, SDC:76, SOC:276
+26-Mar-24 03:20:29.706 [Solver] INFO  coursett.Test> **BEST[49138]** V:543/569, T:668.40, TP:95.78%, SHC:31, SDC:83, SOC:264
+26-Mar-24 03:21:46.045 [Solver] INFO  coursett.Test> **BEST[50547]** V:543/569, T:647.20, TP:95.96%, SHC:31, SDC:83, SOC:261
+26-Mar-24 03:22:09.805 [Solver] INFO  coursett.Test> **BEST[51061]** V:543/569, T:646.80, TP:95.96%, SHC:31, SDC:83, SOC:260
+26-Mar-24 03:23:41.647 [Solver] INFO  coursett.Test> **BEST[52765]** V:544/569, T:648.40, TP:95.96%, SHC:31, SDC:85, SOC:262
+26-Mar-24 03:25:19.109 [Solver] INFO  coursett.Test> **BEST[54437]** V:544/569, T:646.80, TP:95.96%, SHC:31, SDC:85, SOC:258
+26-Mar-24 03:44:45.660 [Solver] INFO  coursett.Test> **BEST[76575]** V:544/569, T:642.00, TP:95.96%, SHC:31, SDC:85, SOC:246
+26-Mar-24 03:51:10.613 [Solver] INFO  coursett.Test> **BEST[83095]** V:544/569, T:640.00, TP:95.96%, SHC:30, SDC:71, SOC:259
+26-Mar-24 03:51:23.985 [Solver] INFO  coursett.Test> **BEST[83301]** V:544/569, T:639.20, TP:95.96%, SHC:30, SDC:71, SOC:257
+26-Mar-24 03:51:37.775 [Solver] INFO  coursett.Test> **BEST[83514]** V:544/569, T:638.80, TP:95.96%, SHC:31, SDC:78, SOC:245
+26-Mar-24 04:00:05.287 [Solver] INFO  coursett.Test> **BEST[91677]** V:544/569, T:637.60, TP:95.96%, SHC:30, SDC:71, SOC:253
+26-Mar-24 04:17:44.938 [Solver] INFO  coursett.Test> **BEST[106471]** V:544/569, T:637.20, TP:95.96%, SHC:30, SDC:70, SOC:253
+26-Mar-24 04:17:45.615 [Solver] INFO  coursett.Test> **BEST[106473]** V:544/569, T:636.80, TP:95.96%, SHC:30, SDC:70, SOC:252
+26-Mar-24 04:18:51.903 [Solver] INFO  coursett.Test> **BEST[107271]** V:544/569, T:633.20, TP:95.96%, SHC:31, SDC:73, SOC:236
+26-Mar-24 04:18:52.840 [Solver] INFO  coursett.Test> **BEST[107284]** V:544/569, T:632.40, TP:95.96%, SHC:31, SDC:73, SOC:234
+26-Mar-24 04:20:58.725 [Solver] INFO  coursett.Test> **BEST[108891]** V:545/569, T:660.00, TP:95.96%, SHC:31, SDC:82, SOC:294
+26-Mar-24 04:20:59.009 [Solver] INFO  coursett.Test> **BEST[108894]** V:545/569, T:658.00, TP:95.96%, SHC:31, SDC:79, SOC:292
+26-Mar-24 04:20:59.071 [Solver] INFO  coursett.Test> **BEST[108895]** V:545/569, T:656.80, TP:95.96%, SHC:31, SDC:79, SOC:289
+26-Mar-24 04:21:51.980 [Solver] INFO  coursett.Test> **BEST[109525]** V:545/569, T:656.40, TP:95.96%, SHC:31, SDC:80, SOC:287
+26-Mar-24 04:21:53.914 [Solver] INFO  coursett.Test> **BEST[109545]** V:545/569, T:655.60, TP:95.96%, SHC:31, SDC:85, SOC:280
+26-Mar-24 04:22:04.782 [Solver] INFO  coursett.Test> **BEST[109670]** V:545/569, T:654.40, TP:95.96%, SHC:31, SDC:82, SOC:280
+26-Mar-24 04:25:56.316 [Solver] INFO  coursett.Test> **BEST[112465]** V:545/569, T:653.60, TP:95.96%, SHC:31, SDC:79, SOC:281
+26-Mar-24 04:51:00.532 [Solver] INFO  termination.MPPTerminationCondition> Timeout reached.
+26-Mar-24 04:51:00.534 [Solver] INFO  util.Progress> [Solver done.]
+26-Mar-24 04:51:00.535 [ShutdownHook] INFO  coursett.Test> Last solution: [
+    Assigned variables: 95.78% (545/569)
+    Best Iteration: 112465
+    Best Time: 94.93 min (19.75 it/s)
+    Distribution preferences: 100.00% (0.00)
+    Iteration: 130033
+    Memory usage: 270.45M
+    Overall solution value: 668.00
+    Room preferences: 100.00% (0)
+    Same subpart balancing penalty: 0.00
+    Speed: 18.06 it/s
+    Student conflicts: 396 [committed:0, distance:78, hard:31]
+    Time: 120.00 min
+    Time preferences: 95.96% (230.00)
+    Too big rooms: 75.75% (1724)
+    Useless half-hours: 0.27% (33 + 359)
+  ]
+26-Mar-24 04:51:00.535 [ShutdownHook] INFO  coursett.Test> Best solution (before restore): [
+    Assigned variables: 95.78% (545/569)
+    Distribution preferences: 100.00% (0.00)
+    Iteration: 112465
+    Memory usage: 237.85M
+    Overall solution value: 653.60
+    Room preferences: 100.00% (0)
+    Same subpart balancing penalty: 0.00
+    Speed: 19.75 it/s
+    Student conflicts: 360 [committed:0, distance:79, hard:31]
+    Time: 94.93 min
+    Time preferences: 95.96% (230.00)
+    Too big rooms: 76.76% (1747)
+    Useless half-hours: 0.28% (37 + 366)
+  ]
+26-Mar-24 04:51:00.725 [ShutdownHook] INFO  coursett.Test> Best solution: [
+    Assigned variables: 95.78% (545/569)
+    Best Iteration: 112465
+    Best Time: 94.93 min (19.75 it/s)
+    Distribution preferences: 100.00% (0.00)
+    Iteration: 130033
+    Memory usage: 273.45M
+    Overall solution value: 653.60
+    Room preferences: 100.00% (0)
+    Same subpart balancing penalty: 0.00
+    Speed: 18.06 it/s
+    Student conflicts: 360 [committed:0, distance:79, hard:31]
+    Time: 120.00 min
+    Time preferences: 95.96% (230.00)
+    Too big rooms: 76.76% (1747)
+    Useless half-hours: 0.28% (37 + 366)
+  ]
+26-Mar-24 04:51:00.725 [ShutdownHook] INFO  util.Progress> [Student Sectioning...]
+26-Mar-24 04:51:00.729 [ShutdownHook] INFO  util.Progress> Student Conflicts: 360.00 (group: 0.00%)
+26-Mar-24 04:51:01.597 [ShutdownHook] INFO  util.Progress> Iter=10k, Idle=0.76k, Speed=11600.93 it/s, Value=33.00, Objective=33.00, Group=0.00%
+26-Mar-24 04:51:02.365 [ShutdownHook] INFO  util.Progress> Iter=20k, Idle=7.97k, Speed=12277.47 it/s, Value=32.00, Objective=32.00, Group=0.00%
+26-Mar-24 04:51:02.995 [ShutdownHook] INFO  util.Progress> Iter=30k, Idle=17.97k, Speed=13256.74 it/s, Value=32.00, Objective=32.00, Group=0.00%
+26-Mar-24 04:51:03.483 [ShutdownHook] INFO  util.Progress> Iter=40k, Idle=27.97k, Speed=14529.60 it/s, Value=32.00, Objective=32.00, Group=0.00%
+26-Mar-24 04:51:03.875 [ShutdownHook] INFO  util.Progress> Iter=50k, Idle=37.97k, Speed=15898.25 it/s, Value=32.00, Objective=32.00, Group=0.00%
+26-Mar-24 04:51:04.376 [ShutdownHook] INFO  util.Progress> Iter=60k, Idle=47.97k, Speed=16478.99 it/s, Value=32.00, Objective=32.00, Group=0.00%
+26-Mar-24 04:51:04.838 [ShutdownHook] INFO  util.Progress> Iter=70k, Idle=57.97k, Speed=17048.22 it/s, Value=32.00, Objective=32.00, Group=0.00%
+26-Mar-24 04:51:05.345 [ShutdownHook] INFO  util.Progress> Iter=80k, Idle=67.97k, Speed=17334.78 it/s, Value=32.00, Objective=32.00, Group=0.00%
+26-Mar-24 04:51:05.788 [ShutdownHook] INFO  util.Progress> Iter=90k, Idle=77.97k, Speed=17786.56 it/s, Value=32.00, Objective=32.00, Group=0.00%
+26-Mar-24 04:51:06.208 [ShutdownHook] INFO  util.Progress> Iter=100k, Idle=87.97k, Speed=18258.17 it/s, Value=32.00, Objective=32.00, Group=0.00%
+26-Mar-24 04:51:06.618 [ShutdownHook] INFO  util.Progress> Iter=110k, Idle=97.97k, Speed=18678.89 it/s, Value=32.00, Objective=32.00, Group=0.00%
+26-Mar-24 04:51:06.728 [ShutdownHook] INFO  util.Progress> Student Conflicts: 32.00 (group: 0.00%)
+26-Mar-24 04:51:07.391 [ShutdownHook] INFO  util.Progress> Iter=10k, Idle=0.24k, Speed=15479.88 it/s, Value=34.00, Objective=34.00, Group=0.00%
+26-Mar-24 04:51:07.392 [ShutdownHook] INFO  util.Progress> Bound is 34.85, best value is 32.00 (108.91%), current value is 34.00 (102.50%)
+26-Mar-24 04:51:07.913 [ShutdownHook] INFO  util.Progress> Iter=20k, Idle=0.49k, Speed=17035.78 it/s, Value=34.00, Objective=34.00, Group=0.00%
+26-Mar-24 04:51:07.913 [ShutdownHook] INFO  util.Progress> Bound is 34.50, best value is 32.00 (107.82%), current value is 34.00 (101.48%)
+26-Mar-24 04:51:08.380 [ShutdownHook] INFO  util.Progress> Iter=30k, Idle=0.04k, Speed=18259.28 it/s, Value=34.00, Objective=34.00, Group=0.00%
+26-Mar-24 04:51:08.380 [ShutdownHook] INFO  util.Progress> Bound is 34.16, best value is 32.00 (106.75%), current value is 34.00 (100.47%)
+26-Mar-24 04:51:08.825 [ShutdownHook] INFO  util.Progress> Iter=40k, Idle=0.23k, Speed=19147.92 it/s, Value=33.00, Objective=33.00, Group=0.00%
+26-Mar-24 04:51:08.825 [ShutdownHook] INFO  util.Progress> Bound is 33.82, best value is 32.00 (105.69%), current value is 33.00 (102.48%)
+26-Mar-24 04:51:09.440 [ShutdownHook] INFO  util.Progress> Iter=50k, Idle=0.01k, Speed=18511.66 it/s, Value=33.00, Objective=33.00, Group=0.00%
+26-Mar-24 04:51:09.441 [ShutdownHook] INFO  util.Progress> Bound is 33.48, best value is 32.00 (104.64%), current value is 33.00 (101.46%)
+26-Mar-24 04:51:10.132 [ShutdownHook] INFO  util.Progress> Iter=60k, Idle=0.16k, Speed=17678.26 it/s, Value=33.00, Objective=33.00, Group=0.00%
+26-Mar-24 04:51:10.133 [ShutdownHook] INFO  util.Progress> Bound is 33.15, best value is 32.00 (103.59%), current value is 33.00 (100.45%)
+26-Mar-24 04:51:10.638 [ShutdownHook] INFO  util.Progress> Iter=70k, Idle=5.29k, Speed=17944.12 it/s, Value=32.00, Objective=32.00, Group=0.00%
+26-Mar-24 04:51:10.639 [ShutdownHook] INFO  util.Progress> Bound is 32.82, best value is 32.00 (102.56%), current value is 32.00 (102.56%)
+26-Mar-24 04:51:11.094 [ShutdownHook] INFO  util.Progress> Iter=80k, Idle=15.29k, Speed=18365.47 it/s, Value=32.00, Objective=32.00, Group=0.00%
+26-Mar-24 04:51:11.094 [ShutdownHook] INFO  util.Progress> Bound is 32.49, best value is 32.00 (101.54%), current value is 32.00 (101.54%)
+26-Mar-24 04:51:11.556 [ShutdownHook] INFO  util.Progress> Iter=90k, Idle=25.30k, Speed=18683.83 it/s, Value=32.00, Objective=32.00, Group=0.00%
+26-Mar-24 04:51:11.556 [ShutdownHook] INFO  util.Progress> Bound is 32.17, best value is 32.00 (100.53%), current value is 32.00 (100.53%)
+26-Mar-24 04:51:12.217 [ShutdownHook] INFO  util.Progress> Iter=100k, Idle=35.30k, Speed=18264.84 it/s, Value=32.00, Objective=32.00, Group=0.00%
+26-Mar-24 04:51:12.217 [ShutdownHook] INFO  util.Progress> Bound is 31.85, best value is 32.00 (99.53%), current value is 32.00 (99.53%)
+26-Mar-24 04:51:12.842 [ShutdownHook] INFO  util.Progress> Iter=110k, Idle=45.30k, Speed=18020.97 it/s, Value=32.00, Objective=32.00, Group=0.00%
+26-Mar-24 04:51:12.843 [ShutdownHook] INFO  util.Progress> Bound is 31.53, best value is 32.00 (98.54%), current value is 32.00 (98.54%)
+26-Mar-24 04:51:13.240 [ShutdownHook] INFO  util.Progress> Iter=120k, Idle=55.30k, Speed=18450.18 it/s, Value=32.00, Objective=32.00, Group=0.00%
+26-Mar-24 04:51:13.240 [ShutdownHook] INFO  util.Progress> Bound is 31.22, best value is 32.00 (97.56%), current value is 32.00 (97.56%)
+26-Mar-24 04:51:13.683 [ShutdownHook] INFO  util.Progress> Iter=130k, Idle=65.30k, Speed=18713.11 it/s, Value=32.00, Objective=32.00, Group=0.00%
+26-Mar-24 04:51:13.684 [ShutdownHook] INFO  util.Progress> Bound is 30.91, best value is 32.00 (96.59%), current value is 32.00 (96.59%)
+26-Mar-24 04:51:14.254 [ShutdownHook] INFO  util.Progress> Iter=140k, Idle=75.30k, Speed=18624.45 it/s, Value=32.00, Objective=32.00, Group=0.00%
+26-Mar-24 04:51:14.254 [ShutdownHook] INFO  util.Progress> Bound is 30.60, best value is 32.00 (95.63%), current value is 32.00 (95.63%)
+26-Mar-24 04:51:14.899 [ShutdownHook] INFO  util.Progress> Iter=150k, Idle=85.30k, Speed=18382.35 it/s, Value=32.00, Objective=32.00, Group=0.00%
+26-Mar-24 04:51:14.899 [ShutdownHook] INFO  util.Progress> Bound is 30.30, best value is 32.00 (94.68%), current value is 32.00 (94.68%)
+26-Mar-24 04:51:15.332 [ShutdownHook] INFO  util.Progress> Iter=160k, Idle=95.30k, Speed=18617.64 it/s, Value=32.00, Objective=32.00, Group=0.00%
+26-Mar-24 04:51:15.332 [ShutdownHook] INFO  util.Progress> Bound is 30.00, best value is 32.00 (93.74%), current value is 32.00 (93.74%)
+26-Mar-24 04:51:15.803 [ShutdownHook] INFO  util.Progress> Iter=170k, Idle=105.30k, Speed=18751.38 it/s, Value=32.00, Objective=32.00, Group=0.00%
+26-Mar-24 04:51:15.803 [ShutdownHook] INFO  util.Progress> Bound is 29.70, best value is 32.00 (92.80%), current value is 32.00 (92.80%)
+26-Mar-24 04:51:16.232 [ShutdownHook] INFO  util.Progress> Iter=180k, Idle=115.30k, Speed=18955.35 it/s, Value=32.00, Objective=32.00, Group=0.00%
+26-Mar-24 04:51:16.232 [ShutdownHook] INFO  util.Progress> Bound is 29.40, best value is 32.00 (91.88%), current value is 32.00 (91.88%)
+26-Mar-24 04:51:16.811 [ShutdownHook] INFO  util.Progress> Iter=190k, Idle=125.30k, Speed=18858.56 it/s, Value=32.00, Objective=32.00, Group=0.00%
+26-Mar-24 04:51:16.812 [ShutdownHook] INFO  util.Progress> Bound is 29.11, best value is 32.00 (90.97%), current value is 32.00 (90.97%)
+26-Mar-24 04:51:17.309 [ShutdownHook] INFO  util.Progress> Iter=200k, Idle=135.29k, Speed=18916.11 it/s, Value=32.00, Objective=32.00, Group=0.00%
+26-Mar-24 04:51:17.309 [ShutdownHook] INFO  util.Progress> Bound is 28.82, best value is 32.00 (90.06%), current value is 32.00 (90.06%)
+26-Mar-24 04:51:17.337 [ShutdownHook] INFO  util.Progress> Student Conflicts: 32.00 (group: 0.00%)
+26-Mar-24 04:51:17.338 [ShutdownHook] INFO  coursett.Test> Best solution: [
+    Assigned variables: 95.78% (545/569)
+    Best Iteration: 112465
+    Best Time: 94.93 min (19.75 it/s)
+    Distribution preferences: 100.00% (0.00)
+    Iteration: 130033
+    Memory usage: 226.10M
+    Overall solution value: 522.40
+    Room preferences: 100.00% (0)
+    Same subpart balancing penalty: 0.00
+    Speed: 18.06 it/s
+    Student conflicts: 32 [committed:0, distance:8, hard:31]
+    Time: 120.00 min
+    Time preferences: 95.96% (230.00)
+    Too big rooms: 76.76% (1747)
+    Useless half-hours: 0.28% (37 + 366)
+  ]
+26-Mar-24 04:51:17.555 [ShutdownHook] INFO  coursett.Test> Total number of done iteration steps:130033
+26-Mar-24 04:51:17.555 [ShutdownHook] INFO  coursett.Test> Achieved speed: 18.060 iterations/second

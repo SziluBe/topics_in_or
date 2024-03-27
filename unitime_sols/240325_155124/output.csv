@@ -1,0 +1,28 @@
+000.001 Assigned variables,543
+000.002 Time [sec],1969.191
+000.003 Hard student conflicts,13
+000.004 Distance student conf.,1
+000.005 Student conflicts,14
+000.006 Committed student conflicts,0
+000.007 All Student conflicts,14
+000.008 Time preferences,250.000
+000.009 Room preferences,0
+000.010 Useless half-hours,34
+000.011 Broken time patterns,352
+000.012 Too big room,1670
+000.013 Distribution preferences,0.000
+000.014 Back-to-back instructor pref.,0
+000.015 Same subpart balancing penalty,0.000
+000.101 Assigned variables max,569
+000.102 Student enrollments,13799
+000.103 Student commited enrollments,0
+000.104 All student enrollments,13799
+000.105 Time preferences min,0
+000.106 Time preferences max,5690
+000.107 Room preferences min,0
+000.108 Room preferences max,0
+000.109 Useless half-hours max,144000
+000.110 Too big room max,2276
+000.111 Distribution preferences min,0
+000.112 Distribution preferences max,0
+000.113 Back-to-back instructor pref max,0

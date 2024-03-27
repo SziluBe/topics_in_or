@@ -663,8 +663,16 @@ for course in courses:
         subpart_id = subpart_ids[subpart]
         if "lecture" in subpart.lower():
             for class_name in courses[course][subpart]:
-                distribution_element = ET.SubElement(distributions_element, "distribution", type="SameAttendees", required="true")
                 class_id = class_ids[class_name]
+                # DifferentDays --> see also below
+                diff_days_distribution_element = ET.SubElement(distributions_element, "distribution", type="DifferentDays", required="true")
+                class_element = ET.SubElement(diff_days_distribution_element, "class", id=str(class_id))
+                for class_name2 in courses[course][subpart]:
+                    class_id2 = class_ids[class_name2]
+                    if class_id != class_id2:
+                        class_element2 = ET.SubElement(diff_days_distribution_element, "class", id=str(class_id2))
+                # SameAttendees
+                distribution_element = ET.SubElement(distributions_element, "distribution", type="SameAttendees", required="true")
                 class_element = ET.SubElement(distribution_element, "class", id=str(class_id))
                 for subpart2 in courses[course]:
                     subpart_id2 = subpart_ids[subpart2]
@@ -672,6 +680,9 @@ for course in courses:
                         for class_name2 in courses[course][subpart2]:
                             class_id2 = class_ids[class_name2]
                             class_element2 = ET.SubElement(distribution_element, "class", id=str(class_id2))
+                            # DifferentDays --> see also above
+                            if "lecture" in subpart2.lower():
+                                class_element2_2 = ET.SubElement(diff_days_distribution_element, "class", id=str(class_id2))
 
 
 students_element = parse_students.main(course_ids)
