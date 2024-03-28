@@ -4,7 +4,7 @@ import xml.etree.ElementTree as ET
 
 import parse_students
 
-SEMESTER = 1
+SEMESTER = 2
 
 
 # Specify the file path
@@ -493,7 +493,8 @@ print(len(sem1df))
 print(len(sem2df))
 print(len(df))
 print(len(sem1df) + len(sem2df))
-# assert len(sem1df) + len(sem2df) == len(df)
+assert len(sem1df) + len(sem2df) == len(df)
+assert len(df) == og_len
 
 sem1df.to_excel("sem1df.xlsx")
 sem2df.to_excel("sem2df.xlsx")
