@@ -52,6 +52,9 @@ for index, row in df.iterrows():
         with open("credit_scoring.txt", "a") as file:
             file.write(str(row["Activity"]) + "     |     " + str(row["Activity Type Name"]) + "     |     " + str(row["Teaching Week Pattern"]) + "     |     " + str(row["Scheduled Days"]) + "     |     " + str(row["Scheduled Start Time"]) + "     |     " + str(row["Scheduled End Time"]) + "     |     " + str(row["Allocated Location Name"]) + "\n")
 
+# NOTE: from https://www.uoecollection.com/conferences-events/venue-hubs/old-town-campus/gordon-aikman-lecture-theatre/
+room_capacities[room_ids["GALT_ Gordon Aikman Lecture Theatre"]] = 481
+
 print("#"*20)
 print("ROOM CAPACITIES")
 print(room_capacities)
@@ -199,8 +202,8 @@ overlapping.to_excel("overlapping.xlsx")
 # Check if Activity - Scheduled Days pairs are unique
 ####################
 
-# Separate non-unique pairs into a separate dataframe
-non_unique = df[df.duplicated(subset=['Activity', 'Scheduled Days'], keep=False)]
+# # Separate non-unique pairs into a separate dataframe
+non_unique = df[df.duplicated(subset=['Activity', 'Scheduled Days', 'Teaching Week Pattern'], keep=False)]
 # non_unique = df[df.duplicated(subset=['Activity'], keep=False)]
 print(non_unique)
 # sort by Teaching Week Pattern
@@ -212,7 +215,7 @@ og_len = len(df)
 print(len(df))
 
 # Remove all duplicates from the dataframe (don't even keep the first occurrence)
-df = df.drop_duplicates(subset=['Activity', 'Scheduled Days'], keep=False)
+# df = df.drop_duplicates(subset=['Activity', 'Scheduled Days', 'Teaching Week Pattern'], keep=False)
 # df = df.drop_duplicates(subset=['Activity'], keep=False)
 print("#"*20)
 
@@ -225,7 +228,7 @@ for index, row in df.iterrows():
 
 print(len(df))
 print(len(non_unique))
-assert len(df) + len(non_unique) == og_len
+# assert len(df) + len(non_unique) == og_len
 print("#"*20)
 
 
@@ -242,13 +245,13 @@ print(weird_slash)
 weird_slash.to_excel("weird_slash.xlsx")
 
 # Drop rows with both "/" and "Lecture" in Activity
-df = df[~(((df['Activity'].str.contains("/")) & (df['Activity'].str.contains("Lecture"))) | (df['Activity'].str.contains("<")) | (df['Activity'].str.contains("Q&A")) | (df['Activity'].str.contains("Online")))]
-print(len(df[((df['Activity'].str.contains("/")) & (df['Activity'].str.contains("Lecture"))) | (df['Activity'].str.contains("<")) | (df['Activity'].str.contains("Q&A")) | (df['Activity'].str.contains("Online"))]))
-print(len(df))
-print(len(non_unique))
-print(len(weird_slash))
-print(og_len)
-assert len(df) + len(non_unique) + len(weird_slash) == og_len
+# df = df[~(((df['Activity'].str.contains("/")) & (df['Activity'].str.contains("Lecture"))) | (df['Activity'].str.contains("<")) | (df['Activity'].str.contains("Q&A")) | (df['Activity'].str.contains("Online")))]
+# print(len(df[((df['Activity'].str.contains("/")) & (df['Activity'].str.contains("Lecture"))) | (df['Activity'].str.contains("<")) | (df['Activity'].str.contains("Q&A")) | (df['Activity'].str.contains("Online"))]))
+# print(len(df))
+# print(len(non_unique))
+# print(len(weird_slash))
+# print(og_len)
+# assert len(df) + len(non_unique) + len(weird_slash) == og_len
 
 # Make sure classes with a "/" are all in the same weeks
 # If not, output them to a file
@@ -299,7 +302,7 @@ print(bad_df)
 bad_df.to_excel("bad_weeks.xlsx")
 
 # Remove these rows from the original dataframe
-df = df.drop(index_col)
+# df = df.drop(index_col)
 
 print(len(df))
 print(len(non_unique))
@@ -307,11 +310,14 @@ print(len(weird_slash))
 print(len(bad_df))
 print(og_len)
 
-assert len(df) + len(non_unique) + len(weird_slash) + len(bad_df) == og_len
+# assert len(df) + len(non_unique) + len(weird_slash) + len(bad_df) == og_len
 
 print(df['Activity Type Name'].unique())
 
 df.to_excel("cleaned.xlsx") #TODO: re-enable
+
+# length of df should be equal to the original length
+assert len(df) == og_len
 
 
 ####################
@@ -320,7 +326,7 @@ df.to_excel("cleaned.xlsx") #TODO: re-enable
 
 bad_df = pd.concat([non_unique, weird_slash, bad_df])
 
-assert len(df) + len(bad_df) == og_len
+# assert len(df) + len(bad_df) == og_len
 bad_df.to_excel("dirtied.xlsx")
 
 
@@ -487,7 +493,7 @@ print(len(sem1df))
 print(len(sem2df))
 print(len(df))
 print(len(sem1df) + len(sem2df))
-assert len(sem1df) + len(sem2df) == len(df)
+# assert len(sem1df) + len(sem2df) == len(df)
 
 sem1df.to_excel("sem1df.xlsx")
 sem2df.to_excel("sem2df.xlsx")
@@ -554,12 +560,13 @@ def generate_time_constraints(row):
             )
     return constraints
 
-def generate_room_constraints(row, rooms, activity_groups):
+def generate_room_constraints(row, rooms, activity_groups, limit):
     constraints = []
     for room in rooms:
         if (any([x in activity_groups[row['Activity Type Name']] for x in rooms[room]]) and
-                row['Planned Size'] <= room_capacities[room_ids[room]] and # the presence of 'room_ids' is giving legacy vibes but oops
-                row['Real Size'] <= room_capacities[room_ids[room]]):
+                limit <= room_capacities[room_ids[room]]): #TODO: check if this is correct; the presence of 'room_ids' is giving legacy vibes but oops
+                # row['Planned Size'] <= room_capacities[room_ids[room]] and # the presence of 'room_ids' is giving legacy vibes but oops
+                # row['Real Size'] <= room_capacities[room_ids[room]]):
             constraints.append({"id": room_ids[room], "penalty": 0}) #TODO: penalty
     return constraints
 
@@ -576,16 +583,63 @@ for index, row in sem1df.iterrows() if SEMESTER == 1 else sem2df.iterrows():
     class_name = row['Activity'] + "_" + row['Scheduled Days']
     activity_type = row['Activity Type Name'] # to tell what rooms can be used
     # weeks, #TODO: maybe do groupings of week patterns that can be swapped between (a class on even weeks can be swapped to odd weeks, etc.)
+    while class_name in classes:
+        class_name += "_2"
+        print("Duplicate class name:", class_name)
     classes[class_name] = {"subpart": subpart, "course": course, "activity_type": activity_type,
-                         "time_constraints": generate_time_constraints(row),
-                         "room_constraints": generate_room_constraints(row, rooms, activity_groups),
-                         "limit": max(int(row['Planned Size']), int(row['Real Size']))}
+                         "limit": max(int(row['Planned Size']), int(row['Real Size'])),
+                         "og_start": row['Scheduled Start Time'],
+                         "og_end": row['Scheduled End Time'],
+                         "og_room": row['Allocated Location Name'],
+                         "og_days": row['Scheduled Days'],
+                         "og_weeks": row['Teaching Week Pattern'],
+                         "row": row,
+                         "rooms": rooms,
+                         "activity_groups": activity_groups,
+                         } #TODO: check if this is correct
+
+with open("merge_log.txt", "w") as file:
+    clean = False
+    while not clean:
+        clean = True
+        for class_name, class_data in classes.items():
+            do_break = False
+            for class_name2, class_data2 in classes.items():
+                if class_name != class_name2 and class_data["og_start"] == class_data2["og_start"] and class_data["og_end"] == class_data2["og_end"] and class_data["og_room"] == class_data2["og_room"] and class_data["og_days"] == class_data2["og_days"] and class_data["og_weeks"] == class_data2["og_weeks"]:
+                    # print and write to file
+                    print(     "Classes in same room, merging: ", class_name)
+                    file.write("Classes in same room, merging: " + class_name + "\n")
+                    print(     "with:                          ", class_name2)
+                    file.write("with:                          " + class_name2 + "\n")
+                    file.write(class_data["row"].to_string() + "\n")
+                    file.write(class_data2["row"].to_string() + "\n")
+                    classes[class_name]["limit"] += classes[class_name2]["limit"]
+                    del classes[class_name2]
+                    do_break = True
+                    break
+            if do_break:
+                clean = False
+                break
+
+for class_name, class_data in classes.items():
+    # "time_constraints": generate_time_constraints(row),
+    classes[class_name]["time_constraints"] = generate_time_constraints(class_data["row"])
+    # "room_constraints": generate_room_constraints(row, rooms, activity_groups),
+    classes[class_name]["room_constraints"] = generate_room_constraints(class_data["row"], class_data["rooms"], class_data["activity_groups"], class_data["limit"])
+    # print(class_name, class_data["room_constraints"], class_data["time_constraints"])
+
+with open("classes.txt", "w") as file:
+    for class_name, class_data in classes.items():
+        file.write(class_name + "\n")
+        file.write(str(class_data) + "\n")
+
+# quit()
 
 print("#"*20)
 print("CLASSES")
 print(classes)
 print(len(classes))
-assert len(classes) == len(sem1df if SEMESTER == 1 else sem2df)
+# assert len(classes) == len(sem1df if SEMESTER == 1 else sem2df)
 
 courses = {}
 
